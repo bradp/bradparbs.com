@@ -2,7 +2,7 @@
 
 echo "Installing node modules : "
 echo "npm install"
-npm install
+yarn install
 
 echo "Init git repository : "
 echo "git init"
