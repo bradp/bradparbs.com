@@ -1,7 +1,6 @@
 {{ $page := . }}
 
 <header class="w-full flex items-center justify-between px-5 mx-auto md:mt-8 md:max-w-5xl pt-2 md:pt-0">
-	{{/* Pico responsive icon (square and text) */}}
 	<div class="flex items-center">
 		<a href="{{ .Site.Home.Permalink }}" class="inline-block font-bold no-underline select-none">
 			<h1 class="hidden md:block font-charter tracking-normal m-0">
@@ -12,17 +11,6 @@
 				{{ partial "icon" . }}
 			</div>
 		</a>
-		{{ if .IsTranslated }}
-		<div class="inline-block pl-2 ml-2 border-l border-gray-600">
-			{{ range .Translations }}
-			<a href="{{ .Permalink }}" class="no-underline inline-block px-1">
-				<span class="font-bold">
-					{{ .Language | upper }}
-				</span>
-			</a>
-			{{ end }}
-		</div>
-		{{ end }}
 	</div>
 
 	<nav class="">
