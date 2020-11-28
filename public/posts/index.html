@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+
+
+
+
+<title>
+	Brad Parbs
+	 - Posts 
+</title>
+
+<link href="https://bradparbs.com/posts/index.xml" rel="alternate" type="application/rss+xml" title="Brad Parbs" />
+
+
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+	
+
+
+
+
+
+<link rel="stylesheet" href="https://bradparbs.com/css/main.min.a48a35b569920ec8b2edc62fc9ddf82d.css" crossorigin="anonymous" media="screen"
+	integrity="md5-pIo1tWmSDsiy7cYvyd34LQ==">
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+</head>
+
+<body class="min-h-screen bg-white relative pb-24">
+	<div id="top"></div>
+
+<header class="w-full flex items-center justify-between px-5 mx-auto md:mt-8 md:max-w-5xl pt-2 md:pt-0">
+	
+	<div class="flex items-center">
+		<a href="https://bradparbs.com/" class="inline-block font-bold no-underline select-none">
+			<h1 class="hidden md:block font-charter tracking-normal m-0">
+				Brad Parbs
+			</h1>
+
+			<div class="md:hidden">
+				<div class="w-8 h-8 relative font-bold bg-white blend-diff">
+	<h1 class="absolute-center m-0 font-charter text-2xl text-gray-100 blend-diff select-none">
+		B
+	</h1>
+</div>
+			</div>
+		</a>
+		
+	</div>
+
+	<nav class="">
+		
+		<a href="/" class='mx-1 md:mx-2 hover:text-black no-underline'>
+			home
+		</a>
+		
+		<a href="/about/" class='mx-1 md:mx-2 hover:text-black no-underline'>
+			about
+		</a>
+		
+		<a href="/projects/" class='mx-1 md:mx-2 hover:text-black no-underline'>
+			projects
+		</a>
+		
+		<a href="/contact/" class='mx-1 md:mx-2 hover:text-black no-underline'>
+			contact
+		</a>
+		
+	</nav>
+</header>
+
+	
+
+	<main class="w-full px-4 pt-8 mx-auto md:max-w-4xl overflow-x-hidden md:overflow-visible ">
+
+    <article class="text-gray-700 sm:mx-12 mb-4">
+        <h1 class="font-bold font-thin text-3xl text-gray-700">
+            Page(/posts/a-beginners-guide-to-the-best-command-line-tools.md)
+        </h1>
+        <p><img  class="mx-auto my-4"  src="/images/beginners-guide-to-best-command-line-tools-header.png" alt=""
+	>
+</p>
+<p>As someone who loves the command line, I’m always striving to make my workflow easier, more efficient, and just overall better. Hopefully, by walking through my set up and my recommendations for the best command line tools, you’ll find some nifty tips and tricks you can adapt to make <em>your</em> workflow better too.</p>
+<p>The command line is a scary place if you’ve never been there before. It <em>is</em>. You can do some really powerful and dangerous things to your computer. Today, we’ll walk through some of the things I’ve done to make my command line interactions more pleasant and powerful.</p>
+<p>This won’t be an in depth look at <em>everything</em> you can do, but rather a glimpse into what <em>I</em> do. Don’t worry, those of you who are still learning; we’ll start with the easy stuff and work our way up to the more advanced business!</p>
+<p><em>Disclaimer: I work on a Mac, and most of this guide will be centered around that. However, most of these tools will work on Windows and most flavors of Linux.</em></p>
+<p><img  class="mx-auto my-4"  src="/images/cli.png" alt="cli"
+	>
+</p>
+<p><strong>Easy Installation</strong></p>
+<p>Before we get too far into the nitty-gritty of the really technical things, we’ll try to solve one of the things that snags a lot of beginners: installation. Thankfully, there are some tools to make it so we don’t need to run a ton of commands or compile most of the tools we’ll talk about.</p>
+<p>On a Mac, that tool is going to be <a href="http://brew.sh"  class="underline">Homebrew</a>
+. Homebrew is great as it brings one of people’s favorite things for Linux to Mac–the idea of packages and package management. A package manager is a tool that helps you to install software, and then keep track of that so you can easily update it. Also, Homebrew is smart enough to make sure you have all the required dependencies when installing something new. It’s really great, and we’ll talk a bit more about what it can do later.</p>
+<p>For now, we’ll run one simple command to install Homebrew:
+<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
+<p>Using Homebrew to install things couldn’t be easier. In your terminal, simply do <code>brew install &lt;package-to-install&gt; </code>.</p>
+<p><em>Note</em>: For those of you on Linux, you can replace <code>brew</code> with <code>apt-get</code>, and in most cases it will work. On Windows, many people suggest <a href="https://chocolatey.org/"  class="underline">Chocolatey NuGet</a>
+, which will do most of the same things, but doesn’t have quite the same number of packages available.</p>
+<p><strong>Your Shell</strong></p>
+<p>When you first open up Terminal (or another terminal program), you’ll probably be running the Bash shell. The shell is what processes commands you type and figures out what to do with them. Bash is widely used, and is the default on both Mac and Linux. Bash has also been around for a really long time–twenty five years! I can’t think of many pieces of software that have been around that long and are still used daily by millions.</p>
+<p>In this post, we won’t be going over many commands or how to use the command line, but instead covering tools. Check out WebDevStudio’s <a href="https://github.com/WebDevStudios/CLI-Cheat-Sheet"  class="underline">CLI cheat sheet</a>
+ to learn that.</p>
+<p><strong>Zsh</strong></p>
+<p>The first customization I’ve done in my terminal is replace Bash with something a bit more powerful and customizable; I use a shell called <a href="http://www.zsh.org/"  class="underline">Zsh</a>
+. I like Zsh because it’s a lot easier to customize your prompt, and the completion is more powerful than Bash. Other than that, most features are comparable to Bash. Where it shines, though, is with some helper tools (we’ll get to those in a minute).</p>
+<p><img  class="mx-auto my-4"  src="/images/brew-install-zsh.png" alt="brew-install-zsh"
+	>
+</p>
+<p>If you want to use Zsh, it’s pretty simple to install, because we now have Homebrew! We’ll just run one command, and we’ll be set.</p>
+<p><code>brew install zsh</code></p>
+<p>You’ll notice after the installation finishes, nothing really happens. We’ll have to change our shell to Zsh, and we do that with a pretty simple command:</p>
+<p><code>chsh -s $(which zsh)</code>.</p>
+<p>What this does is change our shell to use Zsh everytime we login. Now, simply close your terminal and reopen it, and you’ll be good to go with Zsh.</p>
+<p><strong>Oh My Zsh</strong></p>
+<p>Now that Zsh is installed, we want to start configuring it to work well for us. One of the easiest ways to start  is by installing <a href="https://github.com/robbyrussell/oh-my-zsh"  class="underline">Oh My Zsh</a>
+. Oh My Zsh is a Zsh configuration framework, and comes bundled with a ton of Zsh themes and plugins that save you a lot time setting up how you want your shell to look and function.</p>
+<p>Installing it is pretty simple, just do</p>
+<p><code>curl -L http://install.ohmyz.sh | sh</code> and you’ll be golden. Once this installation finishes, it will make a reference to check out your new</p>
+<p>…and you’ll be golden. Once this installation finishes, it will make a reference to check out your new</p>
+<p>Once this installation finishes, it will make a reference to check out your new <code>~/.zshrc </code>file. This is a hidden configuration file, and this is where you’ll start adding your settings in to make Zsh how <em>you</em> want it. Let’s walk through parts of the default file it creates for you, and some of the changes you’ll want to start making.</p>
+<p><strong>Oh My Zsh Configuration</strong></p>
+<p>Because it is a “dotfile,” you won’t see the file in your local filesystem, because it is hidden. We have two options, we can either open that in our text editor, or we can edit it in the command line. For now, we’ll open it in our text editor. If you’re using Sublime Text, you can simply run <code>subl ~/.zshrc</code>, if you’ve <a href="https://www.sublimetext.com/docs/2/osx_command_line.html"  class="underline">set up the subl alias</a>
+. If you’re using another text editor, you can use the command line option for that.</p>
+<p>You’ll notice that most of the options in your <code>.zshrc</code> are commented pretty well, and mostly self-explanatory. The two biggest options we’ll be covering are the <code>ZSH_THEME</code> and the <code>plugins</code>options.</p>
+<p>Before we get into those two options, I’ll quickly go over a few other options I recommend. Just add any of these on a new line if you’d like to use them. After you’ve changed a setting, you’ll need to close and reopen your teminal for it to take effect.</p>
+<ul>
+<li><code>COMPLETION_WAITING_DOTS=&quot;true&quot;</code> If you’re ever in a large directory and you try to tab complete, this will add some waiting dots so you know that Zsh is still working. A bit more helpful than just mashing the tab key until you see something.</li>
+<li><code>ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor) ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')</code> This will highlight the patterns you specify in a color of your choice. This example here will highlight any time you type <code>rm -rf</code> in red. This is helpful, as <code>rm -rf</code> is a potentially very dangerous command, and the reminder of that is very nice.</li>
+<li><code>setopt RM_STAR_WAIT</code> This will add a 10 second wait before you can confirm a wildcard deletion. Lots of people, myself included, are so used to confirming the removal of files, that we don’t stop to actually read what will be deleted. Better to have it now then add it after you make a mistake!</li>
+<li>Some options for our Zsh history. These will set our history to allow a ton more entires, ignore duplicate commands, and ignore some of the commands we don’t need a history of. This is useful because if you want to search for that command you ran a few weeks ago, you can do that a lot easier.
+<ul>
+<li><code>export HISTSIZE=32768;</code></li>
+<li><code>export HISTFILESIZE=$HISTSIZE;</code></li>
+<li><code>export HISTCONTROL=ignoredups;</code></li>
+<li><code>export HISTIGNORE=&quot;ls💿cd -:pwd:exit📅* --help&quot;;</code></li>
+</ul>
+</li>
+</ul>
+<p>Now for <code>ZSH_THEME</code> and <code>plugins</code>. First, we’ll start with our theme.</p>
+<p>First off is ZSH_THEME, which controls what your prompt looks like. There are <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes"  class="underline">quite a lot</a>
+ of themes available and built into Oh My Zsh, and switching between them is quite easy. You can look through that list of themes or check out <a href="http://zshthem.es/"  class="underline">zshthem.es</a>
+ to find one that works for you. The <code>agnoster</code> theme is quite a popular one, though it requires a special font to use. I’m personally a huge fan of <code>muse</code> and have built out a customized theme based on that.</p>
+<p>Once you’ve gotten a theme you like, its time to start adding some plugins.</p>
+<p><strong>Oh My Zsh Plugins</strong></p>
+<p>Oh My Zsh <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins"  class="underline">plugins</a>
+ are fantastic things. It allows you to easily activate a set of aliases, functions, and autocompletions. A good example of a plugin is the one for Homebrew, which we used earlier. By adding <code>brew</code> to the list in <code>plugins=( )</code>. After closing and re-opening your terminal, you’ll now have tab-completion for <code>brew</code>!</p>
+<p>If you browse through the list of plugins, you can simply find some tools for you to use and add them in. They’ll hopefully speed up your process, and it’s nice to have tab-completion for installed programs.</p>
+<p>The plugins I use are:</p>
+<ul>
+<li><code>brew</code> Simply adds tab completions and a <code>brews</code> command.</li>
+<li><code>brew-cask</code> Adds tab completions to brew cask (which we’ll cover later).</li>
+<li><code>catimg</code> There are a few Oh My Zsh like this that package an entire script within the plugin, not just tab-completion. <code>catimg</code> is used to display an image in your terminal. This is useful when you quickly want to preview an image before committing it to git or something.</li>
+<li><code>git</code> Adds lots of aliases for Git, as well as tab completion. The most useful alias it provides is <code>g</code> aliased to <code>git</code>, so anytime you want to use <code>git</code>, you can just do <code>g</code>. There are dozen more aliases that come with this, too.</li>
+<li><code>git-extras</code> This provides tab completions for the excellent <a href="https://github.com/tj/git-extras"  class="underline">Git extras</a>
+ tool. My favorite thing about this is the command <code>git summary</code>, which will show statistics about the current project, who has worked on it, and how long its been in progress.</li>
+<li><code>github</code> Adds tab completion to the <a href="https://github.com/defunkt/github-gem"  class="underline">Github gem</a>
+, which will let you fork Github repos, easily clone Github repos, and a lot more things.</li>
+<li><code>lol</code> This is a plugin that simply provides more aliases. I barely ever use this–sometimes just for fun. This will set up alises like <code>icanhas</code> to create a directory, or <code>gimmeh</code> to create a file. You probably don’t <em>need</em> this plugin.</li>
+<li><code>nyan</code> This is an alias to <code>nc -v nyancat.dakko.us 23</code> I’ll let you figure out what it does.</li>
+<li><code>osx</code> This gives you some command line aliases to manipulate Terminal or iTerm. Things like <code>tab</code> to open a new tab, <code>split_tab</code> to divide it in half, and a few other Mac-specific aliases.</li>
+<li><code>parbs-sites</code> This is a custom Zsh plugin I’ve created to execute some commands and do some tab completion. You can <a href="https://github.com/bradp/dotfiles/tree/master/zsh-custom/plugins/parbs-sites"  class="underline">download</a>
+ it and put it in your Zsh Custom folder, which out of the box is <code>~/.oh-my-zsh/custom/plugins</code>, and you’ll want to modify it to fit your filesystem. I use it to quickly jump to my <a href="https://github.com/Varying-Vagrant-Vagrants/VVV"  class="underline">VVV</a>
+ sites I’ve set up with <a href="https://github.com/bradp/vv"  class="underline">vv</a>
+.</li>
+<li><code>sublime</code> This will add the <code>stt</code> command, to open an entire directory in Sublime Text, as well as setting up the <code>subl</code> and <code>st</code> aliases to edit a single file.</li>
+<li><code>vagrant</code> Tab completion for <a href="http://vagrantup.com"  class="underline">Vagrant</a>
+.</li>
+<li><code>z</code> Z is awesome, and we’ll talk about this in just a bit.</li>
+<li><code>zsh-syntax-highlighting</code> This is one of my favorite plugins, and I recommend it to anyone who is using Zsh. <a href="https://github.com/zsh-users/zsh-syntax-highlighting"  class="underline">Installation</a>
+ is very simple; all you have to do is clone it into your custom folder, and add it to your plugins list. It will highlight commands in either green or red, depending on if they are actual commands or not.There are dozens more plugins, and if there is a popular command line tool you use, chances are someone has made a plugin to speed up usage of it.</li>
+</ul>
+<p><strong>Aliases</strong></p>
+<p>A lot of the plugins I’ve listed add aliases, and those are one of my favorite things on the command line. An alias is a way to say “When I type x, actually run y.” This is useful when you have commands that you run on a regular basis that you want to make a bit easier.</p>
+<p>To define an alias, simply add <code>alias something=&quot;another command&quot;</code> somewhere in your .zshrc. You’ll need to close and repopen your teminal for it to take effect, just like before.</p>
+<p>If you have a projects directory, and every day you navigate to that directory, you can easily make an alias to speed that up. I have an alias named <code>box</code> that is set to run <code>cd ~/Dropbox</code>. So when I run <code>box</code> in my terminal, I’m placed in that directory. I also have one for my Sites folder, one for my other working projects, and a few more to ease navigation.</p>
+<p>Another great use is when you have long commands, or multiple commands you run together. When I’m using VVV, a lot of times I’ll want to run <code>vagrant up</code>, and then <code>vagrant provision</code>, and then <code>vagrant ssh</code>; so that the box turns on, sets it self up, and then puts me in a command prompt inside of it. So I’ve made an <a href="https://github.com/bradp/dotfiles/blob/8d1eed1eb9f3d2d45df3e33b20e5df25361e8035/.aliases#L46"  class="underline">alias</a>
+ that does that: <code>alias vup=&quot;vagrant up &amp;&amp; vagrant provision &amp;&amp; vagrant ssh&quot;</code>.</p>
+<p>Any command you run that you find yourself using multiple times, you can probably shorten it up. It’s also really helpful for commands that you can never remember exactly how to call them. For example, I need to copy my public SSH key to my clipboard pretty regularly to add to new servers and things like that. I have an alias that runs that grabs it, copies it, and confirms (to me) it did that. <code>alias pubkey=&quot;more ~/.ssh/id_rsa.pub | pbcopy | printf '=&gt; Public key copied to pasteboard.\n'&quot;;</code>.</p>
+<p>As you can see, you can do some pretty neat things with aliases.</p>
+<p><strong>Functions</strong></p>
+<p>One downside of aliases is that it’s not very easy to parse arguments you pass in. If I wanted an alias where I could pass in a site name, and it would tail the error log of that site, it would be some tricky work to get that behaving properly. That’s where functions come in.</p>
+<p>Here’s that function to tail a log: <code>function wpdebug() { tail -f $1/wp-content/debug.log }</code> .</p>
+<p>The $1 in there stands for whatever you pass in. So on our terminal, we’d call this <code>wpdebug ~/sites/vvv/my_site/</code>, and it would tail the log. Functions can be extremely powerful, but we don’t need to go over them in-depth right now. I use functions in the same way I use aliases: to replace commands I don’t to have to type over and over, or to make it a bit faster to type.</p>
+<p>This is a function I use as a wrapper to the <code>find</code> command: <code>function f() { find . -name &quot;$1&quot; }</code> As you can see, writing these functions is just as easy as writing an alias.</p>
+<p><strong>Breaking .zshrc up</strong></p>
+<p>Once you’ve started added some aliases and some functions into your .zshrc file, you’ll notice it starts to get a bit disorganized. When I first started using Zsh, I tried to keep that file organized. Aliases at the top, then functions, then settings, and then other things, but it quickly got out of hand. Thankfully, we can use a pretty handy trick to break it into separate files.</p>
+<p>We’re going to be leveraging a command called <code>source</code>. What source does is read a file and execute the contents in the current shell–which is exactly what is happening when .zshrc is read. This is also the reason we’ve had to close and reopen our terminal each time we made a change. Reopening our terminal is re-sourcing that .zshrc file. (Which also means you can run <code>source ~/.zshrc</code> instead of closing and reopening your terminal).</p>
+<p>We’re going to use the source command to break up our .zshrc file and make it a bit more manageable. As you can see in my <a href="https://github.com/bradp/dotfiles/blob/master/.zshrc"  class="underline">.zshrc file</a>
+, I’ve broken it up into a few other files: .aliases, .functions, .exports, and .secret.</p>
+<p>If you break them up this way, you know exactly where all your aliases, functions, or environment settings are. I also use .secret, because I sync my .zshrc and these other dot-files to Github, and I use .secret to put any aliases that contain passwords or confidential information.</p>
+<p>By now, you should have a pretty solid setup with Zsh, Oh My Zsh, and Brew. Lots of people stop here, but we’ll go a bit further down the rabbit hole to make your life even easier.</p>
+<p><strong>Z</strong></p>
+<p>Earlier, we added <code>z</code> as a plugin in Oh My Zsh, but we didn’t talk about it at all. Z is one of my favorite tools I use. It’s a tool to “jump around,” and it’s magical.</p>
+<p>The way you use z is you simply do <code>z &lt;name of a directory&gt;</code> and you’ll be there. You don’t need to <code>cd</code> to some long folder path, you simply type the name of it.</p>
+<p>Z works by keeping tracking of every directory you go into on the command line, and weighting them by how many times you’ve done it. So, right after you install Z, it won’t be able to do much, but after a short while, it will start learning which project folders you go into.</p>
+<p>You can also specify a few flags, so <code>z -t wp-content</code> will take you to the most recently accessed wp-content folder you’ve been in.</p>
+<p>To install z, simple add it to your plugins list in Oh My Zsh, as Oh My Zsh contains the entire code of z.</p>
+<p><strong>ag</strong></p>
+<p>Z is great when you’re moving to a specific directory, but what if you want to find a certain file or line of code? That’s where <a href="https://github.com/ggreer/the_silver_searcher"  class="underline">the silver searcher</a>
+ comes in. The silver search, aka ag, is great. It is an improvement over the many tools there are for searching on the command line. The biggest thing is that it is SUPER FAST. There are a lot of technical things in does in the background to get that speed, but the thing you should know is that it is fast.</p>
+<p>You can easily search your entire codebase for a certain function call, or for a file you can’t remember where it was, anything you want. To put it in perspective, I just searched the entire WordPress codebase for <code>wp_insert_post()</code>, and it returned all the results in less than 1/10 of a second. And this is on a four year old machine. Pretty good.</p>
+<p><img  class="mx-auto my-4"  src="/images/ag-search.png" alt="ag-search"
+	>
+</p>
+<p>To install ag, simply do <code>brew install the_silver_searcher</code>, and you’re all good to go.</p>
+<p><strong>Some more Brew awesomeness</strong></p>
+<p>I’ve added quite a few things with Brew, and some of my favorites are:</p>
+<ul>
+<li>git-extras</li>
+<li>git-flow</li>
+<li><a href="https://github.com/jonas/tig"  class="underline">tig</a>
+</li>
+<li>tree</li>
+<li>vv</li>
+</ul>
+<p>There are so many package available on Homebrew, so go ahead and try them out!</p>
+<p><strong>Brew Cask</strong></p>
+<p>We’ve talked a lot about Homebrew, and now its time for one my favorite additions to it: <a href="http://caskroom.io/"  class="underline">Homebrew Cask</a>
+. Cask allows you to install Mac applications like Google Chrome. I love that you can also update these applications over the command line. In fact, I’ve set up a script to run every night that updates all of my brew-installed programs, as well as all my cask-installed applications. The other benefit is that you can write a <a href="https://github.com/bradp/dotfiles/blob/master/misc/setup-new-mac.sh"  class="underline">script</a>
+ that will set up a new computer with all of these applications as well.</p>
+<p>To install Brew Cask, simply run <code>brew install caskroom/cask/brew-cask</code>, and you’re all set. Then to install an application, it’s just <code>brew cask install &lt;application name&gt;</code>. You can search for available apps just by doing <code>brew cask search &lt;something&gt;</code>. This is useful to find the exact name of something.</p>
+<p>You can even use Cask to install fonts and specific versions of software, if you’d like.</p>
+<p><strong>Dotfiles</strong></p>
+<p>One thing you’ll notice is that now you’ll probably have a large amount of these hidden files on your system. You probably want to keep your customizations that you’ve done for Zsh and other things. I recommend using a system like I use to keep them under version control. You can also very quickly copy them onto another server, to make your settings the same anywhere you go.</p>
+<p>I’ve <a href="https://github.com/bradp/dotfiles"  class="underline">created a repo on Github</a>
+ that contains all of my dot files, and you are more than welcome to use it as a starting place.</p>
+<p>The general concept of keeping your dotfiles under version control is that you want to move all of the important ones into a folder, and then make a “shortcut” from the original location to that new folder. There are many ways to do this, but the way I’ve done it is using a simple <a href="https://github.com/bradp/dotfiles/blob/master/Rakefile"  class="underline">Rakefile</a>
+. In your new folder, you can just run the command <code>rake</code>, and it will create the correct files for you in the correct place.</p>
+<p><img  class="mx-auto my-4"  src="/images/my-dotfiles.png" alt="my-dotfiles"
+	>
+</p>
+<p>There are a number of different tools that do the same thing, such as <a href="https://github.com/anishathalye/dotbot"  class="underline">Dotbot</a>
+, <a href="https://github.com/wking/dotfiles-framework"  class="underline">Dotfiles framework</a>
+, or one of my favorites, <a href="https://github.com/technicalpickles/homesick"  class="underline">Homesick</a>
+. Each one of these has a bit different way to install and use them, so read up on it.</p>
+<p><strong>More on my dotfiles</strong></p>
+<p>You’ll notice as you look at my dotfiles, there are some things we didn’t cover, but are useful to point out:</p>
+<p>I have a <a href="https://github.com/bradp/dotfiles/blob/master/.gemrc"  class="underline">.gemrc</a>
+ file that speeds up gem installation by not bringing over documentation or tests for any gems I install. I recommend this, as it really helps for anything you need to do <code>gem install &lt;something&gt;</code> for.</p>
+<p>I also have a <a href="https://github.com/bradp/dotfiles/blob/master/.zlogin"  class="underline">.zlogin</a>
+ file, which gets included by default in zsh. I have it check for the existence of a specific directory, and if that exists, it will go into it. I use this for VVV to automatically go to my sites folder when I SSH into Vagrant.</p>
+<p>There is also <a href="https://github.com/bradp/dotfiles/blob/master/.hushlogin"  class="underline">.hushlogin</a>
+, which will suppress any “Welcome” messages on a remote server when you SSH in. This file can be empty.</p>
+<p>I use a <a href="https://github.com/bradp/dotfiles/blob/master/.global_ignore"  class="underline">global .gitignore</a>
+ file, so that I don’t need to add a ton of things to each of my gitignore files. This is helpful as there are a lot of file types you never want in version control.</p>
+<p>I also have a <a href="https://github.com/bradp/dotfiles/tree/master/bin"  class="underline">folder of different scripts and commands</a>
+. Most of these are things a bit bigger than would be manageable in my .aliases or .functions file, so they go here. They are documented in the <a href="https://github.com/bradp/dotfiles/blob/master/README.md"  class="underline">README</a>
+, and there are some useful things there.</p>
+<p>Lastly, I have a file to <a href="https://github.com/bradp/dotfiles/blob/master/misc/bootstrap"  class="underline">set up my dotfiles on a new server</a>
+, and one to set up an <a href="https://github.com/bradp/dotfiles/blob/master/misc/setup-new-mac.sh"  class="underline">entirely new Mac</a>
+. These are things you probably don’t need, but helpful to have an example of how to do it if you need to.</p>
+<p><strong>Outro</strong></p>
+<p>Hopefully, by now you’ll have a great setup for your command line. There are a lot more tools out there that I didn’t cover, but these are the ones I use on a daily basis. It’s very easy to add in tools, but just be cautious to only add things you’ll actually use.</p>
+
+    </article>
+
+    <article class="text-gray-700 sm:mx-12 mb-4">
+        <h1 class="font-bold font-thin text-3xl text-gray-700">
+            Page(/posts/getting-started-vagrant-vvv-local-development.md)
+        </h1>
+        <p><img  class="mx-auto my-4"  src="/images/vagrant.png" alt="vagrant"
+	>
+</p>
+<p>When I started doing web development, I think I started the way a lot of us did. You have a site you want to work on, so you connect with FTP, download a file, modify it, upload it back up, and then refresh the page to see if your changes worked. This process doesn’t really work when you’re working with a team of people, or on a site that people are actively going to. If your teammate edits the same file as you, someone’s changes may be lost, and if you upload something with an error in it, you may break the site for people currently browsing it. This isn’t a fun process.</p>
+<p>The solution to combat this “cowboy coding” is to not work directly on a server, but rather on a server that is on your local machine. There are a ton of ways to do this, and I’ll walk you through what I do.</p>
+<p>When doing any sort of design or development, you want to work locally. This is the best way to develop, and has tons of benefits. Like these:</p>
+<ul>
+<li>Faster. No waiting for files to upload via FTP before you can refresh your browser and see your changes.</li>
+<li>Easier debugging. Because everything is running on your system, setting up and using xDebug or other debugging tools is quite a bit easier.</li>
+<li>Don’t need an internet connection work on things.</li>
+<li>Less fear of screwing up. When working locally, you’re free to experiment and play around, as your work is not affecting current users.</li>
+</ul>
+<p>I use <a href="https://www.vagrantup.com/"  class="underline">Vagrant</a>
+ and a nifty tool called <a href="http://github.com/varying-vagrant-vagrants/vvv"  class="underline">Varying Vagrant Vagrants</a>
+ (VVV) to power my local development. This, coupled with some tools I’ve written to make my life easier, is a very enjoyable way to work locally. I’ll walk through setting up VVV, as well as a helper tool VV, and how to use both.</p>
+<p><strong>So what’s Vagrant?</strong></p>
+<p><img  class="mx-auto my-4"  src="/images/vagrant.png" alt="vagrant"
+	>
+</p>
+<p>Vagrant is a toolkit that runs on top of VirtualBox, VMWare, or another virtual machine provider on your local machine. Vagrant will allow you to work with these virtual machines to run your code, while you keep your entire workflow on your local computer.</p>
+<p>Vagrant is configured all within one file–the Vagrantfile. This allows you to just do a “vagrant up” on the command line, and Vagrant will set up a virtual machine configured exactly how it should be.</p>
+<p>Vagrant allows you to create Vagrant boxes, which are basically an image of a machine that you can pull down. This, coupled with some nifty provisioning code, is what gives VVV its magic.</p>
+<p><strong>What is VVV?</strong></p>
+<p><img  class="mx-auto my-4"  src="/images/vvv.png" alt="vvv"
+	>
+</p>
+<p>Varying Vagrant Vagrants is a Vagrant setup that provides a great start for local WordPress development. Whether you’re building plugins, themes, or full site, a local VVV installation is the best place to do your development.</p>
+<p><strong>Setting up VVV</strong></p>
+<p>Getting VVV set up is pretty simple. You can follow along with the guide <a href="https://github.com/varying-vagrant-vagrants/vvv"  class="underline">here</a>
+.</p>
+<ul>
+<li>First you’ll want to install VirtualBox. You can probably switch this out for VMWare or something else, but Virtualbox is free and works perfectly for our needs.</li>
+<li>You’ll also want to install Vagrant. VVV’s README recommends Vagrant 1.6.x, but I’m running 1.7 with absolutely no problems, so you’ll probably be fine with the latest version.</li>
+<li>You’ll also want the vagrant-hostsupdater plugin. This is optional, but highly recommended. This lets you easily set up custom domains to use.</li>
+<li>VVV recommends installing the vagrant-triggers plugin, but I’ve actually run into some issues with this installed. If you choose to use this, disabling it should be your first step if you have issues.</li>
+</ul>
+<p>After installing all the above requirements, just run <code>git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git</code> on the command line where you’d like your local installation  and then a <code>vagrant up</code>. Boom! You’re using VVV.</p>
+<p>This creates some local sites for you to use (keep in mind, these links <em>will not work</em> unless you have the software up and running):</p>
+<ul>
+<li><a href="http://local.wordpress.dev/%20"  class="underline">The latest stable, released version of WordPress</a>
+</li>
+<li><a href="http://local.wordpress-trunk.dev/"  class="underline">The current development version of WordPress</a>
+</li>
+<li><a href="http://src.wordpress-develop.dev/%20"  class="underline">The current development version of WordPress</a>
+, with all files</li>
+<li><a href="http://build.wordpress-develop.dev/"  class="underline">The version of those development files built with Grunt</a>
+</li>
+<li><a href="http://vvv.dev/%20"  class="underline">A default dashboard</a>
+ containing several useful tools</li>
+</ul>
+<p><strong>Using VVV</strong></p>
+<p>Once you’ve set up VVV, you’ll be able to access above sites in your browser and the files inside the folder where you installed VVV. This is a perfect set up to start developing themes and plugins while testing on both the current version of WordPress, as well as the currently in-development version.</p>
+<p>There are a few command line commands you’ll want to know when using VVV:</p>
+<p><strong><code>vagrant up</code></strong> – When in the VVV root directory, this will start the virtual machine that powers VVV. It will set up your hosts file with the correct local domain names, update your local versions of WordPress, and run any custom init scripts you have set up. (More on this later!)</p>
+<p><strong><code>vagrant halt</code></strong> – This pauses Vagrant. This is useful when you’re on battery power, aren’t using VVV, and you don’t want to run a virtual machine in the background.</p>
+<p><strong><code>vagrant provision</code></strong> – This runs provisioning scripts. These are the things that VVV uses to make sure it is set up correctly. You generally don’t need to do this all the time, but I recommend running this command if you start having issues and want to start troubleshooting.</p>
+<p><strong><code>vagrant ssh</code></strong> – And this connects you to VVV via ssh. This is probably my favorite command, as it allows you to run commands inside of the virtual machine. I use this mostly to run WP-CLI and PHPUnit things inside of VVV.</p>
+<p>Vagrant also has more commands, but these are the ones you’ll mostly need and use when working with it for VVV on a daily basis.</p>
+<p><strong>Setting up more local sites</strong></p>
+<p>VVV has a nifty feature that allows you to create new sites. If you’re working on a project, it is useful to have a separate local installation for it, rather than squeezing it into one of the other ones. I’ve built a small command line tool to help automate the setup and management of this called <a href="https://github.com/bradp/vv"  class="underline">Variable VVV</a>
+.</p>
+<p><img  class="mx-auto my-4"  src="/images/vv.png" alt="vv"
+	>
+</p>
+<p><strong>Setting up VV</strong></p>
+<p>If you have <a href="http://brew.sh"  class="underline">Homebrew</a>
+ installed, you simply run <code>brew install bradp/vv/vv</code> in your terminal application. That’s it!</p>
+<p>If you don’t have Homebrew installed, it’s very quick and really useful.</p>
+<p><strong>Using VV</strong></p>
+<p>Once installed, you can run <code>vv</code> anywhere you’d like. If vv can’t automatically find your VVV installation, you will be prompted for the path. It will also save this into a configuration file in <code>~/.vv-config</code> so you won’t be prompted again.</p>
+<p>You can read the <a href="https://github.com/bradp/vv"  class="underline">documentation</a>
+ on Github. It is constantly getting new features and fixes, but for the most part, you’ll want to run the following commands:<img  class="mx-auto my-4"  src="/images/vv-terminal.png" alt="vv-terminal"
+	>
+</p>
+<p><strong><code>vv list</code></strong> – Lists all local sites.</p>
+<p><strong><code>vv create</code></strong> – Walks you through a wizard to create a new site.</p>
+<p><strong><code>vv delete</code></strong> – Walks you through removing a site.</p>
+<p>The wizard that VV walks you through can also all be done with flags on the original command, so creating the same site as in our screenshot could be done like so: <code>vv create --domain testing_site.dev --nametesting_site --debug --sample-content.</code></p>
+<p>VV has a lot more features and information covered in the <a href="https://github.com/bradp/vv"  class="underline">README on Github</a>
+, and should be read through. It has support for site blueprints which will install a set of plugins and themes you choose, deployments, and a lot more.</p>
+<p>Hopefully, now you’ll be a bit more comfortable installing and using VVV and VV to power your local development. Both projects have active Github repositories, and everyone working on the projects is always happy to help.</p>
+
+    </article>
+
+    <article class="text-gray-700 sm:mx-12 mb-4">
+        <h1 class="font-bold font-thin text-3xl text-gray-700">
+            Page(/posts/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-timessetting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times.md)
+        </h1>
+        <p>One of the most enjoyable parts about writing code is writing efficient and performant functionality. No matter how fast your code is, if your server itself isn’t running to it’s maximum performance, you’re not delivering your site as fast as you could be. By setting up <a href="http://nginx.org/"  class="underline">Nginx</a>
+ and the new <a href="http://hhvm.com/"  class="underline">HHVM</a>
+, you can get your server delivering fully loaded pages faster than most servers answer a request.</p>
+<p>HHVM is an open-source virtual machine designed for executing programs written in Hackand PHP. HHVM uses a just-in-time (JIT) compilation approach to achieve superior performance while maintaining the development flexibility that PHP provides.</p>
+<p>It is worth noting that HHVM isn’t 100% compatible with all of PHP, so if you’re using obscure functions, you may run into an issue. In all of my testing of WordPress, I never once had this problem, but it is something to keep in mind.</p>
+<p>In this post, we’ll set up both Nginx and HHVM from scratch, and then install and setup WordPress. If you follow this guide, you can have an insanely fast server setup in less than an hour.</p>
+<p>This post is written for specifically Ubuntu 12.04 LTS and 14.04 LTS. The steps outlined will probably work on other versions, and with some modifications most likely anywhere. I prefer Ubuntu, though. I’ll be going through this on a Ubuntu 14.04 LTS installation.</p>
+<p>I’m taking these steps on a brand new <a href="https://www.digitalocean.com/"  class="underline">Digital Ocean</a>
+ VPS droplet, but you can use the server of your choice.</p>
+<p>We want to start with a brand new installation, and install everything we will need. Our first step is updating all of the built in software, and then installing some small useful tools we will want.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get update
+$ sudo apt-get install -y unzip vim git-core curl wget build-essential
+</code></pre></div><p>The <code>-y</code> flag we’re using for <code>apt-get install</code> will tell apt that we want to answer <code>Yes</code> to every question about whether or not we want to install a package. Because we’re also running as root (sudo), we want to only install from trusted sources, like the ones that are already added to Ubuntu.</p>
+<p>We now want to install Nginx. It’s also possible to run HHVM with Apache, but our goal is speed and performance so we want to use Nginx. Nginx is a reverse proxy server, as well as a normal web server, and also gives us nice load balancing and caching.</p>
+<p>The entire goal of Nginx and HHVM is to speed up everything our webserver does to create our final HTML pages that WordPress generates.</p>
+<p>Installing Nginx is actually super simple on a new Ubuntu installation. We tell ‘apt’, our handy package manager how to find Nginx, and then we can just do a ‘apt-get install’ like we did previously.</p>
+<p><code>$ sudo add-apt-repository -y ppa:nginx/mainline</code></p>
+<p><img  class="mx-auto my-4"  src="/images/1.png" alt="1"
+	>
+</p>
+<p>After we do this, we want to do another at-get update to fetch the Nginx package we just told ‘apt’ about. Now we’re ready to install Nginx.</p>
+<p><code>$ sudo apt-get install -y nginx</code></p>
+<p>That’s it! Nginx is installed. We’ll configure it in just a bit.</p>
+<p>Now we’re ready to install HHVM. For Ubuntu 12.04 and 14.04, we can follow the <a href="https://github.com/facebook/hhvm/wiki/Prebuilt-Packages-on-Ubuntu-12.04"  class="underline">official guide</a>
+.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Ubuntu  12.04: $ sudo add-apt-repository -y ppa:mapnik/boost
+$ wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add - $ echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list
+$ sudo apt-get update
+$ sudo apt-get install -y hhvm Ubuntu  14.04: $ wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add - $ echo deb http://dl.hhvm.com/ubuntu trusty main | sudo tee /etc/apt/sources.list.d/hhvm.list
+$ sudo apt-get update
+$ sudo apt-get install -y hhvm
+</code></pre></div><p>So far, everything goes pretty smoothly. The longest part is probably waiting for the server to pull in all of the packages for the ‘apt-get update’ every time.</p>
+<p>After installing HHVM, we get a pretty handy message.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">********************************************************************
+* HHVM is installed.  Here are some more things you might want to do:
+*  *  Configure your webserver to use HHVM:
+	* $ sudo /usr/share/hhvm/install_fastcgi.sh
+	* $ sudo /etc/init.d/nginx restart
+	* $ sudo /etc/init.d/apache restart
+	* $ sudo /etc/init.d/hhvm restart
+*  *  Start HHVM at boot:
+	* $ sudo update-rc.d hhvm defaults
+*  *  Run command line scripts with HHVM:
+	* $ hhvm whatever.php
+*  *  Use HHVM for  /usr/bin/php even if you have php-cli installed:
+	* $ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60
+********************************************************************
+</code></pre></div><p>This is nice because it tells us how to do our next few steps.</p>
+<p>First we’ll run the first of the commands they tell us about to resart Nginx and install FastCGI using HHVM.</p>
+<p><code>$ sudo /usr/share/hhvm/install_fastcgi.sh</code></p>
+<p>After this, we want to tell Ubuntu to run HHVM on system start.</p>
+<p><code>$ sudo update-rc.d hhvm defaults</code></p>
+<p>And then we’ll restart HHVM, just for good measure.</p>
+<p><code>$ sudo service hhvm restart </code></p>
+<p>At this point, HHVM is currently running, and will run whenever our server is started up. We can verify that HHVM is installed by creating a PHP file and making sure that HHVM can run it.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ touch test.php
+$ echo &#34; test.php
+$ hhvm test.php
+</code></pre></div><p>We should get a return of “HipHop”. If that’s what you see, we know that HHVM is working perfectly.</p>
+<p>At this point, we can start setting up the configuration for a website, but before we do that, there’s another handy command that our HHVM installation results screen gave us to have HHVM “pretend” to be PHP over the command line.</p>
+<p><code>$ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60</code></p>
+<p>What this lets us do is use PHP command line tools like WPCLI, PHPUnit, Composer, and all of those things, just like if we were running PHP instead of HHVM.</p>
+<p>Let’s test this real quick by doing:</p>
+<p><code>$ php -v</code></p>
+<p>You should get a result like this:</p>
+<p><img  class="mx-auto my-4"  src="/images/3.png" alt="3"
+	>
+</p>
+<p>One really nice thing about HHVM and Nginx is there is very little configuration we need to do to start working. We don’t really have to do anything at all and it is already running. The default file location of our files is “/usr/share/nginx/html”, and there is already a simple HTML file there. I like to make an alias so that I can quickly get to this location.</p>
+<p><code>$ echo &quot;www=&quot;cd /usr/share/nginx/html&quot;&quot;  &gt;&gt;  ~/.bashrc</code></p>
+<p>This creates an alias so we can simply type “www” and change to our file directory.</p>
+<p>At this point we want to install MySQL, so that we can actually use WordPress, and not just PHP files. Oddly, this portion has more configuration then anything we’ve done up to this point. After running the following command, we’ll get a password screen to set our root password.</p>
+<p><code>$ sudo apt-get install mysql-server</code></p>
+<p><a href="/images/4.png"  class="underline"><img  class="mx-auto my-4"  src="/images/4.png" alt="4"
+	>
+</a>
+</p>
+<p>Now we’re ready to install WordPress and set up Nginx to work with it.</p>
+<p>We’re going to head to our Nginx HTML folder and grab a copy of wordpress and unzip it.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd /usr/share/nginx/html
+$ wget http://wordpress.org/latest.zip
+$ unzip latest.zip
+</code></pre></div><p>And we’ll also do a little housekeeping while we’re here.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ mv wordpress/*  .
+$ rmdir wordpress
+$ rm latest.zip
+$ rm index.html
+```
+
+
+Now we’ll set up our MySQL database.
+
+`$ mysql -u root -pYOURPASSWORDHERE`
+
+
+![5](/images/5.png)
+
+Now we’re inside a MySQL prompt inside our SSH prompt inside our terminal program. Prompt-ception!
+
+First we create a database, and then add a user, set that user’s password, give that user permissions, refresh MySQL privileges, and then exit out of our MySQL prompt. Make sure you write down this information, as you’ll need it for wp-config.php later.
+
+```
+$ create database databasename;
+$ create user username@localhost;
+$ set password for username@localhost = password(&#34;yourpasswordhere&#34;);
+$ grant all privileges on databasename.* to username@localhost identified by &#39;yourpasswordhere&#39;;
+$ flush privileges;
+$ exit;
+```
+
+
+And now let’s create and edit wp-config.php. To edit the file, you can either SFTP in and edit this file locally, or use Nano or Vim on the server. We’ll use Vim.
+
+`$ cp wp-config-sample.php wp-config.php`
+`$ vi wp-config.php `
+
+For Vi, to start typing you want to hit ‘i’ to go into insert mode, and when you’re ready to save and quit, just hit ‘ESC’ and then ‘:wq’. It’s confusing, I know.
+
+At this point, we’re ready to set up Nginx to be able to run WordPress. We’re going to edit `/etc/nginx/sites-available/default`.
+
+`$ sudo vi /etc/nginx/sites-available/default`
+
+We want to change two things in our configuration.
+
+We want to change Nginx to also look for PHP files.
+
+```
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server ipv6only=on;
+	root /usr/share/nginx/html;
+	*index.php* index index.html index.htm;  # Make site accessible from http://localhost/
+	server_name localhost;
+	include hhvm.conf;
+}
+```
+
+And we want to change how files are loaded.
+
+```
+location /  {
+	# First attempt to serve request as file, then
+	# as directory, then fall back to displaying a 404.
+	try_files $uri $uri/ /index.php?q=$uri&amp;$args;
+}
+```
+
+Your complete file should look like [this](https://gist.github.com/bradp/2e71455f9795fb2e6b2d):
+
+```
+1.  # You may add here your
+2.  # server {
+3.  #    ...
+4.  # }
+5.  # statements for each of your virtual hosts to this file
+6.   
+7.  ##
+8.  # You should look at the following URL&#39;s in order to grasp a solid understanding
+9.  # of Nginx configuration files in order to fully unleash the power of Nginx.
+10.  # http://wiki.nginx.org/Pitfalls
+11.  # http://wiki.nginx.org/QuickStart
+12.  # http://wiki.nginx.org/Configuration
+13.  #
+14.  # Generally, you will want to move this file somewhere, and start with a clean
+15.  # file but keep this around for reference. Or just disable in sites-enabled.
+16.  #
+17.  # Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+18.  ##
+19.   
+20.  server {
+21.  listen 80 default_server;
+22.  listen [::]:80 default_server ipv6only=on;
+23.   
+24.  root /usr/share/nginx/html;
+25.  index.php index.html index.htm;
+26.   
+27.   # Make site accessible from http://localhost/
+28.  server_name localhost;
+29.  include hhvm.conf;
+30.   
+31.  location /  {
+32.   # First attempt to serve request as file, then
+33.   # as directory, then fall back to displaying a 404.
+34.  try_files $uri $uri/ /index.php?q=$uri&amp;amp;$args;
+35.   # Uncomment to enable naxsi on this location
+36.   # include /etc/nginx/naxsi.rules
+37.   }
+38.   
+39.   # Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests
+40.   #location /RequestDenied {
+41.   #    proxy_pass http://127.0.0.1:8080;
+42.   #}
+43.   
+44.   #error_page 404 /404.html;
+45.   
+46.   # redirect server error pages to the static page /50x.html
+47.   #
+48.   #error_page 500 502 503 504 /50x.html;
+49.   #location = /50x.html {
+50.   #    root /usr/share/nginx/html;
+51.   #}
+52.   
+53.   # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+54.   #
+55.   #location ~ .php$ {
+56.   #    fastcgi_split_path_info ^(.+.php)(/.+)$;
+57.   #    # NOTE: You should have &#34;cgi.fix_pathinfo = 0;&#34; in php.ini
+58.   #
+59.   #    # With php5-cgi alone:
+60.   #    fastcgi_pass 127.0.0.1:9000;
+61.   #    # With php5-fpm:
+62.   #    fastcgi_pass unix:/var/run/php5-fpm.sock;
+63.   #    fastcgi_index index.php;
+64.   #    include fastcgi_params;
+65.   #}
+66.   
+67.   # deny access to .htaccess files, if Apache&#39;s document root
+68.   # concurs with nginx&#39;s one
+69.   #
+70.   #location ~ /.ht {
+71.   #    deny all;
+72.   #}
+73.  }
+74.   
+75.   
+76.  # another virtual host using mix of IP-, name-, and port-based configuration
+77.  #
+78.  #server {
+79.  #    listen 8000;
+80.  #    listen somename:8080;
+81.  #    server_name somename alias another.alias;
+82.  #    root html;
+83.  #    index index.html index.htm;
+84.  #
+85.  #    location / {
+86.  #        try_files $uri $uri/ =404;
+87.  #    }
+88.  #}
+89.   
+90.   
+91.  # HTTPS server
+92.  #
+93.  #server {
+94.  #    listen 443;
+95.  #    server_name localhost;
+96.  #
+97.  #    root html;
+98.  #    index index.html index.htm;
+99.  #
+100.  #    ssl on;
+101.  #    ssl_certificate cert.pem;
+102.  #    ssl_certificate_key cert.key;
+103.  #
+104.  #    ssl_session_timeout 5m;
+105.  #
+106.  #    ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+107.  #    ssl_ciphers &#34;HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES&#34;;
+108.  #    ssl_prefer_server_ciphers on;
+109.  #
+110.  #    location / {
+111.  #        try_files $uri $uri/ =404;
+112.  #    }
+113.  #}
+```
+
+Now we need to restart Nginx, and start the WordPress installation.
+
+`$ sudo service nginx restart`
+
+At this point you can navigate in your browser to your site and you should be good to go!
+
+![load-times](/images/load-times.png)
+
+Here’s a screenshot a stresstest of a site running default 2014, with the steps outlined above. As you can see, these results are amazing for a $5/month server.
+</code></pre></div>
+    </article>
+
+
+	</main>
+
+	<div class="absolute bottom-0 w-full"><footer class="w-full h-24 text-center text-xs text-gray-400 bg-black relative">
+	<div class="w-full px-6 md:pt-0 md:mx-auto md:max-w-5xl flex flex-1 space-between items-center absolute-center">
+		<a href="https://bradparbs.com/" class="absolute">
+			<div class="w-8 h-8 relative font-bold bg-white blend-diff">
+	<h1 class="absolute-center m-0 font-charter text-2xl text-gray-100 blend-diff select-none">
+		B
+	</h1>
+</div>
+		</a>
+
+		<div class="h-full flex-1">
+			<span class="select-none">made with ❤️ in mke</span>
+		</div>
+	</div>
+</footer>
+</div>
+</body>
+
+</html>

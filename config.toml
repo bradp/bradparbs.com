@@ -4,15 +4,13 @@ enableEmoji = true
 languageCode = 'en-us'
 theme = 'pico'
 paginate = 10
-title = 'Brad Parbs - Milwaukee WordPress developer'
-description = "Brad Parbs. Milwaukee WordPress developer."
+title = 'Brad Parbs'
+description = "Brad Parbs - Milwaukee WordPress developer."
 email = "brad@bradparbs.com"
 favicon = '/favicon.png'
 
 [params]
-customCSS = [
-	"css/style.sass",
-]
+# customCSS = ["css/style.sass"]
 # customJS = ["js/console.js"]
 
 [[params.social]]
@@ -53,16 +51,22 @@ url = "/"
 weight = 10
 
 [[menu.main]]
-identifier = "blog" # identifier is use for translations
+identifier = "about" # identifier is use for translations
 pre = "" # pre is inserted before the translation (icons, image, etc)
-url = "/blog/"
+url = "/about/"
 weight = 20
+
+[[menu.main]]
+identifier = "projects" # identifier is use for translations
+pre = "" # pre is inserted before the translation (icons, image, etc)
+url = "/projects/"
+weight = 30
 
 [[menu.main]]
 identifier = "contact" # identifier is use for translations
 pre = "" # pre is inserted before the translation (icons, image, etc)
-url = "/#contact"
-weight = 30
+url = "/contact/"
+weight = 40
 
 # Syntax highlightning
 [markup.highlight]
@@ -75,11 +79,5 @@ tabWidth = 2
 category = "categories"
 tag = "tags"
 
-# Translation
-# English, French and Italian are supported but you can contribute
-# by adding translation to i18n/ folder.
-[languages.en]
-contentDir = 'en'
-languageCode = 'en'
-languageName = 'English'
-weight = 0
+[permalinks]
+"posts" = "/:year/:title/"

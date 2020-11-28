@@ -1,0 +1,2 @@
+<img {{ with .Page.Type }} class="mx-auto my-4" {{ end }} src="{{ .Destination | safeURL | relURL }}" alt="{{ .Text }}"
+	{{ with .Title}} title="{{ . }}" {{ end }}>

@@ -7,7 +7,7 @@ weight = 10
 # hidden = true
 
 # Hero image (optional). Enter filename of an image in the `static/` folder.
-hero_media = "/img/portrait.webp"
+hero_media = "/images/brad-parbs.jpg"
 
 # Buttons
 # Add as much button as you want
@@ -25,6 +25,6 @@ hero_media = "/img/portrait.webp"
 
 +++
 
-# My name is **Sponge Bob** and I'm a **chief cook**.
+# I'm **Brad Parbs** and I build neat things on the internet.
 
-All my dishes are made with love
+I'm a Milwaukee WordPress developer, currently working as a developer at [Awesome Motive](https://awesomemotive.com/).

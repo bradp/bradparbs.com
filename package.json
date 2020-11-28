@@ -10,13 +10,13 @@
 	"license": "MIT",
 	"dependencies": {
 		"@fullhuman/postcss-purgecss": "^3.0.0",
-		"autoprefixer": "^10.0.4",
-		"postcss": "^8.1.10",
-		"postcss-cli": "^8.3.0",
+		"autoprefixer": "^10.0.1",
+		"postcss": "^8.1.4",
+		"postcss-cli": "^8.1.0",
 		"postcss-import": "^13.0.0",
-		"tailwindcss": "^2.0.1"
+		"tailwindcss": "^1.9.6"
 	},
 	"devDependencies": {
-		"npm-check-updates": "^10.2.2"
+		"npm-check-updates": "^9.2.3"
 	}
 }
