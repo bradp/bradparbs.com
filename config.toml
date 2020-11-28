@@ -5,21 +5,16 @@ languageCode = 'en-us'
 theme = 'pico'
 paginate = 10
 title = 'Brad Parbs - Milwaukee WordPress developer'
-
-[params]
-customCSS = [
-	"css/style.sass",
-] # Path relative to assets folder
-
-# customJS = ["js/console.js"] # Path relative to assets folder
-# Homepage description
-# For blog page description you can overwrite it
-# in the front matter
 description = "Brad Parbs. Milwaukee WordPress developer."
 email = "brad@bradparbs.com"
 favicon = '/favicon.png'
 
-# Social parameters for contact_icons widget
+[params]
+customCSS = [
+	"css/style.sass",
+]
+# customJS = ["js/console.js"]
+
 [[params.social]]
 alt = "github icon"
 blank = true
@@ -84,19 +79,7 @@ tag = "tags"
 # English, French and Italian are supported but you can contribute
 # by adding translation to i18n/ folder.
 [languages.en]
-contentDir = 'content/en'
+contentDir = 'en'
 languageCode = 'en'
 languageName = 'English'
 weight = 0
-
-[languages.fr]
-contentDir = 'content/fr'
-languageCode = 'fr'
-languageName = 'Français'
-weight = 2
-
-[languages.it]
-contentDir = 'content/it'
-languageCode = 'it'
-languageName = 'Italiano'
-weight = 3
