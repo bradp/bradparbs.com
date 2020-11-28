@@ -17,7 +17,6 @@ keywords = "brad parbs, bradparbs"
 twitterUsername = "@bradparbs"
 socialImage = "images/brad-parbs.jpgs"
 
-
 [[params.social]]
 alt = "github icon"
 blank = true
@@ -86,3 +85,6 @@ tag = "tags"
 
 [permalinks]
 "posts" = "/:year/:title/"
+
+[markup]
+  defaultMarkdownHandler = "blackfriday"
