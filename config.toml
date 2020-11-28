@@ -8,6 +8,7 @@ title = 'Brad Parbs'
 description = "Brad Parbs - Milwaukee WordPress developer."
 email = "brad@bradparbs.com"
 favicon = '/favicon.png'
+enableRobotsTXT = true
 
 [params]
 customCSS = ["css/style.css"]
