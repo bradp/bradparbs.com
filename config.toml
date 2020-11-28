@@ -1,78 +1,102 @@
-baseURL = "https://bradparbs.com"
-languageCode = "en"
-DefaultContentLanguage = "en"
-title = "Brad Parbs - Milwaukee WordPress Developer"
-theme = "anatole"
-summarylength = 10
+baseURL = 'https://bradparbs.com/'
+defaultContentLanguage = 'en'
 enableEmoji = true
-enableRobotsTXT = true
-
-# Enable Disqus
-#disqusShortname = ""
-
-# Google Analytics
-#googleAnalytics = "UA-123-45"
+languageCode = 'en-us'
+theme = 'pico'
+paginate = 10
+title = 'Brad Parbs - Milwaukee WordPress developer'
 
 [params]
-title = "Brad Parbs"
-author = "Brad Parbs"
-description = "I'm a Milwaukee WordPress developer. I like to make cool things."
-profilePicture = "images/brad-parbs.jpg"
-keywords = ""
-favicon = "favicons/"
-customCss = ["css/style.css"]
-customJs = ["js/main.js"]
-mainSections = ["2014","2015"]
-images = ["images/site-feature-image.png"]
-# Google Site Verification
-#googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+customCSS = [
+	"css/style.sass",
+] # Path relative to assets folder
 
-## Math settings
-[params.math]
-enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
-use = "katex"  # options: "katex", "mathjax". default is "katex".
+# customJS = ["js/console.js"] # Path relative to assets folder
+# Homepage description
+# For blog page description you can overwrite it
+# in the front matter
+description = "Brad Parbs. Milwaukee WordPress developer."
+email = "brad@bradparbs.com"
+favicon = '/favicon.png'
 
-## Social links
-# use 'fab' when brand icons, use 'fas' when standard solid icons.
+# Social parameters for contact_icons widget
+[[params.social]]
+alt = "github icon"
+blank = true
+icon = "/icons/github.svg"
+name = "github"
+url = "https://github.com/"
 
-[[params.socialIcons]]
-icon = "fab fa-github"
-title = "GitHub"
-url = "https://github.com/bradp/"
+[[params.social]]
+alt = "twitter icon"
+blank = true
+icon = "/icons/twitter.svg"
+name = "twitter"
+url = "https://twitter.com/"
 
-[[params.socialIcons]]
-icon = "fab fa-twitter"
-title = "twitter"
-url = "https://www.twitter.com/bradparbs/"
+[[params.social]]
+alt = "linkedin icon"
+blank = true
+icon = "/icons/linkedin.svg"
+name = "linkedin"
+url = "https://linkedin.com/in/bradparbs"
 
-[[params.socialIcons]]
-icon = "fab fa-linkedin"
-title = "Linkedin"
-url = "https://www.linkedin.com/in/bradparbs"
+[[params.social]]
+alt = "email icon"
+icon = "/icons/email.svg"
+name = "email"
+url = "mailto:mail@example.com"
 
-[[params.socialIcons]]
-icon = "fas fa-envelope"
-title = "e-mail"
-url = "mailto:brad@bradparbs.com"
 
-## Menu items
-
+# Navigation bar
 [menu]
 
-  [[menu.main]]
-  name = "Home"
-  identifier = "home"
-  weight = 100
-  url = "/"
+[[menu.main]]
+identifier = "home" # identifier is use for translations
+pre = "" # pre is inserted before the translation (icons, image, etc)
+url = "/"
+weight = 10
 
-  [[menu.main]]
-  name = "About"
-  weight = 200
-  identifier = "about"
-  url = "/about/"
+[[menu.main]]
+identifier = "blog" # identifier is use for translations
+pre = "" # pre is inserted before the translation (icons, image, etc)
+url = "/blog/"
+weight = 20
 
-  [[menu.main]]
-  name = "Projects"
-  weight = 300
-  identifier = "projects"
-  url = "/projects/"
+[[menu.main]]
+identifier = "contact" # identifier is use for translations
+pre = "" # pre is inserted before the translation (icons, image, etc)
+url = "/#contact"
+weight = 30
+
+# Syntax highlightning
+[markup.highlight]
+guessSyntax = true
+lineNumbersInTable = true
+noClasses = false # Set to false to use the Pico default theme.
+tabWidth = 2
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+# Translation
+# English, French and Italian are supported but you can contribute
+# by adding translation to i18n/ folder.
+[languages.en]
+contentDir = 'content/en'
+languageCode = 'en'
+languageName = 'English'
+weight = 0
+
+[languages.fr]
+contentDir = 'content/fr'
+languageCode = 'fr'
+languageName = 'Français'
+weight = 2
+
+[languages.it]
+contentDir = 'content/it'
+languageCode = 'it'
+languageName = 'Italiano'
+weight = 3
