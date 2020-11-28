@@ -1,7 +1,7 @@
 +++
 title = "Getting started with Vagrant & VVV for local development"
 subtitle = ""
-tags = ['vvv','local','developement']
+tags = ['vvv','local','development']
 date = 2015-01-14
 description = "Getting started with Vagrant & VVV for local development"
 banner = 'images/vagrant.png'
