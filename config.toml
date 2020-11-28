@@ -1,3 +1,78 @@
-baseURL = "https://bradparbs.com/"
-languageCode = "en-us"
+baseURL = "https://bradparbs.com"
+languageCode = "en"
+DefaultContentLanguage = "en"
+title = "Brad Parbs - Milwaukee WordPress Developer"
+theme = "anatole"
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
+
+# Enable Disqus
+#disqusShortname = ""
+
+# Google Analytics
+#googleAnalytics = "UA-123-45"
+
+[params]
 title = "Brad Parbs"
+author = "Brad Parbs"
+description = "I'm a Milwaukee WordPress developer. I like to make cool things."
+profilePicture = "images/brad-parbs.jpg"
+keywords = ""
+favicon = "favicons/"
+customCss = ["css/style.css"]
+customJs = ["js/main.js"]
+mainSections = ["2014","2015"]
+images = ["images/site-feature-image.png"]
+# Google Site Verification
+#googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+## Math settings
+[params.math]
+enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
+
+## Social links
+# use 'fab' when brand icons, use 'fas' when standard solid icons.
+
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/bradp/"
+
+[[params.socialIcons]]
+icon = "fab fa-twitter"
+title = "twitter"
+url = "https://www.twitter.com/bradparbs/"
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/bradparbs"
+
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:brad@bradparbs.com"
+
+## Menu items
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 200
+  identifier = "about"
+  url = "/about/"
+
+  [[menu.main]]
+  name = "Projects"
+  weight = 300
+  identifier = "projects"
+  url = "/projects/"
