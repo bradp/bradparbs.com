@@ -13,14 +13,14 @@ hero_media = "/images/brad-parbs.jpg"
 # Add as much button as you want
 [[btn]]
 	# The url of the button
-  url = "/about"
+  url = "/about/"
 	# The text of the button
-  label = "Know more"
+  label = "Learn more about me"
 	# Primary color
 	primary = true
 
 [[btn]]
-  url = "#contact"
+  url = "/contact/"
   label = 'Contact me'
 
 +++

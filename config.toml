@@ -10,7 +10,7 @@ email = "brad@bradparbs.com"
 favicon = '/favicon.png'
 
 [params]
-# customCSS = ["css/style.sass"]
+customCSS = ["css/style.css"]
 # customJS = ["js/console.js"]
 
 [[params.social]]
