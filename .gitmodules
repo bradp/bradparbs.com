@@ -1,3 +1,9 @@
 [submodule "themes/pico"]
 	path = themes/pico
 	url = https://github.com/negrel/hugo-theme-pico.git
+[submodule "themes/hugo-social-metadata"]
+	path = themes/hugo-social-metadata
+	url = https://github.com/msfjarvis/hugo-social-metadata.git
+[submodule "themes/hugo-redirect"]
+	path = themes/hugo-redirect
+	url = https://github.com/gcc42/hugo-redirect.git

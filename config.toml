@@ -2,7 +2,7 @@ baseURL = 'https://bradparbs.com/'
 defaultContentLanguage = 'en'
 enableEmoji = true
 languageCode = 'en-us'
-theme = 'pico'
+theme = ["hugo-redirect", "hugo-social-metadata", "pico"]
 paginate = 10
 title = 'Brad Parbs'
 description = "Brad Parbs - Milwaukee WordPress developer."
@@ -12,6 +12,10 @@ favicon = '/favicon.png'
 [params]
 customCSS = ["css/style.css"]
 # customJS = ["js/console.js"]
+keywords = "brad parbs, bradparbs"
+twitterUsername = "@bradparbs"
+socialImage = "images/brad-parbs.jpgs"
+
 
 [[params.social]]
 alt = "github icon"
