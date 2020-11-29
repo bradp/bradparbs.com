@@ -28,7 +28,7 @@
 		<a class="no-underline mr-4" href="{{ .URL }}">
 			<img src="{{ "/images/top_arrow.svg" | relURL }}" class="transform -rotate-90 inline-block">
 		</a>
-		<a href="{{ .URL }}">
+		<a title="{{ i18n "previous" | title }}" href="{{ .URL }}">
 			<span class="">{{ i18n "previous" | title }}</span>
 		</a>
 	</div>
@@ -40,7 +40,7 @@
 
 	{{ with $paginator.Next }}
 	<div class="flex-1 text-right">
-		<a href="{{ .URL }}">
+		<a title="{{ i18n "next" | title }}" href="{{ .URL }}">
 			<span class="">{{ i18n "next" | title }}</span>
 		</a>
 		<a class="no-underline ml-4" href="{{ .URL }}">
