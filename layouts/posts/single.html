@@ -1,7 +1,7 @@
 {{ define "main" }}
 <button onclick="window.history.back()"
-	class="bg-transparent border-none font-bold">&larr;{{ i18n "back" | title}}</button>
-<h1 class="text-center mx-auto max-w-4xl text-4xl sm:text-5xl md:text-6xl">
+	class="back-btn bg-transparent border-none font-bold">&larr;{{ i18n "back" | title}}</button>
+<h1 class="text-center mx-auto max-w-4xl text-2xl sm:text-3xl md:text-4xl tracking-tighter m-0">
 	{{ .Title }}
 </h1>
 {{ with .Params.subtitle }}
@@ -17,7 +17,7 @@
 </div>
 {{/* Previous / Next section */}}
 {{ if or (.PrevInSection) (.NextInSection) }}
-<hr class="mb-6 mt-24">
+<hr class="mb-6 mt-12">
 {{ end }}
 
 <div class="flex flex-wrap justify-between items-center m-10">

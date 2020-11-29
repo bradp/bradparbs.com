@@ -10,6 +10,8 @@ email = "brad@bradparbs.com"
 favicon = '/favicon.png'
 enableRobotsTXT = true
 
+disableKinds = ["taxonomy", "term"]
+
 [params]
 customCSS = ["css/style.css"]
 # customJS = ["js/console.js"]
@@ -68,17 +70,12 @@ identifier = "blog"
 url = "/posts/"
 weight = 40
 
-
 # Syntax highlightning
 [markup.highlight]
 guessSyntax = true
 lineNumbersInTable = true
-noClasses = false # Set to false to use the Pico default theme.
-tabWidth = 2
-
-[taxonomies]
-category = "categories"
-tag = "tags"
+noClasses = false
+tabWidth = 4
 
 [permalinks]
 "posts" = "/:year/:title/"

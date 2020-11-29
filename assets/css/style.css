@@ -43,6 +43,10 @@ a:hover {
 	color: #b8457d;
 }
 
+b, strong {
+	font-weight: 600;
+}
+
 .site-title {
 	font-size: 5rem;
     font-weight: 200;
@@ -55,4 +59,8 @@ a:hover {
     margin-left: -2vw;
 	position: relative;
 	top: 2rem;
+}
+
+.back-btn {
+	color: #ed64a6;
 }

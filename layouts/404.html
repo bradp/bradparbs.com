@@ -1,7 +1,20 @@
 {{ define "main" }}
 <main id="main">
-	<div>
-		<h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
-	</div>
+	<div class="min-h-screen flex items-center">
+		<div class="container mx-auto p-4 flex flex-wrap items-center">
+		  <div class="w-full md:w-5/12 text-center p-4">
+			<img src="/images/404.png" alt="Not Found" />
+		  </div>
+		  <div class="w-full md:w-7/12 text-center md:text-left p-4">
+			<div class="text-6xl font-medium">404</div>
+			<div class="text-xl md:text-3xl font-medium mb-4">
+				😢️ Oh jeez. This page isn't here.
+			</div>
+			<div class="text-lg mb-8">
+				<a href="/" class="border border-white rounded p-4">Go back Home</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
 </main>
 {{ end }}
