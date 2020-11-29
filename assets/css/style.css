@@ -10,3 +10,8 @@ article.content {
 	max-width: 24rem;
     margin: 0 auto;
 }
+
+.post-content a img {
+	margin: 0 auto;
+    width: 50%;
+}

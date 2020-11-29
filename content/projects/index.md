@@ -7,8 +7,7 @@ author = "Brad Parbs"
 +++
 
 
-Tools / Software
-==================
+## Tools / Software
 
 -   [vv](https://github.com/bradp/vv) - The best tool for managing [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) sites.
 -   [Worndpress](https://github.com/worndpress) - The best fork of WordPress.
@@ -21,8 +20,7 @@ Tools / Software
 -   [generator-chassis-wp](https://github.com/bradp/generator-chassis-wp) - Yeoman generator for [Chassis](http://chassis.io/).
 -   [See more →](https://github.com/bradp)
 
-WordPress Plugins
-=================
+## WordPress Plugin
 
 -   [Automatic Feat. Images From Videos](https://wordpress.org/plugins/automatic-featured-images-from-videos) - Sets featured images from videos.
 -   [Registered Post Types](https://github.com/bradp/registered-post-types) - Shows a list of all the post types in your WordPress.
@@ -30,16 +28,14 @@ WordPress Plugins
 -   [Forced Emoji](https://github.com/bradp/forced-emoji) - randomly forces emoji into your content where it can.
 -   [See more →](https://profiles.wordpress.org/bradparbs/)
 
-Websites
-========
+## Websites
 
 -   [Gifsb.in](https://gifsb.in/) - My collection of gifs for everyday use.
 -   [sax.cat](https://sax.cat/) - We all need a little sax in our life.
 -   [Is it snowing in Milwaukee?](https://isitsnowinginmilwaukee.com/) - Is it snowing in Milwaukee right now?
 -   [butts.tech](https://butts.tech/) - when you need an ascii butt.
 
-Talks & Slides
-==============
+## Talks & Slides
 
 -   [Learn to Love the Terminal](https://speakerdeck.com/bradp/learn-to-love-the-terminal) WordCamp Lancaster 2016
 -   [Learn to Love the Terminal](https://speakerdeck.com/bradp/learn-to-love-the-terminal) WordCamp Milwaukee 2016
@@ -56,8 +52,7 @@ Talks & Slides
 -   [Responsive Design Primer](https://wordpress.tv/2012/10/06/brad-parbs-responsive-design-primer/) WordCamp Chicago 2012
 -   [See more →](https://speakerdeck.com/bradp)
 
-Stupid "art"
-============
+## Stupid "art"
 
 -   [How to be Awesome](https://github.com/bradp/HowToBeAwesome) - I self published a book years ago. It's dumb.
 -   [Sign Installation](https://github.com/bradp/Sign-Installation) - Motivational signs from a 2010 project.
