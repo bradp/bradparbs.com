@@ -4,7 +4,7 @@ subtitle = ""
 tags = ['cli']
 date = 2015-06-25
 description = "A Beginner’s Guide to the Best Command Line Tools"
-banner = ''
+banner = '/images/beginners-guide-to-best-command-line-tools-header.png'
 +++
 
 ![](/images/beginners-guide-to-best-command-line-tools-header.png)

@@ -5,3 +5,8 @@ li {
 article.content {
     padding-bottom: 2rem;
 }
+
+.hero-content p {
+	max-width: 24rem;
+    margin: 0 auto;
+}

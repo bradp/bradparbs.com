@@ -4,6 +4,6 @@ subtitle = "It's my brand new site!"
 date = 2020-11-28
 tags = []
 description = "A whole new site!"
-banner = ''
+banner = '/images/new-site.png'
 +++
  🎉 It's a whole new site! 🎉

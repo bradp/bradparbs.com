@@ -49,28 +49,29 @@ url = "mailto:brad@bradparbs.com"
 [menu]
 
 [[menu.main]]
-identifier = "home" # identifier is use for translations
-pre = "" # pre is inserted before the translation (icons, image, etc)
+identifier = "home"
 url = "/"
 weight = 10
 
 [[menu.main]]
-identifier = "about" # identifier is use for translations
-pre = "" # pre is inserted before the translation (icons, image, etc)
+identifier = "about"
 url = "/about/"
 weight = 20
 
 [[menu.main]]
-identifier = "projects" # identifier is use for translations
-pre = "" # pre is inserted before the translation (icons, image, etc)
+identifier = "projects"
 url = "/projects/"
 weight = 30
 
 [[menu.main]]
-identifier = "contact" # identifier is use for translations
-pre = "" # pre is inserted before the translation (icons, image, etc)
-url = "/contact/"
+identifier = "blog"
+url = "/posts/"
 weight = 40
+
+[[menu.main]]
+identifier = "contact"
+url = "/contact/"
+weight = 50
 
 # Syntax highlightning
 [markup.highlight]

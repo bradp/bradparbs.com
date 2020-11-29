@@ -1,0 +1,23 @@
+<div class="py-8 flex border-t-2 border-gray-200 flex-wrap md:flex-no-wrap">
+	<div class="md:flex-grow">
+		{{ with .Params.banner }}
+		<div class="h-48 overflow-hidden bg-cover bg-center" style="background-image: url('{{ . | absURL }}');">
+		</div>
+		{{ end }}
+		<h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{{ .Title | emojify }}</h2>
+		<p class="leading-relaxed">
+			{{ with .Params.subtitle }}
+			{{ . }}
+			{{ else }}
+			{{ substr .Plain 0 256 }}
+			{{ end }}
+		</p>
+		<a href="{{ .Permalink }}" class="text-blue-500 inline-flex items-center mt-4">Read More
+			<svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+				stroke-linecap="round" stroke-linejoin="round">
+				<path d="M5 12h14"></path>
+				<path d="M12 5l7 7-7 7"></path>
+			</svg>
+		</a>
+	</div>
+</div>

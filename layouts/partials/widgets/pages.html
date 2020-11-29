@@ -1,0 +1,34 @@
+<section id="recent-posts" class="text-gray-700 body-font">
+
+	{{ $items_type := .Params.content.page_type | default "post" }}
+	{{ $items_count := .Params.content.count }}
+
+	{{/* Filters */}}
+	{{ $query := where site.RegularPages "Type" $items_type }}
+	{{ $archive_page := site.GetPage "Section" $items_type }}
+
+	{{ if .Params.content.filters.tag }}
+	{{ $archive_page = site.GetPage (printf "tags/%s" .Params.content.filters.tag) }}
+	{{ $query = $query | intersect $archive_page.Pages }}
+	{{ end }}
+	{{ if .Params.content.filters.category }}
+	{{ $archive_page = site.GetPage (printf "categories/%s" .Params.content.filters.category) }}
+	{{ $query = $query | intersect $archive_page.Pages }}
+	{{ end }}
+
+	<div class="text-center w-full">
+		<h1 class="my-0 text-4xl sm:text-5xl md:text-6xl">
+			{{ .Title }}
+		</h1>
+	</div>
+
+	<div class="container px-5 py-24 mx-auto">
+		<div class="flex flex-wrap -m-4">
+			{{ range first $items_count $query }}
+				{{ partial "card.html" . }}
+			{{ else }}
+				{{ .Content }}
+			{{ end }}
+		</div>
+	</div>
+</section>

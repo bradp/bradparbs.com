@@ -4,12 +4,16 @@
 </h1>
 
 <div>
-	{{ $paginator := .Paginate (where .Pages "Type" "blog") }}
-	{{ range $paginator.Pages }}
-	<div class="max-w-xl mx-auto">
-		{{ partial "card.html" . }}
-	</div>
-	{{ end }}
+{{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+{{ range $paginator.Pages }}
+	<section class="text-gray-700 body-font overflow-hidden">
+		<div class="container px-5 py-10 mx-auto">
+			<div class="-my-8">
+				{{ partial "post-list-single.html" . }}
+			</div>
+		</div>
+	</section>
+{{ end }}
 
 </div>
 
@@ -44,11 +48,6 @@
 		</a>
 	</div>
 	{{ end }}
-</div>
-
-<div class="overflow-hidden flex flex-wrap justify-center mx-auto my-16 px-4 max-w-6xl">
-	{{ $tags := .Site.Taxonomies.tags }}
-	{{ partial "taxonomy_list" $tags }}
 </div>
 
 {{ end }}

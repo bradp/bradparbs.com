@@ -4,7 +4,7 @@ subtitle = ""
 date = 2014-07-17
 tags = []
 description = "Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"
-banner = ''
+banner = '/images/1.png'
 +++
 
 

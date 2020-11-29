@@ -9,6 +9,9 @@
 	{{ . }}
 </h2>
 {{ end }}
+<h3 class="text-center font-serif font-thin mx-auto mb-5 max-w-4xl text-l">
+	Posted on {{ .Date.Format "January 2, 2006" }} by Brad Parbs
+</h3>
 <div class="text-justify leading-loose mb-12 text-lg">
 	{{ .Content }}
 </div>
@@ -17,7 +20,7 @@
 <hr class="mb-6 mt-24">
 {{ end }}
 
-<div class="flex flex-wrap justify-between items-center">
+<div class="flex flex-wrap justify-between items-center m-10">
 	{{ if .PrevInSection }}
 	<div class="{{ if .NextInSection }} w-full sm:w-1/2 {{ end }} mb-1 text-center sm:text-left overflow-ellipsis pr-1">
 		<a class="mr-4 no-underline" href="{{ .PrevInSection.Permalink }}">
@@ -41,9 +44,4 @@
 	</div>
 	{{ end }}
 </div>
-
-<hr class="my-6">
-{{ partial "contact_icons.html" . }}
-<div class="mt-6"></div>
-
 {{ end }}
