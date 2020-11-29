@@ -2,12 +2,13 @@
 	"name": "bradparbs.com",
 	"version": "2.0.0",
 	"description": "",
+	"repository": "https://github.com/brad[/bradparbs.com",
+	"author": "Brad Parbs",
+	"keywords": [],
+	"license": "MIT",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"keywords": [],
-	"author": "Brad Parbs",
-	"license": "MIT",
 	"dependencies": {
 		"@fullhuman/postcss-purgecss": "^3.0.0",
 		"autoprefixer": "^10.0.1",
