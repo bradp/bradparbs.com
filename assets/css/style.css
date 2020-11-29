@@ -6,12 +6,18 @@ article.content {
     padding-bottom: 2rem;
 }
 
-.hero-content p {
-	max-width: 24rem;
-    margin: 0 auto;
-}
-
 .post-content a img {
 	margin: 0 auto;
     width: 50%;
+}
+
+.hero-content h1 {
+	font-size: 2.5rem;
+	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+.hero-content p {
+	max-width: 24rem;
+	margin: 0 auto;
+	font-size: 1.2rem;
 }

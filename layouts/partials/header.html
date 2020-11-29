@@ -1,5 +1,7 @@
 {{ $page := . }}
+{{ if .IsHome }}
 
+{{ else }}
 <header class="w-full flex items-center justify-between px-5 mx-auto md:mt-8 md:max-w-5xl pt-2 md:pt-0">
 	<div class="flex items-center">
 		<a href="{{ .Site.Home.Permalink }}" class="inline-block font-bold no-underline select-none">
@@ -9,11 +11,12 @@
 		</a>
 	</div>
 
-	<nav class="">
+	<nav class="space-x-2">
 		{{ range .Site.Menus.main }}
-		<a href="{{ .URL }}" class='mx-1 md:mx-2 hover:text-black no-underline'>
+		<a href="{{ .URL }}" class='border bg-pink-100 border-pink-500 text-pink-500 rounded-lg p-2 transition duration-500 ease select-none hover:text-white hover:bg-pink-800 hover:border-pink-900 focus:outline-none focus:shadow-outline no-underline transform hover:scale-110'>
 			{{ .Identifier }}
 		</a>
 		{{ end }}
 	</nav>
 </header>
+{{ end }}
