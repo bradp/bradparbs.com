@@ -22,27 +22,20 @@ socialImage = "images/brad-parbs.jpg"
 [[params.social]]
 alt = "github icon"
 blank = true
-icon = "/icons/github.svg"
+icon = "/images/github.svg"
 name = "github"
 url = "https://github.com/bradp"
 
 [[params.social]]
 alt = "twitter icon"
 blank = true
-icon = "/icons/twitter.svg"
+icon = "/images/twitter.svg"
 name = "twitter"
 url = "https://twitter.com/bradparbs"
 
 [[params.social]]
-alt = "linkedin icon"
-blank = true
-icon = "/icons/linkedin.svg"
-name = "linkedin"
-url = "https://linkedin.com/in/bradparbs"
-
-[[params.social]]
 alt = "email icon"
-icon = "/icons/email.svg"
+icon = "/images/email.svg"
 name = "email"
 url = "mailto:brad@bradparbs.com"
 

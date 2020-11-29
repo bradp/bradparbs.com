@@ -11,13 +11,6 @@
 	integrity="{{ $bundle.Data.Integrity }}">
 {{ end }}
 
-{{ if eq .Type "blog" }}
-{{ $syntax := resources.Get "css/syntax.css" }}
-{{ $syntax = $syntax | resources.Minify | fingerprint "md5" }}
-<link rel="stylesheet" href="{{ $syntax.Permalink }}" crossorigin="anonymous"
-	integrity="{{ $syntax.Data.Integrity }}" media="screen">
-{{ end }}
-
 {{/* Custom CSS & SASS */}}
 {{ range .Site.Params.customCSS -}}
 {{ $style := resources.Get . }}
