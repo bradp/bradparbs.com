@@ -68,10 +68,6 @@ identifier = "blog"
 url = "/posts/"
 weight = 40
 
-[[menu.main]]
-identifier = "contact"
-url = "/contact/"
-weight = 50
 
 # Syntax highlightning
 [markup.highlight]

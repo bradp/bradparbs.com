@@ -12,7 +12,7 @@
 
 	{{- partial "header.html" . -}}
 
-	{{ $mainClass := "" }}
+	{{ $mainClass := "text-xl leading-loose font-light subpixel-antialiased" }}
 	{{ if .IsHome }}
 	{{ $mainClass = "lg:max-w-5xl xl:max-w-6xl 2xl:max-w-screen-xl" }}
 	{{ end }}
