@@ -18,22 +18,23 @@ author = "Brad Parbs"
 -   [WP-CLI Examples](https://github.com/bradp/WP-CLI-Examples) - An example of a WP-CLI script to start from.
 -   [generator-plugin-wp](https://github.com/WebDevStudios/generator-plugin-wp) - Yeoman WordPress Plugin Generator.
 -   [generator-chassis-wp](https://github.com/bradp/generator-chassis-wp) - Yeoman generator for [Chassis](http://chassis.io/).
--   [See more →](https://github.com/bradp)
+-   [See more on my Github →](https://github.com/bradp)
 
-## WordPress Plugin
+## WordPress Plugins
 
 -   [Automatic Feat. Images From Videos](https://wordpress.org/plugins/automatic-featured-images-from-videos) - Sets featured images from videos.
 -   [Registered Post Types](https://github.com/bradp/registered-post-types) - Shows a list of all the post types in your WordPress.
 -   [Logout Roulette](https://wordpress.org/plugins/logout-roulette/) - Are you ready to try your luck?.
 -   [Forced Emoji](https://github.com/bradp/forced-emoji) - randomly forces emoji into your content where it can.
--   [See more →](https://profiles.wordpress.org/bradparbs/)
+-   [See more at WordPress.org →](https://profiles.wordpress.org/bradparbs/)
 
 ## Websites
 
--   [Gifsb.in](https://gifsb.in/) - My collection of gifs for everyday use.
--   [sax.cat](https://sax.cat/) - We all need a little sax in our life.
 -   [Is it snowing in Milwaukee?](https://isitsnowinginmilwaukee.com/) - Is it snowing in Milwaukee right now?
+-   [sax.cat](https://sax.cat/) - We all need a little sax in our life.
+-   [Gifsb.in](https://gifsb.in/) - My collection of gifs for everyday use.
 -   [butts.tech](https://butts.tech/) - when you need an ascii butt.
+-	[Random Nature Cams](http://brrad.com/cam) - Random nature cams, perfect for a Raspberry Pi in Kiosk mode.
 
 ## Talks & Slides
 
@@ -50,7 +51,7 @@ author = "Brad Parbs"
 -   [Intro to Responsive Design](https://wordpress.tv/2013/01/31/brad-parbs-intro-to-responsive-design/) WordCamp Phoenix 2013
 -   [320px and Up, Getting Started with Responsive Design](https://wordpress.tv/2012/11/02/brad-parbs-320px-and-up-getting-started-with-responsive-design/) WordCamp Detroit 2012
 -   [Responsive Design Primer](https://wordpress.tv/2012/10/06/brad-parbs-responsive-design-primer/) WordCamp Chicago 2012
--   [See more →](https://speakerdeck.com/bradp)
+-   [See more on Speakerdeck →](https://speakerdeck.com/bradp)
 
 ## Stupid "art"
 

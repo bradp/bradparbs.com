@@ -24,4 +24,4 @@ hero_media = "/images/brad-parbs.jpg"
 
 # 👋 I'm **Brad Parbs**. I build neat things on the internet.
 
-I'm a Milwaukee-based WordPress developer, currently working as a developer at [Awesome Motive](https://awesomemotive.com/).
+I'm a Milwaukee-based WordPress developer, currently building cool things at [Awesome Motive](https://awesomemotive.com/).

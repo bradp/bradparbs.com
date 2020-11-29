@@ -2,19 +2,21 @@
 {{ if .IsHome }}
 
 {{ else }}
-<header class="w-full flex items-center justify-between px-5 mx-auto md:mt-8 md:max-w-5xl pt-2 md:pt-0">
-	<div class="flex items-center">
-		<a href="{{ .Site.Home.Permalink }}" class="inline-block font-bold no-underline select-none">
-			<h1 class="hidden md:block tracking-normal font-sans-serif m-0 transform -rotate-3">
-				{{ .Site.Title }}
-			</h1>
-		</a>
-	</div>
+<div class="site-header bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transform rotate-3 bg-opacity-75 block">
+	<header id="site-header" class="w-full flex items-center justify-between px-5 mx-auto md:mt-8 md:max-w-5xl pt-2 md:pt-0">
+		<div class="flex items-center">
+			<a href="{{ .Site.Home.Permalink }}" class="inline-block no-underline select-none">
+				<h1 class="font-sans-serif m-0 site-title">
+					{{ .Site.Title }}
+				</h1>
+			</a>
+		</div>
 
-	<nav>
-		{{ range .Site.Menus.main }}
-		<a href="{{ .URL }}" class='border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 transition duration-500 ease select-none hover:text-white hover:bg-pink-400 hover:border-pink-200 focus:outline-none focus:shadow-outline no-underline'>{{ .Identifier }}</a>
-		{{ end }}
-	</nav>
-</header>
+		<nav>
+			{{ range .Site.Menus.main }}
+			<a href="{{ .URL }}" class='border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline'>{{ .Identifier }}</a>
+			{{ end }}
+		</nav>
+	</header>
+</div>
 {{ end }}

@@ -1,3 +1,6 @@
+h1 {
+	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
 li {
 	padding-bottom: 1rem;
 }
@@ -13,7 +16,6 @@ article.content {
 
 .hero-content h1 {
 	font-size: 2.5rem;
-	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 }
 
 .hero-content p {
@@ -24,7 +26,13 @@ article.content {
 
 header h1 {
 	font-size: 2.5rem;
-    font-family: segoe ui,Candara,bitstream vera sans,dejavu sans,bitstream vera sans,trebuchet ms,Verdana,verdana ref,sans-serif;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+nav a {
+	margin-bottom: 1rem;
+    line-height: 4rem;
+    padding: 1rem;
 }
 
 a {
@@ -33,4 +41,18 @@ a {
 
 a:hover {
 	color: #b8457d;
+}
+
+.site-title {
+	font-size: 5rem;
+    font-weight: 200;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: white;
+}
+
+.site-header {
+	margin-right: -2vw;
+    margin-left: -2vw;
+	position: relative;
+	top: 2rem;
 }
