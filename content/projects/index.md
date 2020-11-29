@@ -30,11 +30,12 @@ author = "Brad Parbs"
 
 ## Websites
 
--   [Is it snowing in Milwaukee?](https://isitsnowinginmilwaukee.com/) - Is it snowing in Milwaukee right now?
--   [sax.cat](https://sax.cat/) - We all need a little sax in our life.
--   [Gifsb.in](https://gifsb.in/) - My collection of gifs for everyday use.
--   [butts.tech](https://butts.tech/) - when you need an ascii butt.
--	[Random Nature Cams](http://brrad.com/cam) - Random nature cams, perfect for a Raspberry Pi in Kiosk mode.
+-   ⛄️ [Is it snowing in Milwaukee?](https://isitsnowinginmilwaukee.com/) - Is it snowing in Milwaukee right now?
+-   😺️ [sax.cat](https://sax.cat/) - We all need a little sax in our life.
+-   💝️ [Gifsb.in](https://gifsb.in/) - My collection of gifs for everyday use.
+-   🔞️ [butts.tech](https://butts.tech/) - when you need an ascii butt.
+-	🐕️ [Random Nature Cams](https://brrad.com/cam) - Random nature cams, perfect for a Raspberry Pi in Kiosk mode.
+-	💰️ [brad.cash](https://brad.cash) - You can send me money.
 
 ## Talks & Slides
 
