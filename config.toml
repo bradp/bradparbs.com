@@ -70,13 +70,6 @@ identifier = "blog"
 url = "/posts/"
 weight = 40
 
-# Syntax highlightning
-[markup.highlight]
-guessSyntax = true
-lineNumbersInTable = true
-noClasses = false
-tabWidth = 4
-
 [permalinks]
 "posts" = "/:year/:title/"
 

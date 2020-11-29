@@ -1,128 +1,14 @@
-<!DOCTYPE html>
-<html lang='en-us'>
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name=viewport content="width=device-width, initial-scale=1">
-
-<meta name="description" content="Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times" />
-
-<title>
-	Brad Parbs
-	 - Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times 
-</title>
-
-
-
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-	
-
-
-
-
-
-<link rel="stylesheet" href="https://bradparbs.com/css/main.min.a48a35b569920ec8b2edc62fc9ddf82d.css" crossorigin="anonymous" media="screen"
-	integrity="md5-pIo1tWmSDsiy7cYvyd34LQ==">
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-</head>
-
-<body class="min-h-screen bg-white relative pb-24">
-	<div id="top"></div>
-
-<header class="w-full flex items-center justify-between px-5 mx-auto md:mt-8 md:max-w-5xl pt-2 md:pt-0">
-	
-	<div class="flex items-center">
-		<a href="https://bradparbs.com/" class="inline-block font-bold no-underline select-none">
-			<h1 class="hidden md:block font-charter tracking-normal m-0">
-				Brad Parbs
-			</h1>
-
-			<div class="md:hidden">
-				<div class="w-8 h-8 relative font-bold bg-white blend-diff">
-	<h1 class="absolute-center m-0 font-charter text-2xl text-gray-100 blend-diff select-none">
-		B
-	</h1>
-</div>
-			</div>
-		</a>
-		
-	</div>
-
-	<nav class="">
-		
-		<a href="/" class='mx-1 md:mx-2 hover:text-black no-underline'>
-			home
-		</a>
-		
-		<a href="/about/" class='mx-1 md:mx-2 hover:text-black no-underline'>
-			about
-		</a>
-		
-		<a href="/projects/" class='mx-1 md:mx-2 hover:text-black no-underline'>
-			projects
-		</a>
-		
-		<a href="/contact/" class='mx-1 md:mx-2 hover:text-black no-underline'>
-			contact
-		</a>
-		
-	</nav>
-</header>
-
-	
-
-	<main class="w-full px-4 pt-8 mx-auto md:max-w-4xl overflow-x-hidden md:overflow-visible ">
-<article class="">
-	<h1 class="font-bold text-3xl text-gray-700">Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times</h1>
-	<p>One of the most enjoyable parts about writing code is writing efficient and performant functionality. No matter how fast your code is, if your server itself isn’t running to it’s maximum performance, you’re not delivering your site as fast as you could be. By setting up <a href="http://nginx.org/"  class="underline">Nginx</a>
- and the new <a href="http://hhvm.com/"  class="underline">HHVM</a>
-, you can get your server delivering fully loaded pages faster than most servers answer a request.</p>
-<p>HHVM is an open-source virtual machine designed for executing programs written in Hackand PHP. HHVM uses a just-in-time (JIT) compilation approach to achieve superior performance while maintaining the development flexibility that PHP provides.</p>
-<p>It is worth noting that HHVM isn’t 100% compatible with all of PHP, so if you’re using obscure functions, you may run into an issue. In all of my testing of WordPress, I never once had this problem, but it is something to keep in mind.</p>
-<p>In this post, we’ll set up both Nginx and HHVM from scratch, and then install and setup WordPress. If you follow this guide, you can have an insanely fast server setup in less than an hour.</p>
-<p>This post is written for specifically Ubuntu 12.04 LTS and 14.04 LTS. The steps outlined will probably work on other versions, and with some modifications most likely anywhere. I prefer Ubuntu, though. I’ll be going through this on a Ubuntu 14.04 LTS installation.</p>
-<p>I’m taking these steps on a brand new <a href="https://www.digitalocean.com/"  class="underline">Digital Ocean</a>
- VPS droplet, but you can use the server of your choice.</p>
-<p>We want to start with a brand new installation, and install everything we will need. Our first step is updating all of the built in software, and then installing some small useful tools we will want.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get update
-$ sudo apt-get install -y unzip vim git-core curl wget build-essential
-</code></pre></div><p>The <code>-y</code> flag we’re using for <code>apt-get install</code> will tell apt that we want to answer <code>Yes</code> to every question about whether or not we want to install a package. Because we’re also running as root (sudo), we want to only install from trusted sources, like the ones that are already added to Ubuntu.</p>
-<p>We now want to install Nginx. It’s also possible to run HHVM with Apache, but our goal is speed and performance so we want to use Nginx. Nginx is a reverse proxy server, as well as a normal web server, and also gives us nice load balancing and caching.</p>
-<p>The entire goal of Nginx and HHVM is to speed up everything our webserver does to create our final HTML pages that WordPress generates.</p>
-<p>Installing Nginx is actually super simple on a new Ubuntu installation. We tell ‘apt’, our handy package manager how to find Nginx, and then we can just do a ‘apt-get install’ like we did previously.</p>
-<p><code>$ sudo add-apt-repository -y ppa:nginx/mainline</code></p>
-<p><img  class="mx-auto my-4"  src="/images/1.png" alt="1"
-	>
-</p>
-<p>After we do this, we want to do another at-get update to fetch the Nginx package we just told ‘apt’ about. Now we’re ready to install Nginx.</p>
-<p><code>$ sudo apt-get install -y nginx</code></p>
-<p>That’s it! Nginx is installed. We’ll configure it in just a bit.</p>
-<p>Now we’re ready to install HHVM. For Ubuntu 12.04 and 14.04, we can follow the <a href="https://github.com/facebook/hhvm/wiki/Prebuilt-Packages-on-Ubuntu-12.04"  class="underline">official guide</a>
-.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Ubuntu  12.04: $ sudo add-apt-repository -y ppa:mapnik/boost
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><title>Brad Parbs
+- Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times</title><link rel=icon type=image/x-icon href=/favicon.ico><meta property="og:type" content="website"><meta name=twitter:card content="summary_large_image" key=twcard><meta name=twitter:site content="@bradparbs" key=twhandle><title>Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times &#183; Brad Parbs</title><meta name=description content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><meta name=keywords content="brad parbs,bradparbs"><meta property="og:url" content="https://bradparbs.com/2014/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/"><meta property="og:title" content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times &#183; Brad Parbs"><meta name=og:description content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><meta name=twitter:url content="https://bradparbs.com/2014/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/"><meta property="og:image" content="https://bradparbs.com/images/brad-parbs.jpg" key=ogimage><link rel=stylesheet href=https://bradparbs.com/css/main.min.715f658604febc0f437d7fd993c346ef.css crossorigin=anonymous media=screen integrity=md5-cV9lhgT+vA9DfX/Zk8NG7w==><link rel=stylesheet href=https://bradparbs.com/css/style.min.53ed32ebdc243b09d5b7830327c3c21b.css crossorigin=anonymous media=screen integrity=md5-U+0y69wkOwnVt4MDJ8PCGw==></head><body class="min-h-screen bg-white relative pb-24"><div id=top></div><div class="site-header bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transform rotate-3 bg-opacity-75 block"><header id=site-header class="w-full flex items-center justify-between px-5 mx-auto md:mt-8 md:max-w-5xl pt-2 md:pt-0"><div class="flex items-center"><a href=https://bradparbs.com/ class="inline-block no-underline select-none"><h1 class="font-sans-serif m-0 site-title">Brad Parbs</h1></a></div><nav><a href=/ class="border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline">home</a>
+<a href=/about/ class="border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline">about</a>
+<a href=/projects/ class="border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline">projects</a>
+<a href=/posts/ class="border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline">blog</a></nav></header></div><main class="w-full px-4 pt-8 mx-auto md:max-w-4xl overflow-x-hidden md:overflow-visible text-xl leading-loose font-light subpixel-antialiased"><button onclick=window.history.back() class="back-btn bg-transparent border-none font-bold">&larr;Back</button><h1 class="text-center mx-auto max-w-4xl text-2xl sm:text-3xl md:text-4xl tracking-tighter m-0">Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times</h1><h3 class="text-center font-serif font-thin mx-auto mb-5 max-w-4xl text-l">Posted on July 17, 2014 by Brad Parbs</h3><div class="text-justify leading-loose mb-12 text-lg post-content"><p>One of the most enjoyable parts about writing code is writing efficient and performant functionality. No matter how fast your code is, if your server itself isn’t running to it’s maximum performance, you’re not delivering your site as fast as you could be. By setting up <a href=http://nginx.org/>Nginx</a> and the new <a href=http://hhvm.com/>HHVM</a>, you can get your server delivering fully loaded pages faster than most servers answer a request.</p><p>HHVM is an open-source virtual machine designed for executing programs written in Hackand PHP. HHVM uses a just-in-time (JIT) compilation approach to achieve superior performance while maintaining the development flexibility that PHP provides.</p><p>It is worth noting that HHVM isn’t 100% compatible with all of PHP, so if you’re using obscure functions, you may run into an issue. In all of my testing of WordPress, I never once had this problem, but it is something to keep in mind.</p><p>In this post, we’ll set up both Nginx and HHVM from scratch, and then install and setup WordPress. If you follow this guide, you can have an insanely fast server setup in less than an hour.</p><p>This post is written for specifically Ubuntu 12.04 LTS and 14.04 LTS. The steps outlined will probably work on other versions, and with some modifications most likely anywhere. I prefer Ubuntu, though. I’ll be going through this on a Ubuntu 14.04 LTS installation.</p><p>I’m taking these steps on a brand new <a href=https://www.digitalocean.com/>Digital Ocean</a> VPS droplet, but you can use the server of your choice.</p><p>We want to start with a brand new installation, and install everything we will need. Our first step is updating all of the built in software, and then installing some small useful tools we will want.</p><pre><code>$ sudo apt-get update
+$ sudo apt-get install -y unzip vim git-core curl wget build-essential</code></pre><p>The <code>-y</code> flag we’re using for <code>apt-get install</code> will tell apt that we want to answer <code>Yes</code> to every question about whether or not we want to install a package. Because we’re also running as root (sudo), we want to only install from trusted sources, like the ones that are already added to Ubuntu.</p><p>We now want to install Nginx. It’s also possible to run HHVM with Apache, but our goal is speed and performance so we want to use Nginx. Nginx is a reverse proxy server, as well as a normal web server, and also gives us nice load balancing and caching.</p><p>The entire goal of Nginx and HHVM is to speed up everything our webserver does to create our final HTML pages that WordPress generates.</p><p>Installing Nginx is actually super simple on a new Ubuntu installation. We tell ‘apt’, our handy package manager how to find Nginx, and then we can just do a ‘apt-get install’ like we did previously.</p><p><code>$ sudo add-apt-repository -y ppa:nginx/mainline</code></p><p><img src=/images/1.png alt=1></p><p>After we do this, we want to do another at-get update to fetch the Nginx package we just told ‘apt’ about. Now we’re ready to install Nginx.</p><p><code>$ sudo apt-get install -y nginx</code></p><p>That’s it! Nginx is installed. We’ll configure it in just a bit.</p><p>Now we’re ready to install HHVM. For Ubuntu 12.04 and 14.04, we can follow the <a href=https://github.com/facebook/hhvm/wiki/Prebuilt-Packages-on-Ubuntu-12.04>official guide</a>.</p><pre><code>Ubuntu  12.04: $ sudo add-apt-repository -y ppa:mapnik/boost
 $ wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add - $ echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list
 $ sudo apt-get update
 $ sudo apt-get install -y hhvm Ubuntu  14.04: $ wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add - $ echo deb http://dl.hhvm.com/ubuntu trusty main | sudo tee /etc/apt/sources.list.d/hhvm.list
 $ sudo apt-get update
-$ sudo apt-get install -y hhvm
-</code></pre></div><p>So far, everything goes pretty smoothly. The longest part is probably waiting for the server to pull in all of the packages for the ‘apt-get update’ every time.</p>
-<p>After installing HHVM, we get a pretty handy message.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">********************************************************************
+$ sudo apt-get install -y hhvm</code></pre><p>So far, everything goes pretty smoothly. The longest part is probably waiting for the server to pull in all of the packages for the ‘apt-get update’ every time.</p><p>After installing HHVM, we get a pretty handy message.</p><pre><code>********************************************************************
 * HHVM is installed.  Here are some more things you might want to do:
 *  *  Configure your webserver to use HHVM:
 	* $ sudo /usr/share/hhvm/install_fastcgi.sh
@@ -135,51 +21,15 @@ $ sudo apt-get install -y hhvm
 	* $ hhvm whatever.php
 *  *  Use HHVM for  /usr/bin/php even if you have php-cli installed:
 	* $ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60
-********************************************************************
-</code></pre></div><p>This is nice because it tells us how to do our next few steps.</p>
-<p>First we’ll run the first of the commands they tell us about to resart Nginx and install FastCGI using HHVM.</p>
-<p><code>$ sudo /usr/share/hhvm/install_fastcgi.sh</code></p>
-<p>After this, we want to tell Ubuntu to run HHVM on system start.</p>
-<p><code>$ sudo update-rc.d hhvm defaults</code></p>
-<p>And then we’ll restart HHVM, just for good measure.</p>
-<p><code>$ sudo service hhvm restart </code></p>
-<p>At this point, HHVM is currently running, and will run whenever our server is started up. We can verify that HHVM is installed by creating a PHP file and making sure that HHVM can run it.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ touch test.php
+********************************************************************</code></pre><p>This is nice because it tells us how to do our next few steps.</p><p>First we’ll run the first of the commands they tell us about to resart Nginx and install FastCGI using HHVM.</p><p><code>$ sudo /usr/share/hhvm/install_fastcgi.sh</code></p><p>After this, we want to tell Ubuntu to run HHVM on system start.</p><p><code>$ sudo update-rc.d hhvm defaults</code></p><p>And then we’ll restart HHVM, just for good measure.</p><p><code>$ sudo service hhvm restart</code></p><p>At this point, HHVM is currently running, and will run whenever our server is started up. We can verify that HHVM is installed by creating a PHP file and making sure that HHVM can run it.</p><pre><code>$ touch test.php
 $ echo &#34; test.php
-$ hhvm test.php
-</code></pre></div><p>We should get a return of “HipHop”. If that’s what you see, we know that HHVM is working perfectly.</p>
-<p>At this point, we can start setting up the configuration for a website, but before we do that, there’s another handy command that our HHVM installation results screen gave us to have HHVM “pretend” to be PHP over the command line.</p>
-<p><code>$ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60</code></p>
-<p>What this lets us do is use PHP command line tools like WPCLI, PHPUnit, Composer, and all of those things, just like if we were running PHP instead of HHVM.</p>
-<p>Let’s test this real quick by doing:</p>
-<p><code>$ php -v</code></p>
-<p>You should get a result like this:</p>
-<p><img  class="mx-auto my-4"  src="/images/3.png" alt="3"
-	>
-</p>
-<p>One really nice thing about HHVM and Nginx is there is very little configuration we need to do to start working. We don’t really have to do anything at all and it is already running. The default file location of our files is “/usr/share/nginx/html”, and there is already a simple HTML file there. I like to make an alias so that I can quickly get to this location.</p>
-<p><code>$ echo &quot;www=&quot;cd /usr/share/nginx/html&quot;&quot;  &gt;&gt;  ~/.bashrc</code></p>
-<p>This creates an alias so we can simply type “www” and change to our file directory.</p>
-<p>At this point we want to install MySQL, so that we can actually use WordPress, and not just PHP files. Oddly, this portion has more configuration then anything we’ve done up to this point. After running the following command, we’ll get a password screen to set our root password.</p>
-<p><code>$ sudo apt-get install mysql-server</code></p>
-<p><a href="/images/4.png"  class="underline"><img  class="mx-auto my-4"  src="/images/4.png" alt="4"
-	>
-</a>
-</p>
-<p>Now we’re ready to install WordPress and set up Nginx to work with it.</p>
-<p>We’re going to head to our Nginx HTML folder and grab a copy of wordpress and unzip it.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd /usr/share/nginx/html
+$ hhvm test.php</code></pre><p>We should get a return of “HipHop”. If that’s what you see, we know that HHVM is working perfectly.</p><p>At this point, we can start setting up the configuration for a website, but before we do that, there’s another handy command that our HHVM installation results screen gave us to have HHVM “pretend” to be PHP over the command line.</p><p><code>$ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60</code></p><p>What this lets us do is use PHP command line tools like WPCLI, PHPUnit, Composer, and all of those things, just like if we were running PHP instead of HHVM.</p><p>Let’s test this real quick by doing:</p><p><code>$ php -v</code></p><p>You should get a result like this:</p><p><img src=/images/3.png alt=3></p><p>One really nice thing about HHVM and Nginx is there is very little configuration we need to do to start working. We don’t really have to do anything at all and it is already running. The default file location of our files is “/usr/share/nginx/html”, and there is already a simple HTML file there. I like to make an alias so that I can quickly get to this location.</p><p><code>$ echo "www="cd /usr/share/nginx/html"" >> ~/.bashrc</code></p><p>This creates an alias so we can simply type “www” and change to our file directory.</p><p>At this point we want to install MySQL, so that we can actually use WordPress, and not just PHP files. Oddly, this portion has more configuration then anything we’ve done up to this point. After running the following command, we’ll get a password screen to set our root password.</p><p><code>$ sudo apt-get install mysql-server</code></p><p><a href=/images/4.png><img src=/images/4.png alt=4></a></p><p>Now we’re ready to install WordPress and set up Nginx to work with it.</p><p>We’re going to head to our Nginx HTML folder and grab a copy of wordpress and unzip it.</p><pre><code>$ cd /usr/share/nginx/html
 $ wget http://wordpress.org/latest.zip
-$ unzip latest.zip
-</code></pre></div><p>And we’ll also do a little housekeeping while we’re here.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ mv wordpress/*  .
+$ unzip latest.zip</code></pre><p>And we’ll also do a little housekeeping while we’re here.</p><p>````
+$ mv wordpress/* .
 $ rmdir wordpress
 $ rm latest.zip
-$ rm index.html
-```
-
-
-Now we’ll set up our MySQL database.
+$ rm index.html</p><pre><code>Now we’ll set up our MySQL database.
 
 `$ mysql -u root -pYOURPASSWORDHERE`
 
@@ -188,19 +38,12 @@ Now we’ll set up our MySQL database.
 
 Now we’re inside a MySQL prompt inside our SSH prompt inside our terminal program. Prompt-ception!
 
-First we create a database, and then add a user, set that user’s password, give that user permissions, refresh MySQL privileges, and then exit out of our MySQL prompt. Make sure you write down this information, as you’ll need it for wp-config.php later.
-
-```
-$ create database databasename;
+First we create a database, and then add a user, set that user’s password, give that user permissions, refresh MySQL privileges, and then exit out of our MySQL prompt. Make sure you write down this information, as you’ll need it for wp-config.php later.</code></pre><p>$ create database databasename;
 $ create user username@localhost;
-$ set password for username@localhost = password(&#34;yourpasswordhere&#34;);
-$ grant all privileges on databasename.* to username@localhost identified by &#39;yourpasswordhere&#39;;
+$ set password for username@localhost = password(&ldquo;yourpasswordhere&rdquo;);
+$ grant all privileges on databasename.* to username@localhost identified by &lsquo;yourpasswordhere&rsquo;;
 $ flush privileges;
-$ exit;
-```
-
-
-And now let’s create and edit wp-config.php. To edit the file, you can either SFTP in and edit this file locally, or use Nano or Vim on the server. We’ll use Vim.
+$ exit;</p><pre><code>And now let’s create and edit wp-config.php. To edit the file, you can either SFTP in and edit this file locally, or use Nano or Vim on the server. We’ll use Vim.
 
 `$ cp wp-config-sample.php wp-config.php`
 `$ vi wp-config.php `
@@ -213,177 +56,25 @@ At this point, we’re ready to set up Nginx to be able to run WordPress. We’r
 
 We want to change two things in our configuration.
 
-We want to change Nginx to also look for PHP files.
-
-```
-server {
-	listen 80 default_server;
-	listen [::]:80 default_server ipv6only=on;
-	root /usr/share/nginx/html;
-	*index.php* index index.html index.htm;  # Make site accessible from http://localhost/
-	server_name localhost;
-	include hhvm.conf;
-}
-```
-
-And we want to change how files are loaded.
-
-```
-location /  {
-	# First attempt to serve request as file, then
-	# as directory, then fall back to displaying a 404.
-	try_files $uri $uri/ /index.php?q=$uri&amp;$args;
-}
-```
-
-Your complete file should look like [this](https://gist.github.com/bradp/2e71455f9795fb2e6b2d):
-
-```
-1.  # You may add here your
-2.  # server {
-3.  #    ...
-4.  # }
-5.  # statements for each of your virtual hosts to this file
-6.   
-7.  ##
-8.  # You should look at the following URL&#39;s in order to grasp a solid understanding
-9.  # of Nginx configuration files in order to fully unleash the power of Nginx.
-10.  # http://wiki.nginx.org/Pitfalls
-11.  # http://wiki.nginx.org/QuickStart
-12.  # http://wiki.nginx.org/Configuration
-13.  #
-14.  # Generally, you will want to move this file somewhere, and start with a clean
-15.  # file but keep this around for reference. Or just disable in sites-enabled.
-16.  #
-17.  # Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
-18.  ##
-19.   
-20.  server {
-21.  listen 80 default_server;
-22.  listen [::]:80 default_server ipv6only=on;
-23.   
-24.  root /usr/share/nginx/html;
-25.  index.php index.html index.htm;
-26.   
-27.   # Make site accessible from http://localhost/
-28.  server_name localhost;
-29.  include hhvm.conf;
-30.   
-31.  location /  {
-32.   # First attempt to serve request as file, then
-33.   # as directory, then fall back to displaying a 404.
-34.  try_files $uri $uri/ /index.php?q=$uri&amp;amp;$args;
-35.   # Uncomment to enable naxsi on this location
-36.   # include /etc/nginx/naxsi.rules
-37.   }
-38.   
-39.   # Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests
-40.   #location /RequestDenied {
-41.   #    proxy_pass http://127.0.0.1:8080;
-42.   #}
-43.   
-44.   #error_page 404 /404.html;
-45.   
-46.   # redirect server error pages to the static page /50x.html
-47.   #
-48.   #error_page 500 502 503 504 /50x.html;
-49.   #location = /50x.html {
-50.   #    root /usr/share/nginx/html;
-51.   #}
-52.   
-53.   # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
-54.   #
-55.   #location ~ .php$ {
-56.   #    fastcgi_split_path_info ^(.+.php)(/.+)$;
-57.   #    # NOTE: You should have &#34;cgi.fix_pathinfo = 0;&#34; in php.ini
-58.   #
-59.   #    # With php5-cgi alone:
-60.   #    fastcgi_pass 127.0.0.1:9000;
-61.   #    # With php5-fpm:
-62.   #    fastcgi_pass unix:/var/run/php5-fpm.sock;
-63.   #    fastcgi_index index.php;
-64.   #    include fastcgi_params;
-65.   #}
-66.   
-67.   # deny access to .htaccess files, if Apache&#39;s document root
-68.   # concurs with nginx&#39;s one
-69.   #
-70.   #location ~ /.ht {
-71.   #    deny all;
-72.   #}
-73.  }
-74.   
-75.   
-76.  # another virtual host using mix of IP-, name-, and port-based configuration
-77.  #
-78.  #server {
-79.  #    listen 8000;
-80.  #    listen somename:8080;
-81.  #    server_name somename alias another.alias;
-82.  #    root html;
-83.  #    index index.html index.htm;
-84.  #
-85.  #    location / {
-86.  #        try_files $uri $uri/ =404;
-87.  #    }
-88.  #}
-89.   
-90.   
-91.  # HTTPS server
-92.  #
-93.  #server {
-94.  #    listen 443;
-95.  #    server_name localhost;
-96.  #
-97.  #    root html;
-98.  #    index index.html index.htm;
-99.  #
-100.  #    ssl on;
-101.  #    ssl_certificate cert.pem;
-102.  #    ssl_certificate_key cert.key;
-103.  #
-104.  #    ssl_session_timeout 5m;
-105.  #
-106.  #    ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
-107.  #    ssl_ciphers &#34;HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES&#34;;
-108.  #    ssl_prefer_server_ciphers on;
-109.  #
-110.  #    location / {
-111.  #        try_files $uri $uri/ =404;
-112.  #    }
-113.  #}
-```
-
+We want to change Nginx to also look for PHP files.</code></pre><p>server {
+listen 80 default_server;
+listen [::]:80 default_server ipv6only=on;
+root /usr/share/nginx/html;
+<em>index.php</em> index index.html index.htm; # Make site accessible from <a href=http://localhost/>http://localhost/</a>
+server_name localhost;
+include hhvm.conf;
+}</p><pre><code>And we want to change how files are loaded.</code></pre><p>location / {
+# First attempt to serve request as file, then
+# as directory, then fall back to displaying a 404.
+try_files $uri $uri/ /index.php?q=$uri&$args;
+}</p><pre><code>Your complete file should look like [this](https://gist.github.com/bradp/2e71455f9795fb2e6b2d):</code></pre><ol><li># You may add here your</li><li># server {</li><li># &mldr;</li><li># }</li><li># statements for each of your virtual hosts to this file</li><li> </li><li>##</li><li># You should look at the following URL&rsquo;s in order to grasp a solid understanding</li><li># of Nginx configuration files in order to fully unleash the power of Nginx.</li><li># <a href=http://wiki.nginx.org/Pitfalls>http://wiki.nginx.org/Pitfalls</a></li><li># <a href=http://wiki.nginx.org/QuickStart>http://wiki.nginx.org/QuickStart</a></li><li># <a href=http://wiki.nginx.org/Configuration>http://wiki.nginx.org/Configuration</a></li><li>#</li><li># Generally, you will want to move this file somewhere, and start with a clean</li><li># file but keep this around for reference. Or just disable in sites-enabled.</li><li>#</li><li># Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.</li><li>##</li><li> </li><li>server {</li><li>listen 80 default_server;</li><li>listen [::]:80 default_server ipv6only=on;</li><li> </li><li>root /usr/share/nginx/html;</li><li>index.php index.html index.htm;</li><li> </li><li># Make site accessible from <a href=http://localhost/>http://localhost/</a></li><li>server_name localhost;</li><li>include hhvm.conf;</li><li> </li><li>location / {</li><li># First attempt to serve request as file, then</li><li># as directory, then fall back to displaying a 404.</li><li>try_files $uri $uri/ /index.php?q=$uri&$args;</li><li># Uncomment to enable naxsi on this location</li><li># include /etc/nginx/naxsi.rules</li><li>}</li><li> </li><li># Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests</li><li>#location /RequestDenied {</li><li># proxy_pass <a href=http://127.0.0.1:8080>http://127.0.0.1:8080</a>;</li><li>#}</li><li> </li><li>#error_page 404 /404.html;</li><li> </li><li># redirect server error pages to the static page /50x.html</li><li>#</li><li>#error_page 500 502 503 504 /50x.html;</li><li>#location = /50x.html {</li><li># root /usr/share/nginx/html;</li><li>#}</li><li> </li><li># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</li><li>#</li><li>#location ~ .php$ {</li><li># fastcgi_split_path_info ^(.+.php)(/.+)$;</li><li># # NOTE: You should have &ldquo;cgi.fix_pathinfo = 0;&rdquo; in php.ini</li><li>#</li><li># # With php5-cgi alone:</li><li># fastcgi_pass 127.0.0.1:9000;</li><li># # With php5-fpm:</li><li># fastcgi_pass unix:/var/run/php5-fpm.sock;</li><li># fastcgi_index index.php;</li><li># include fastcgi_params;</li><li>#}</li><li> </li><li># deny access to .htaccess files, if Apache&rsquo;s document root</li><li># concurs with nginx&rsquo;s one</li><li>#</li><li>#location ~ /.ht {</li><li># deny all;</li><li>#}</li><li>}</li><li> </li><li> </li><li># another virtual host using mix of IP-, name-, and port-based configuration</li><li>#</li><li>#server {</li><li># listen 8000;</li><li># listen somename:8080;</li><li># server_name somename alias another.alias;</li><li># root html;</li><li># index index.html index.htm;</li><li>#</li><li># location / {</li><li># try_files $uri $uri/ =404;</li><li># }</li><li>#}</li><li> </li><li> </li><li># HTTPS server</li><li>#</li><li>#server {</li><li># listen 443;</li><li># server_name localhost;</li><li>#</li><li># root html;</li><li># index index.html index.htm;</li><li>#</li><li># ssl on;</li><li># ssl_certificate cert.pem;</li><li># ssl_certificate_key cert.key;</li><li>#</li><li># ssl_session_timeout 5m;</li><li>#</li><li># ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;</li><li># ssl_ciphers &ldquo;HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES&rdquo;;</li><li># ssl_prefer_server_ciphers on;</li><li>#</li><li># location / {</li><li># try_files $uri $uri/ =404;</li><li># }</li><li>#}
+``<code>
 Now we need to restart Nginx, and start the WordPress installation.
-
-`$ sudo service nginx restart`
-
+</code>$ sudo service nginx restart`
 At this point you can navigate in your browser to your site and you should be good to go!
-
-![load-times](/images/load-times.png)
-
-Here’s a screenshot a stresstest of a site running default 2014, with the steps outlined above. As you can see, these results are amazing for a $5/month server.
-</code></pre></div>
-</article>
-
-	</main>
-
-	<div class="absolute bottom-0 w-full"><footer class="w-full h-24 text-center text-xs text-gray-400 bg-black relative">
-	<div class="w-full px-6 md:pt-0 md:mx-auto md:max-w-5xl flex flex-1 space-between items-center absolute-center">
-		<a href="https://bradparbs.com/" class="absolute">
-			<div class="w-8 h-8 relative font-bold bg-white blend-diff">
-	<h1 class="absolute-center m-0 font-charter text-2xl text-gray-100 blend-diff select-none">
-		B
-	</h1>
-</div>
-		</a>
-
-		<div class="h-full flex-1">
-			<span class="select-none">made with ❤️ in mke</span>
-		</div>
-	</div>
-</footer>
-</div>
-</body>
-
-</html>
+<img src=/images/load-times.png alt=load-times>
+Here’s a screenshot a stresstest of a site running default 2014, with the steps outlined above. As you can see, these results are amazing for a $5/month server.</li></ol></div><hr class="mb-6 mt-12"><div class="flex flex-wrap justify-between items-center m-10"><div class="ml-auto mt-1 text-center sm:text-right overflow-ellipsis pl-1"><a href=https://bradparbs.com/2015/getting-started-with-vagrant-vvv-for-local-development/><span class=underline>Getting started with Vagrant & VVV for local development</span></a>
+<a class="ml-4 no-underline" href=https://bradparbs.com/2015/getting-started-with-vagrant-vvv-for-local-development/><img src=/icons/top_arrow.svg class="transform rotate-90 inline-block"></a></div></div></main><div class="absolute bottom-0 w-full"><footer class="w-full h-24 text-center text-xs h-24 relative bg-gradient-to-r from-red-500 via-pink-500 to-purple-400"><div class="w-full pt-6 pb-6 flex flex-1 space-between items-center justify-evenly absolute-center"><a href=https://bradparbs.com/ class="m-0 text-lg text-white select-none no-underline">Brad Parbs</a><div class="flex justify-center items-center flex-wrap"><a href=https://github.com/bradp title=github class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out" target=_blank rel=noopener><img src=/icons/github.svg alt="github icon" class="w-4 h-4 md:w-6 md:h-6"></a>
+<a href=https://twitter.com/bradparbs title=twitter class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out" target=_blank rel=noopener><img src=/icons/twitter.svg alt="twitter icon" class="w-4 h-4 md:w-6 md:h-6"></a>
+<a href=https://linkedin.com/in/bradparbs title=linkedin class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out" target=_blank rel=noopener><img src=/icons/linkedin.svg alt="linkedin icon" class="w-4 h-4 md:w-6 md:h-6"></a>
+<a href=mailto:brad@bradparbs.com title=email class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out" target=_blank rel=noopener><img src=/icons/email.svg alt="email icon" class="w-4 h-4 md:w-6 md:h-6"></a></div></div></footer></div></body></html>
