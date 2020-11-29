@@ -1,17 +1,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name=viewport content="width=device-width, initial-scale=1">
-{{ with .Description }}
-<meta name="description" content="Brad Parbs - Milwaukee WordPress developer - {{ . }}" />
-{{ else }}
-{{ with $.Site.Params.description }}
-<meta name="description" content="Brad Parbs - Milwaukee WordPress developer." />
-{{ end }}
 
-{{ end }}
-<title>
-	{{ .Site.Title }}
-	{{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}
-</title>
+<title>{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }} </title>
+
 {{ with .OutputFormats.Get "RSS" }}
 <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
 {{ end }}
@@ -22,4 +13,17 @@
 <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 {{ end }}
 
-{{ partial "social_metadata.html" . }}
+<meta name="apple-mobile-web-app-title" content="Brad Parbs - Milwaukee WordPress developer" />
+<meta name="application-name" content="Brad Parbs - Milwaukee WordPress developer" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="{{ if .Description }} {{ with .Description }} - {{ . }} {{ end }} {{ else }} Brad Parbs - Milwaukee WordPress developer {{ end }}" />
+<meta itemprop="name" content="{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}" />
+<meta itemprop="description" content="{{ if .Description }} {{ with .Description }} - {{ . }} {{ end }} {{ else }} Brad Parbs - Milwaukee WordPress developer {{ end }}" />
+<meta name="twitter:site" content="@bradparbs" />
+<meta name="twitter:title" content="{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}" />
+<meta name="twitter:description" content="{{ if .Description }} {{ with .Description }} - {{ . }} {{ end }} {{ else }} Brad Parbs - Milwaukee WordPress developer {{ end }}" />
+<meta name="twitter:creator" content="@bradparbs" />
+
+<meta property="og:title" content="{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}" />
+<meta property="og:description" content="{{ if .Description }} {{ with .Description }} - {{ . }} {{ end }} {{ else }} Brad Parbs - Milwaukee WordPress developer {{ end }}" />
+<meta property="og:site_name" content="Brad Parbs - Milwaukee WordPress developer" />
