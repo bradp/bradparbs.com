@@ -22,6 +22,6 @@ hero_media = "/images/brad-parbs.jpg"
 
 +++
 
-# I'm **Brad Parbs** and I build neat things on the internet.
+# I'm **Brad Parbs**. I like to build neat things on the internet.
 
 I'm a Milwaukee WordPress developer, currently working as a developer at [Awesome Motive](https://awesomemotive.com/).
