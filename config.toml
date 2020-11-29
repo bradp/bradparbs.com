@@ -15,21 +15,21 @@ customCSS = ["css/style.css"]
 # customJS = ["js/console.js"]
 keywords = "brad parbs, bradparbs"
 twitterUsername = "@bradparbs"
-socialImage = "images/brad-parbs.jpgs"
+socialImage = "images/brad-parbs.jpg"
 
 [[params.social]]
 alt = "github icon"
 blank = true
 icon = "/icons/github.svg"
 name = "github"
-url = "https://github.com/"
+url = "https://github.com/bradp"
 
 [[params.social]]
 alt = "twitter icon"
 blank = true
 icon = "/icons/twitter.svg"
 name = "twitter"
-url = "https://twitter.com/"
+url = "https://twitter.com/bradparbs"
 
 [[params.social]]
 alt = "linkedin icon"
@@ -42,7 +42,7 @@ url = "https://linkedin.com/in/bradparbs"
 alt = "email icon"
 icon = "/icons/email.svg"
 name = "email"
-url = "mailto:mail@example.com"
+url = "mailto:brad@bradparbs.com"
 
 
 # Navigation bar

@@ -1,17 +1,20 @@
-<div class="mb-4 border border-gray-300 rounded-md overflow-hidden">
-	<a href="{{ .Permalink }}" class="no-underline block">
-		{{/* A span is used instead a div for accessibiliy, <a> tag can't wrap div elements */}}
+<div class="mb-4 border border-gray-300 rounded-md overflow-hidden transform hover:shadow-md hover:scale-110 hover:bg-gray-200 h-full relative">
+	<a href="{{ .Permalink }}" class="no-underline">
 		<span class="block">
-			<div class="px-4 mt-3 mb-3">
-				<h2 class="m-0 inline-block overflow-ellipsis">{{ .Title | emojify }}</h2>
+			<div class="px-6 py-4 h-56">
+				<div class="font-bold text-l mb-2 h-18 align-middle">
+					{{ .Title | emojify }}
+				</div>
+				<p class="text-gray-700 font-light text-sm leading-1 text-base">
+					{{ with .Params.subtitle }}
+					{{ . }}
+					{{ else }}
+					{{ substr .Plain 0 155 }} ...
+					{{ end }}
+				</p>
 			</div>
-			<div class="px-4 mb-3 text-gray-600 overflow-ellipsis">
-				{{ with .Params.subtitle }}
-				{{ . }}
-				{{ else }}
-				{{ substr .Plain 0 256 }}
-				{{ end }}
-				<span class="text-xs mt-3 block no-underline">{{ i18n "read_more" }}...</span>
+			<div class="px-6 pt-4 pb-2 absolute bottom-0">
+				<span class="inline-block px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Read More 👉️</span>
 			</div>
 		</span>
 	</a>
