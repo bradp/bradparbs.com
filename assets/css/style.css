@@ -37,6 +37,8 @@ nav a {
 
 nav a.text-pink-500 {
     color: #8c4686;
+    margin-bottom: 0;
+    line-height: 2rem;
 }
 
 a {
