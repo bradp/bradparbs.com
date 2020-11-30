@@ -35,8 +35,12 @@ nav a {
     padding: 1rem;
 }
 
+nav a.text-pink-500 {
+    color: #8c4686;
+}
+
 a {
-	color: #ed64a6;
+	color: #bf3a7a;
 }
 
 a:hover {
@@ -62,7 +66,7 @@ b, strong {
 }
 
 .back-btn {
-	color: #ed64a6;
+	color: #bf3a7a;
 }
 
 .hero-image {
@@ -70,5 +74,5 @@ b, strong {
 }
 
 *::selection {
-	background-color: #ed64a6
+	background-color: #bf3a7a
 }
