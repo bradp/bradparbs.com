@@ -69,10 +69,6 @@ b, strong {
 	color: #bf3a7a;
 }
 
-.hero-image {
-	max-height: 20rem;
-}
-
 *::selection {
 	background-color: #bf3a7a
 }
