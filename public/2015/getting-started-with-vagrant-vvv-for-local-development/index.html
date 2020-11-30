@@ -1,8 +1,270 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Brad Parbs - Getting started with Vagrant & VVV for local development</title><link rel=icon type=image/x-icon href=/favicon.ico><meta name=apple-mobile-web-app-title content="Brad Parbs - Milwaukee WordPress developer"><meta name=application-name content="Brad Parbs - Milwaukee WordPress developer"><meta name=theme-color content="#ffffff"><meta name=description content="- Getting started with Vagrant & VVV for local development"><meta itemprop=name content="Brad Parbs  - Getting started with Vagrant & VVV for local development"><meta itemprop=description content="- Getting started with Vagrant & VVV for local development"><meta name=twitter:site content="@bradparbs"><meta name=twitter:title content="Brad Parbs  - Getting started with Vagrant & VVV for local development"><meta name=twitter:description content="- Getting started with Vagrant & VVV for local development"><meta name=twitter:creator content="@bradparbs"><meta property="og:title" content="Brad Parbs  - Getting started with Vagrant & VVV for local development"><meta property="og:description" content="- Getting started with Vagrant & VVV for local development"><meta property="og:site_name" content="Brad Parbs - Milwaukee WordPress developer"><link rel=stylesheet href=https://bradparbs.com/css/main.min.d7de472f5be19c2e787cab74d17481fc.css crossorigin=anonymous media=screen integrity=md5-195HL1vhnC54fKt00XSB/A==><link rel=stylesheet href=https://bradparbs.com/css/style.min.fbe4706b61e4dd1659c229acb76577f1.css crossorigin=anonymous media=screen integrity=md5-++Rwa2Hk3RZZwimst2V38Q==></head><body class="min-h-screen bg-white relative pb-24"><div id=top></div><div class="site-header bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transform rotate-3 bg-opacity-75 block"><header id=site-header class="w-full flex items-center justify-between px-5 mx-auto md:mt-8 md:max-w-5xl pt-2 md:pt-0"><div class="flex items-center"><a href=https://bradparbs.com/ title="Brad Parbs" class="inline-block no-underline select-none"><h1 class="font-sans-serif m-0 site-title">Brad Parbs</h1></a></div><nav><a href=/ title=home class="border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline">home</a>
-<a href=/about/ title=about class="border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline">about</a>
-<a href=/projects/ title=projects class="border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline">projects</a>
-<a href=/posts/ title=blog class="border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline">blog</a></nav></header></div><main class="w-full px-4 pt-8 mx-auto md:max-w-4xl overflow-x-hidden md:overflow-visible text-xl leading-loose font-light subpixel-antialiased"><button onclick=window.history.back() class="back-btn bg-transparent border-none font-bold">&larr;Back</button><h1 class="text-center mx-auto max-w-4xl text-2xl sm:text-3xl md:text-4xl tracking-tighter m-0">Getting started with Vagrant & VVV for local development</h1><h3 class="text-center font-serif font-thin mx-auto mb-5 max-w-4xl text-l">Posted on January 14, 2015 by Brad Parbs</h3><div class="text-justify leading-loose mb-12 text-lg post-content"><p><img src=/images/vagrant.png alt=vagrant></p><p>When I started doing web development, I think I started the way a lot of us did. You have a site you want to work on, so you connect with FTP, download a file, modify it, upload it back up, and then refresh the page to see if your changes worked. This process doesn’t really work when you’re working with a team of people, or on a site that people are actively going to. If your teammate edits the same file as you, someone’s changes may be lost, and if you upload something with an error in it, you may break the site for people currently browsing it. This isn’t a fun process.</p><p>The solution to combat this “cowboy coding” is to not work directly on a server, but rather on a server that is on your local machine. There are a ton of ways to do this, and I’ll walk you through what I do.</p><p>When doing any sort of design or development, you want to work locally. This is the best way to develop, and has tons of benefits. Like these:</p><ul><li>Faster. No waiting for files to upload via FTP before you can refresh your browser and see your changes.</li><li>Easier debugging. Because everything is running on your system, setting up and using xDebug or other debugging tools is quite a bit easier.</li><li>Don’t need an internet connection work on things.</li><li>Less fear of screwing up. When working locally, you’re free to experiment and play around, as your work is not affecting current users.</li></ul><p>I use <a href=https://www.vagrantup.com/>Vagrant</a> and a nifty tool called <a href=http://github.com/varying-vagrant-vagrants/vvv>Varying Vagrant Vagrants</a> (VVV) to power my local development. This, coupled with some tools I’ve written to make my life easier, is a very enjoyable way to work locally. I’ll walk through setting up VVV, as well as a helper tool VV, and how to use both.</p><p><strong>So what’s Vagrant?</strong></p><p><img src=/images/vagrant.png alt=vagrant></p><p>Vagrant is a toolkit that runs on top of VirtualBox, VMWare, or another virtual machine provider on your local machine. Vagrant will allow you to work with these virtual machines to run your code, while you keep your entire workflow on your local computer.</p><p>Vagrant is configured all within one file–the Vagrantfile. This allows you to just do a “vagrant up” on the command line, and Vagrant will set up a virtual machine configured exactly how it should be.</p><p>Vagrant allows you to create Vagrant boxes, which are basically an image of a machine that you can pull down. This, coupled with some nifty provisioning code, is what gives VVV its magic.</p><p><strong>What is VVV?</strong></p><p><img src=/images/vvv.png alt=vvv></p><p>Varying Vagrant Vagrants is a Vagrant setup that provides a great start for local WordPress development. Whether you’re building plugins, themes, or full site, a local VVV installation is the best place to do your development.</p><p><strong>Setting up VVV</strong></p><p>Getting VVV set up is pretty simple. You can follow along with the guide <a href=https://github.com/varying-vagrant-vagrants/vvv>here</a>.</p><ul><li>First you’ll want to install VirtualBox. You can probably switch this out for VMWare or something else, but Virtualbox is free and works perfectly for our needs.</li><li>You’ll also want to install Vagrant. VVV’s README recommends Vagrant 1.6.x, but I’m running 1.7 with absolutely no problems, so you’ll probably be fine with the latest version.</li><li>You’ll also want the vagrant-hostsupdater plugin. This is optional, but highly recommended. This lets you easily set up custom domains to use.</li><li>VVV recommends installing the vagrant-triggers plugin, but I’ve actually run into some issues with this installed. If you choose to use this, disabling it should be your first step if you have issues.</li></ul><p>After installing all the above requirements, just run <code>git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git</code> on the command line where you’d like your local installation  and then a <code>vagrant up</code>. Boom! You’re using VVV.</p><p>This creates some local sites for you to use (keep in mind, these links <em>will not work</em> unless you have the software up and running):</p><ul><li><a href=http://local.wordpress.dev/%20>The latest stable, released version of WordPress</a></li><li><a href=http://local.wordpress-trunk.dev/>The current development version of WordPress</a></li><li><a href=http://src.wordpress-develop.dev/%20>The current development version of WordPress</a>, with all files</li><li><a href=http://build.wordpress-develop.dev/>The version of those development files built with Grunt</a></li><li><a href=http://vvv.dev/%20>A default dashboard</a> containing several useful tools</li></ul><p><strong>Using VVV</strong></p><p>Once you’ve set up VVV, you’ll be able to access above sites in your browser and the files inside the folder where you installed VVV. This is a perfect set up to start developing themes and plugins while testing on both the current version of WordPress, as well as the currently in-development version.</p><p>There are a few command line commands you’ll want to know when using VVV:</p><p><strong><code>vagrant up</code></strong> – When in the VVV root directory, this will start the virtual machine that powers VVV. It will set up your hosts file with the correct local domain names, update your local versions of WordPress, and run any custom init scripts you have set up. (More on this later!)</p><p><strong><code>vagrant halt</code></strong> – This pauses Vagrant. This is useful when you’re on battery power, aren’t using VVV, and you don’t want to run a virtual machine in the background.</p><p><strong><code>vagrant provision</code></strong> – This runs provisioning scripts. These are the things that VVV uses to make sure it is set up correctly. You generally don’t need to do this all the time, but I recommend running this command if you start having issues and want to start troubleshooting.</p><p><strong><code>vagrant ssh</code></strong> – And this connects you to VVV via ssh. This is probably my favorite command, as it allows you to run commands inside of the virtual machine. I use this mostly to run WP-CLI and PHPUnit things inside of VVV.</p><p>Vagrant also has more commands, but these are the ones you’ll mostly need and use when working with it for VVV on a daily basis.</p><p><strong>Setting up more local sites</strong></p><p>VVV has a nifty feature that allows you to create new sites. If you’re working on a project, it is useful to have a separate local installation for it, rather than squeezing it into one of the other ones. I’ve built a small command line tool to help automate the setup and management of this called <a href=https://github.com/bradp/vv>Variable VVV</a>.</p><p><img src=/images/vv.png alt=vv></p><p><strong>Setting up VV</strong></p><p>If you have <a href=http://brew.sh>Homebrew</a> installed, you simply run <code>brew install bradp/vv/vv</code> in your terminal application. That’s it!</p><p>If you don’t have Homebrew installed, it’s very quick and really useful.</p><p><strong>Using VV</strong></p><p>Once installed, you can run <code>vv</code> anywhere you’d like. If vv can’t automatically find your VVV installation, you will be prompted for the path. It will also save this into a configuration file in <code>~/.vv-config</code> so you won’t be prompted again.</p><p>You can read the <a href=https://github.com/bradp/vv>documentation</a> on Github. It is constantly getting new features and fixes, but for the most part, you’ll want to run the following commands:<img src=/images/vv-terminal.png alt=vv-terminal></p><p><strong><code>vv list</code></strong> – Lists all local sites.</p><p><strong><code>vv create</code></strong> – Walks you through a wizard to create a new site.</p><p><strong><code>vv delete</code></strong> – Walks you through removing a site.</p><p>The wizard that VV walks you through can also all be done with flags on the original command, so creating the same site as in our screenshot could be done like so: <code>vv create --domain testing_site.dev --nametesting_site --debug --sample-content.</code></p><p>VV has a lot more features and information covered in the <a href=https://github.com/bradp/vv>README on Github</a>, and should be read through. It has support for site blueprints which will install a set of plugins and themes you choose, deployments, and a lot more.</p><p>Hopefully, now you’ll be a bit more comfortable installing and using VVV and VV to power your local development. Both projects have active Github repositories, and everyone working on the projects is always happy to help.</p></div><hr class="mb-6 mt-12"><div class="flex flex-wrap justify-between items-center m-10"><div class="w-full sm:w-1/2 mb-1 text-center sm:text-left overflow-ellipsis pr-1"><a class="mr-4 no-underline" href=https://bradparbs.com/2014/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/><img src=/images/top_arrow.svg class="transform -rotate-90 inline-block"></a>
-<a href=https://bradparbs.com/2014/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/><span class=underline>Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times</span></a></div><div class="w-full sm:w-1/2 mt-1 text-center sm:text-right overflow-ellipsis pl-1"><a href=https://bradparbs.com/2015/a-beginners-guide-to-the-best-command-line-tools/><span class=underline>A Beginner’s Guide to the Best Command Line Tools</span></a>
-<a class="ml-4 no-underline" href=https://bradparbs.com/2015/a-beginners-guide-to-the-best-command-line-tools/><img src=/images/top_arrow.svg class="transform rotate-90 inline-block"></a></div></div></main><div class="absolute bottom-0 w-full"><footer class="w-full h-24 text-center text-xs h-24 relative bg-gradient-to-r from-red-500 via-pink-500 to-purple-400"><div class="w-full pt-6 pb-6 flex flex-1 space-between items-center justify-evenly absolute-center"><a href=https://bradparbs.com/ class="m-0 text-lg text-white select-none no-underline">Brad Parbs</a><div class="flex justify-center items-center flex-wrap"><a href=https://github.com/bradp title=github class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out" target=_blank rel=noopener><img src=/images/github.svg alt="github icon" class="w-4 h-4 md:w-6 md:h-6"></a>
-<a href=https://twitter.com/bradparbs title=twitter class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out" target=_blank rel=noopener><img src=/images/twitter.svg alt="twitter icon" class="w-4 h-4 md:w-6 md:h-6"></a>
-<a href=mailto:brad@bradparbs.com title=email class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out" target=_blank rel=noopener><img src=/images/email.svg alt="email icon" class="w-4 h-4 md:w-6 md:h-6"></a></div></div></footer></div></body></html>
+<!DOCTYPE html>
+<html lang='en-us'>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<title>Brad Parbs  - Getting started with Vagrant &amp; VVV for local development  </title>
+
+
+
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+<meta name="apple-mobile-web-app-title" content="Brad Parbs - Milwaukee WordPress developer" />
+<meta name="application-name" content="Brad Parbs - Milwaukee WordPress developer" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="  - Getting started with Vagrant &amp; VVV for local development  " />
+<meta itemprop="name" content="Brad Parbs  - Getting started with Vagrant &amp; VVV for local development " />
+<meta itemprop="description" content="  - Getting started with Vagrant &amp; VVV for local development  " />
+<meta name="twitter:site" content="@bradparbs" />
+<meta name="twitter:title" content="Brad Parbs  - Getting started with Vagrant &amp; VVV for local development " />
+<meta name="twitter:description" content="  - Getting started with Vagrant &amp; VVV for local development  " />
+<meta name="twitter:creator" content="@bradparbs" />
+
+<meta property="og:title" content="Brad Parbs  - Getting started with Vagrant &amp; VVV for local development " />
+<meta property="og:description" content="  - Getting started with Vagrant &amp; VVV for local development  " />
+<meta property="og:site_name" content="Brad Parbs - Milwaukee WordPress developer" />
+
+	
+
+
+
+
+
+<link rel="stylesheet" href="https://bradparbs.com/css/main.min.d7de472f5be19c2e787cab74d17481fc.css" crossorigin="anonymous" media="screen"
+	integrity="md5-195HL1vhnC54fKt00XSB/A==">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://bradparbs.com/css/style.min.fbe4706b61e4dd1659c229acb76577f1.css" crossorigin="anonymous" media="screen"
+	integrity="md5-++Rwa2Hk3RZZwimst2V38Q==">
+
+
+	
+
+
+
+
+
+
+</head>
+
+<body class="min-h-screen bg-white relative pb-24">
+	<div id="top"></div>
+
+<div class="site-header bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transform rotate-3 bg-opacity-75 block">
+	<header id="site-header" class="w-full flex items-center justify-between px-5 mx-auto md:mt-8 md:max-w-5xl pt-2 md:pt-0">
+		<div class="flex items-center">
+			<a href="https://bradparbs.com/" title="Brad Parbs" class="inline-block no-underline select-none">
+				<h1 class="font-sans-serif m-0 site-title">
+					Brad Parbs
+				</h1>
+			</a>
+		</div>
+
+		<nav>
+			
+			<a href="/" title="home" class='border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline'>home</a>
+			
+			<a href="/about/" title="about" class='border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline'>about</a>
+			
+			<a href="/projects/" title="projects" class='border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline'>projects</a>
+			
+			<a href="/posts/" title="blog" class='border bg-pink-100 border-pink-500 text-pink-500 rounded-lg m-2 p-2 select-none hover:text-white hover:bg-pink-400 focus:outline-none focus:shadow-outline no-underline'>blog</a>
+			
+		</nav>
+	</header>
+</div>
+
+
+	
+
+	<main class="w-full px-4 pt-8 mx-auto md:max-w-4xl overflow-x-hidden md:overflow-visible text-xl leading-loose font-light subpixel-antialiased">
+<button onclick="window.history.back()"
+	class="back-btn bg-transparent border-none font-bold">&larr;Back</button>
+<h1 class="text-center mx-auto max-w-4xl text-2xl sm:text-3xl md:text-4xl tracking-tighter m-0">
+	Getting started with Vagrant &amp; VVV for local development
+</h1>
+
+<h3 class="text-center font-serif font-thin mx-auto mb-5 max-w-4xl text-l">
+	Posted on January 14, 2015 by Brad Parbs
+</h3>
+<div class="text-justify leading-loose mb-12 text-lg post-content">
+	<p><img src="/images/vagrant.png" alt="vagrant" /></p>
+
+<p>When I started doing web development, I think I started the way a lot of us did. You have a site you want to work on, so you connect with FTP, download a file, modify it, upload it back up, and then refresh the page to see if your changes worked. This process doesn’t really work when you’re working with a team of people, or on a site that people are actively going to. If your teammate edits the same file as you, someone’s changes may be lost, and if you upload something with an error in it, you may break the site for people currently browsing it. This isn’t a fun process.</p>
+
+<p>The solution to combat this “cowboy coding” is to not work directly on a server, but rather on a server that is on your local machine. There are a ton of ways to do this, and I’ll walk you through what I do.</p>
+
+<p>When doing any sort of design or development, you want to work locally. This is the best way to develop, and has tons of benefits. Like these:</p>
+
+<ul>
+<li>Faster. No waiting for files to upload via FTP before you can refresh your browser and see your changes.</li>
+<li>Easier debugging. Because everything is running on your system, setting up and using xDebug or other debugging tools is quite a bit easier.</li>
+<li>Don’t need an internet connection work on things.</li>
+<li>Less fear of screwing up. When working locally, you’re free to experiment and play around, as your work is not affecting current users.</li>
+</ul>
+
+<p>I use <a href="https://www.vagrantup.com/">Vagrant</a> and a nifty tool called <a href="http://github.com/varying-vagrant-vagrants/vvv">Varying Vagrant Vagrants</a> (VVV) to power my local development. This, coupled with some tools I’ve written to make my life easier, is a very enjoyable way to work locally. I’ll walk through setting up VVV, as well as a helper tool VV, and how to use both.</p>
+
+<p><strong>So what’s Vagrant?</strong></p>
+
+<p><img src="/images/vagrant.png" alt="vagrant" /></p>
+
+<p>Vagrant is a toolkit that runs on top of VirtualBox, VMWare, or another virtual machine provider on your local machine. Vagrant will allow you to work with these virtual machines to run your code, while you keep your entire workflow on your local computer.</p>
+
+<p>Vagrant is configured all within one file–the Vagrantfile. This allows you to just do a “vagrant up” on the command line, and Vagrant will set up a virtual machine configured exactly how it should be.</p>
+
+<p>Vagrant allows you to create Vagrant boxes, which are basically an image of a machine that you can pull down. This, coupled with some nifty provisioning code, is what gives VVV its magic.</p>
+
+<p><strong>What is VVV?</strong></p>
+
+<p><img src="/images/vvv.png" alt="vvv" /></p>
+
+<p>Varying Vagrant Vagrants is a Vagrant setup that provides a great start for local WordPress development. Whether you’re building plugins, themes, or full site, a local VVV installation is the best place to do your development.</p>
+
+<p><strong>Setting up VVV</strong></p>
+
+<p>Getting VVV set up is pretty simple. You can follow along with the guide <a href="https://github.com/varying-vagrant-vagrants/vvv">here</a>.</p>
+
+<ul>
+<li>First you’ll want to install VirtualBox. You can probably switch this out for VMWare or something else, but Virtualbox is free and works perfectly for our needs.</li>
+<li>You’ll also want to install Vagrant. VVV’s README recommends Vagrant 1.6.x, but I’m running 1.7 with absolutely no problems, so you’ll probably be fine with the latest version.</li>
+<li>You’ll also want the vagrant-hostsupdater plugin. This is optional, but highly recommended. This lets you easily set up custom domains to use.</li>
+<li>VVV recommends installing the vagrant-triggers plugin, but I’ve actually run into some issues with this installed. If you choose to use this, disabling it should be your first step if you have issues.</li>
+</ul>
+
+<p>After installing all the above requirements, just run <code>git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git</code> on the command line where you’d like your local installation  and then a <code>vagrant up</code>. Boom! You’re using VVV.</p>
+
+<p>This creates some local sites for you to use (keep in mind, these links <em>will not work</em> unless you have the software up and running):</p>
+
+<ul>
+<li><a href="http://local.wordpress.dev/%20">The latest stable, released version of WordPress</a></li>
+<li><a href="http://local.wordpress-trunk.dev/">The current development version of WordPress</a></li>
+<li><a href="http://src.wordpress-develop.dev/%20">The current development version of WordPress</a>, with all files</li>
+<li><a href="http://build.wordpress-develop.dev/">The version of those development files built with Grunt</a></li>
+<li><a href="http://vvv.dev/%20">A default dashboard</a> containing several useful tools</li>
+</ul>
+
+<p><strong>Using VVV</strong></p>
+
+<p>Once you’ve set up VVV, you’ll be able to access above sites in your browser and the files inside the folder where you installed VVV. This is a perfect set up to start developing themes and plugins while testing on both the current version of WordPress, as well as the currently in-development version.</p>
+
+<p>There are a few command line commands you’ll want to know when using VVV:</p>
+
+<p><strong><code>vagrant up</code></strong> – When in the VVV root directory, this will start the virtual machine that powers VVV. It will set up your hosts file with the correct local domain names, update your local versions of WordPress, and run any custom init scripts you have set up. (More on this later!)</p>
+
+<p><strong><code>vagrant halt</code></strong> – This pauses Vagrant. This is useful when you’re on battery power, aren’t using VVV, and you don’t want to run a virtual machine in the background.</p>
+
+<p><strong><code>vagrant provision</code></strong> – This runs provisioning scripts. These are the things that VVV uses to make sure it is set up correctly. You generally don’t need to do this all the time, but I recommend running this command if you start having issues and want to start troubleshooting.</p>
+
+<p><strong><code>vagrant ssh</code></strong> – And this connects you to VVV via ssh. This is probably my favorite command, as it allows you to run commands inside of the virtual machine. I use this mostly to run WP-CLI and PHPUnit things inside of VVV.</p>
+
+<p>Vagrant also has more commands, but these are the ones you’ll mostly need and use when working with it for VVV on a daily basis.</p>
+
+<p><strong>Setting up more local sites</strong></p>
+
+<p>VVV has a nifty feature that allows you to create new sites. If you’re working on a project, it is useful to have a separate local installation for it, rather than squeezing it into one of the other ones. I’ve built a small command line tool to help automate the setup and management of this called <a href="https://github.com/bradp/vv">Variable VVV</a>.</p>
+
+<p><img src="/images/vv.png" alt="vv" /></p>
+
+<p><strong>Setting up VV</strong></p>
+
+<p>If you have <a href="http://brew.sh">Homebrew</a> installed, you simply run <code>brew install bradp/vv/vv</code> in your terminal application. That’s it!</p>
+
+<p>If you don’t have Homebrew installed, it’s very quick and really useful.</p>
+
+<p><strong>Using VV</strong></p>
+
+<p>Once installed, you can run <code>vv</code> anywhere you’d like. If vv can’t automatically find your VVV installation, you will be prompted for the path. It will also save this into a configuration file in <code>~/.vv-config</code> so you won’t be prompted again.</p>
+
+<p>You can read the <a href="https://github.com/bradp/vv">documentation</a> on Github. It is constantly getting new features and fixes, but for the most part, you’ll want to run the following commands:<img src="/images/vv-terminal.png" alt="vv-terminal" /></p>
+
+<p><strong><code>vv list</code></strong> – Lists all local sites.</p>
+
+<p><strong><code>vv create</code></strong> – Walks you through a wizard to create a new site.</p>
+
+<p><strong><code>vv delete</code></strong> – Walks you through removing a site.</p>
+
+<p>The wizard that VV walks you through can also all be done with flags on the original command, so creating the same site as in our screenshot could be done like so: <code>vv create --domain testing_site.dev --nametesting_site --debug --sample-content.</code></p>
+
+<p>VV has a lot more features and information covered in the <a href="https://github.com/bradp/vv">README on Github</a>, and should be read through. It has support for site blueprints which will install a set of plugins and themes you choose, deployments, and a lot more.</p>
+
+<p>Hopefully, now you’ll be a bit more comfortable installing and using VVV and VV to power your local development. Both projects have active Github repositories, and everyone working on the projects is always happy to help.</p>
+
+</div>
+
+
+<hr class="mb-6 mt-12">
+
+
+<div class="flex flex-wrap justify-between items-center m-10">
+	
+	<div class=" w-full sm:w-1/2  mb-1 text-center sm:text-left overflow-ellipsis pr-1">
+		<a class="mr-4 no-underline" href="https://bradparbs.com/2014/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/">
+			<img src="/images/top_arrow.svg" class="transform -rotate-90 inline-block">
+		</a>
+		<a href="https://bradparbs.com/2014/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/">
+			<span class="underline">Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times</span>
+		</a>
+	</div>
+	
+
+	
+	<div
+		class=" w-full sm:w-1/2  mt-1 text-center sm:text-right overflow-ellipsis pl-1">
+		<a href="https://bradparbs.com/2015/a-beginners-guide-to-the-best-command-line-tools/">
+			<span class="underline">A Beginner’s Guide to the Best Command Line Tools</span>
+		</a>
+		<a class="ml-4 no-underline" href="https://bradparbs.com/2015/a-beginners-guide-to-the-best-command-line-tools/">
+			<img src="/images/top_arrow.svg" class="transform rotate-90 inline-block">
+		</a>
+	</div>
+	
+</div>
+
+	</main>
+
+	<div class="absolute bottom-0 w-full"><footer class="w-full h-24 text-center text-xs h-24 relative bg-gradient-to-r from-red-500 via-pink-500 to-purple-400">
+
+	<div class="w-full pt-6 pb-6 flex flex-1 space-between items-center justify-evenly absolute-center">
+		<a href="https://bradparbs.com/" class="m-0 text-lg text-white select-none no-underline">
+			Brad Parbs
+		</a>
+
+		<div class="flex justify-center items-center flex-wrap">
+			
+			<a href="https://github.com/bradp" title="github"
+				class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out"
+				target="_blank" rel="noopener">
+				<img src="/images/github.svg" alt="github icon" class="w-4 h-4 md:w-6 md:h-6">
+			</a>
+			
+			<a href="https://twitter.com/bradparbs" title="twitter"
+				class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out"
+				target="_blank" rel="noopener">
+				<img src="/images/twitter.svg" alt="twitter icon" class="w-4 h-4 md:w-6 md:h-6">
+			</a>
+			
+			<a href="mailto:brad@bradparbs.com" title="email"
+				class="bg-pink-800 rounded-full p-3 mx-2 my-2 transform hover:scale-125 hover:rotate-12 active:scale-90 transition-transform duration-300 ease-in-out"
+				target="_blank" rel="noopener">
+				<img src="/images/email.svg" alt="email icon" class="w-4 h-4 md:w-6 md:h-6">
+			</a>
+			
+		</div>
+	</div>
+</footer>
+</div>
+</body>
+
+</html>
