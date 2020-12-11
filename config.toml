@@ -43,40 +43,21 @@ url = "mailto:brad@bradparbs.com"
 # Navigation bar
 [menu]
 
-[[menu.main]]
-identifier = "home"
-url = "/"
-weight = 10
 
 [[menu.main]]
 identifier = "about"
 url = "/about/"
 weight = 20
-
-[[menu.home]]
-identifier = "about"
-url = "/about/"
-weight = 10
 
 [[menu.main]]
 identifier = "projects"
 url = "/projects/"
 weight = 30
-
-[[menu.home]]
-identifier = "projects"
-url = "/projects/"
-weight = 20
 
 [[menu.main]]
 identifier = "blog"
 url = "/posts/"
 weight = 40
-
-[[menu.home]]
-identifier = "blog"
-url = "/posts/"
-weight = 30
 
 [permalinks]
 "posts" = "/:year/:title/"
