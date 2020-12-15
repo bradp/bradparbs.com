@@ -7,7 +7,7 @@ author = "Brad Parbs"
 type = "page"
 +++
 
-I’m currently a Developer at [Awesome Motive](https://awesomemotive.com/), where I am helping to build the easiest WordPress form plugin: [WPForms](https://wpforms.com/). Previously [Human Made](https://humanmade.com), [Impress](https://givewp.com), & [WebDevStudios](https://webdevstudios.com).
+I’m currently a Developer at [Awesome Motive](https://awesomemotive.com/), where I am helping to build the easiest WordPress form plugin: [WPForms](https://wpforms.com/). Previously [Human Made](https://humanmade.com) & [WebDevStudios](https://webdevstudios.com).
 
 I like to [build things](/projects/) on the internet.
 

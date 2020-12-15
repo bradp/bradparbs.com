@@ -60,13 +60,6 @@ b, strong {
 	color: white;
 }
 
-.site-header {
-	margin-right: -2vw;
-    margin-left: -2vw;
-	position: relative;
-	top: 2rem;
-}
-
 .back-btn {
 	color: #bf3a7a;
 }
