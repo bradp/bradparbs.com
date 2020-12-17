@@ -20,21 +20,21 @@ twitterUsername = "@bradparbs"
 socialImage = "images/brad-parbs.jpg"
 
 [[params.social]]
-alt = "github icon"
+alt = "github"
 blank = true
 icon = "/images/github.svg"
 name = "github"
 url = "https://github.com/bradp"
 
 [[params.social]]
-alt = "twitter icon"
+alt = "twitter"
 blank = true
 icon = "/images/twitter.svg"
 name = "twitter"
 url = "https://twitter.com/bradparbs"
 
 [[params.social]]
-alt = "email icon"
+alt = "email"
 icon = "/images/email.svg"
 name = "email"
 url = "mailto:brad@bradparbs.com"
