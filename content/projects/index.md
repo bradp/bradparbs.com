@@ -14,9 +14,12 @@ author = "Brad Parbs"
 -   🔞️ [butts.tech](https://butts.tech/) - when you need an ascii butt.
 -	🐕️ [Random Nature Cams](https://brrad.com/cam) - Random nature cams, perfect for a Raspberry Pi in Kiosk mode.
 -	💰️ [brad.cash](https://brad.cash) - You can send me money.
+-   💀️ [horror.watch](https://horror.watch) - Stream tons of public domain horror movies for free.
+
 
 ## Tools / Software
 
+-   🍐️ [pears.cloud](https://pears.cloud) - A static site starter kit for easily developement.
 -   [vv](https://github.com/bradp/vv) - The best tool for managing [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) sites.
 -   [Worndpress](https://github.com/worndpress) - The best fork of WordPress.
 -   [my dotfiles](https://github.com/bradp/dotfiles) - My way-too-documented dotfiles.
