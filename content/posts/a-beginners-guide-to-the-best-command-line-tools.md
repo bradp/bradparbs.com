@@ -5,9 +5,8 @@ tags = ['cli']
 date = 2015-06-25
 description = "A Beginner’s Guide to the Best Command Line Tools"
 banner = '/images/beginners-guide-to-best-command-line-tools-header.png'
+type = "post"
 +++
-
-![](/images/beginners-guide-to-best-command-line-tools-header.png)
 
 As someone who loves the command line, I’m always striving to make my workflow easier, more efficient, and just overall better. Hopefully, by walking through my set up and my recommendations for the best command line tools, you’ll find some nifty tips and tricks you can adapt to make _your_ workflow better too.
 

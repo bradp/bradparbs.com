@@ -1,20 +1,11 @@
 {{ define "main" }}
-<main id="main">
-	<div class="min-h-screen flex items-center">
-		<div class="container mx-auto flex flex-wrap">
-		  <div class="w-full md:w-5/12 text-center p-4">
-			<img src="/images/404.png" alt="Not Found" />
-		  </div>
-		  <div class="w-full md:w-7/12 text-center md:text-left p-4">
-			<div class="text-6xl font-medium">404</div>
-			<div class="text-xl md:text-3xl font-medium mb-4">
-				😢️ Oh jeez. This page isn't here.
-			</div>
-			<div class="text-lg mb-8">
-				<a href="/" class="border border-white rounded p-4">Go back home</a>
-			</div>
-		  </div>
-		</div>
-	  </div>
-</main>
+{{ .Content }}
+<section id="example" class="w-full max-w-sm mx-auto text-gray-700 body-font">
+	<div class="order-1 max-w-md px-2 text-sm md:text-base lg:px-0">
+		<header class="mb-6">
+			<h2 class="text-4xl font-bold leading-none text-gray-400 select-none lg:text-6xl">oops</h2>
+			<h3 class="text-xl font-light leading-normal md:text-3xl lg:text-3xl">that page is gone</h3>
+		</header>
+	</div>
+</section>
 {{ end }}

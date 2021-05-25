@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply relative;
+		font-family: Open Sans, -apple-system, Helvetica Neue, Helvetica, sans-serif;
+	}
+
+	main {
+		@apply min-h-screen px-4 pt-8 mx-auto mt-6 mb-16 main-width;
+	}
+
+	article {
+		@apply w-full max-w-xl pb-16 mx-auto;
+		@apply prose-sm prose sm:prose lg:prose-lg xl:prose-xl;
+		@apply prose-purple;
+	}
+
+	h1 {
+		@apply text-3xl tracking-tight text-purple-800;
+		@apply m-0 mb-4;
+	}
+
+	h2 {
+		@apply text-xl;
+		@apply m-0 mb-4;
+	}
+
+	a {
+		@apply text-indigo-500 hover:underline hover:text-indigo-800;
+	}
+}
+
+.main-width {
+	@apply w-full px-12 text-xl md:max-w-5xl lg:max-w-6xl xl:max-w-7xl;
+}

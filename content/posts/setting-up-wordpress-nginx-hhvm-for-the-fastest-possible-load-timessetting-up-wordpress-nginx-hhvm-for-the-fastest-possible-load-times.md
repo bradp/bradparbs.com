@@ -2,9 +2,10 @@
 title = "Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"
 subtitle = ""
 date = 2014-07-17
-tags = []
+tags = [ 'local', 'server', 'development']
 description = "Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"
 banner = '/images/1.png'
+type = "post"
 +++
 
 

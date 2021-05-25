@@ -5,9 +5,8 @@ tags = ['vvv','local','development']
 date = 2015-01-14
 description = "Getting started with Vagrant & VVV for local development"
 banner = 'images/vagrant.png'
+type = "post"
 +++
-
-![vagrant](/images/vagrant.png)
 
 When I started doing web development, I think I started the way a lot of us did. You have a site you want to work on, so you connect with FTP, download a file, modify it, upload it back up, and then refresh the page to see if your changes worked. This process doesn’t really work when you’re working with a team of people, or on a site that people are actively going to. If your teammate edits the same file as you, someone’s changes may be lost, and if you upload something with an error in it, you may break the site for people currently browsing it. This isn’t a fun process.
 

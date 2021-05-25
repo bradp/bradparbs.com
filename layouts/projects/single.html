@@ -1,0 +1,11 @@
+{{ define "main" }}
+	<article class="max-w-4xl p-12 mx-auto overflow-hidden">
+		<h1 class="my-6">{{ .Title }}</h1>
+		{{ range (.GetTerms "tags") }}
+		<a href="{{ .Permalink }}" class="text-xs font-medium text-blue-600 uppercase">
+			{{ .LinkTitle }}
+		</a>
+		{{ end }}
+		{{ .Content }}
+	</article>
+{{ end }}

@@ -1,66 +1,69 @@
-baseURL = 'https://bradparbs.com/'
-defaultContentLanguage = 'en'
-enableEmoji = true
-languageCode = 'en-us'
-theme = ["pico"]
-paginate = 10
+# Site Details
 title = 'Brad Parbs'
 description = "Brad Parbs - Milwaukee WordPress developer."
 email = "brad@bradparbs.com"
+baseURL = 'https://bradparbs.com/'
 favicon = '/favicon.png'
-enableRobotsTXT = true
-
-disableKinds = ["taxonomy", "term"]
 
 [params]
-customCSS = ["css/style.css"]
-# customJS = ["js/console.js"]
-keywords = "brad parbs, bradparbs"
-twitterUsername = "@bradparbs"
-socialImage = "images/brad-parbs.jpg"
+# Used for Open Graph tags & Twitter card tags.
+title = 'Brad Parbs'
+description = "Brad Parbs - Milwaukee WordPress developer."
+images = ["images/share-image.png"]
+# Language
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+# Build
+canonifyUrls = true
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+enableGitInfo = true
+disableFastRender = true
+# Content
+disableKinds = ["taxonomy", "term"]
+enableEmoji = true
+enableInlineShortcodes = true
+summaryLength = 40
 
-[[params.social]]
-alt = "github"
-blank = true
-icon = "/images/github.svg"
-name = "github"
-url = "https://github.com/bradp"
+[permalinks]
+posts = "/blog/:year/:month/:title/"
 
-[[params.social]]
-alt = "twitter"
-blank = true
-icon = "/images/twitter.svg"
-name = "twitter"
-url = "https://twitter.com/bradparbs"
+[imaging]
+resampleFilter = 'Lanczos'
+quality = 85
 
-[[params.social]]
-alt = "email"
-icon = "/images/email.svg"
-name = "email"
-url = "mailto:brad@bradparbs.com"
+[imaging.exif]
+includeFields = ""
+disableDate = true
+disableLatLong = true
 
+[build]
+writeStats = true
 
-# Navigation bar
+[social]
+twitter = "bradparbs"
+
+[Author]
+name = "Brad Parbs"
+
 [menu]
 
-
 [[menu.main]]
-identifier = "about"
+name = "about"
 url = "/about/"
 weight = 20
 
 [[menu.main]]
-identifier = "projects"
+name = "projects"
 url = "/projects/"
 weight = 30
 
 [[menu.main]]
-identifier = "blog"
+name = "blog"
 url = "/posts/"
 weight = 40
 
-[permalinks]
-"posts" = "/:year/:title/"
-
-[markup]
-  defaultMarkdownHandler = "blackfriday"
+[[menu.main]]
+name = "contact"
+url = "/contact/"
+weight = 50

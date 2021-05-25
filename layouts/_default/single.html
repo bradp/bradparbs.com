@@ -1,6 +1,18 @@
 {{ define "main" }}
-<article class="content">
-	<h1 class="font-bold text-3xl text-gray-700">{{ .Title }}</h1>
-	{{ .Content }}
+<article class="ml-0">
+	<h1 class="my-6">{{ .Title }}</h1>
 </article>
+
+{{ if in .Params.type "post" }}
+		<span class="mx-1 text-xs text-gray-600">
+			<time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z0700" }}" class="post-date">
+				{{ .Date.Format "2006-01-02" }}
+			</time>
+		</span>
+
+		{{ range (.GetTerms "tags") }}
+			<a href="{{ .Permalink }}" class="text-xs font-medium text-blue-600 uppercase">{{ .LinkTitle }}</a>
+		{{ end }}
+{{ end }}
+{{ .Content }}
 {{ end }}

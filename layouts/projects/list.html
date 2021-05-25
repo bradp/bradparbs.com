@@ -1,0 +1,52 @@
+{{ define "main" }}
+<article class="ml-0">
+	<h1 class="my-6">{{ .Title }}</h1>
+</article>
+<h3 class="py-3 text-2xl tracking-tight sm:text-3xl">Websites</h3>
+<h4 class="text-gray-400">What's coming next?</h4>
+<ul class="grid grid-cols-1 gap-5 py-6 mb-6 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+	{{ range where .Pages "Params.kind" "website" }}
+		<li class="flex col-span-1 rounded-md shadow-sm">
+			<div class="flex items-center justify-between flex-1 bg-white border border-gray-200 rounded-md shadow-md">
+				<div class="flex-1 px-4 py-2 text-sm">
+					<a href="{{ .Params.link }}" class="py-3 text-lg font-medium text-gray-900 hover:text-gray-600">{{ .Title }}</a>
+					<p class="py-3 text-gray-500">{{ .Params.description }}</p>
+					<a href="{{ .Params.link }}" class="py-3 text-sm text-indigo-500 hover:underline hover:text-indigo-800">Go to {{ .Title }} ➞</a>
+				</div>
+			</div>
+		</li>
+	{{ end }}
+</ul>
+
+<h3 class="py-3 text-2xl tracking-tight sm:text-3xl">Tools &amp; Software</h3>
+<h4><a href="https://github.com/bradp/" class="text-indigo-500 hover:text-indigo-800">See more on GitHub →</a></h4>
+<ul class="grid grid-cols-1 gap-5 py-6 mb-6 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+	{{ range where .Pages "Params.kind" "tool" }}
+		<li class="flex col-span-1 rounded-md shadow-sm">
+			<div class="flex items-center justify-between flex-1 bg-white border border-gray-200 rounded-md shadow-md">
+				<div class="flex-1 px-4 py-2 text-sm">
+					<a href="{{ .Params.link }}" class="py-3 text-lg font-medium text-gray-900 hover:text-gray-600">{{ .Title }}</a>
+					<p class="py-3 text-gray-500">{{ .Params.description }}</p>
+					<a href="{{ .Params.link }}" class="py-3 text-sm text-indigo-500 hover:underline hover:text-indigo-800">Check out {{ .Title }} ➞</a>
+				</div>
+			</div>
+		</li>
+	{{ end }}
+</ul>
+
+<h3 class="py-3 text-2xl tracking-tight sm:text-3xl">WordPress Plugins</h3>
+<h4><a href="https://profiles.wordpress.org/bradparbs/" class="text-indigo-500 hover:text-indigo-800">See more on WordPress.org →</a></h4>
+<ul class="grid grid-cols-1 gap-5 py-6 mb-6 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+	{{ range where .Pages "Params.kind" "plugin" }}
+		<li class="flex col-span-1 rounded-md shadow-sm">
+			<div class="flex items-center justify-between flex-1 bg-white border border-gray-200 rounded-md shadow-md">
+				<div class="flex-1 px-4 py-2 text-sm">
+					<a href="{{ .Params.link }}" class="py-3 text-lg font-medium text-gray-900 hover:text-gray-600">{{ .Title }}</a>
+					<p class="py-3 text-gray-500">{{ .Params.description }}</p>
+					<a href="{{ .Params.link }}" class="py-3 text-sm text-indigo-500 hover:underline hover:text-indigo-800">Download {{ .Title }} ➞</a>
+				</div>
+			</div>
+		</li>
+	{{ end }}
+</ul>
+{{ end }}

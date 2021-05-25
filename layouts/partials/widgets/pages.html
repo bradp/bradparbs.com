@@ -1,9 +1,0 @@
-<section id="nav">
-	<nav class="flex flex-wrap items-center mx-auto mt-8 text-xl place-content-center md:space-x-10 ">
-		{{ range .Site.Menus.main }}
-		<a href="{{ .URL }}" title="{{ .Title }}" class='px-4 py-2 m-2 mx-1 text-pink-500 no-underline transition duration-500 transform bg-pink-100 border border-pink-500 rounded-md select-none md:mx-2 ease hover:text-white hover:bg-pink-800 hover:border-pink-900 focus:outline-none focus:shadow-outline hover:scale-110'>
-			{{ .Identifier }}
-		</a>
-		{{ end }}
-	</nav>
-</section>

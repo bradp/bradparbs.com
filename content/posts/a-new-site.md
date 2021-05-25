@@ -2,9 +2,10 @@
 title = "Hey, hey, hey, it's a new site!"
 subtitle = "It's my brand new site!"
 date = 2020-11-28
-tags = []
+tags = ['misc']
 description = "A whole new site!"
 banner = '/images/new-site.png'
+type = "post"
 +++
 After a few years of barely changing anything on my site, I'm super happy to finally build **a whole new site**! 🎉
 
