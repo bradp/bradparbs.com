@@ -1,5 +1,6 @@
 +++
-title = "☀️ weather dashboard"
+title = "weather dashboard"
+emoji = "☀️"
 description = "small lil weather & time dashboard"
 author = "Brad Parbs"
 type = "page"

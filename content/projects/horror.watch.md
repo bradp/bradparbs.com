@@ -1,5 +1,6 @@
 +++
-title = "💀️ horror.watch"
+title = "horror.watch"
+emoji = "💀️"
 description = "tons of free horror movies to stream"
 author = "Brad Parbs"
 type = "page"

@@ -1,5 +1,6 @@
 +++
-title = "❄️ isitsnowinginmilwaukee.com"
+title = "isitsnowinginmilwaukee.com"
+emoji = "❄️"
 description = "when you need to know the weather"
 author = "Brad Parbs"
 type = "page"

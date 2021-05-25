@@ -1,5 +1,6 @@
 +++
-title = "🐕️ random nature cams"
+title = "random nature cams"
+emoji = "🐕️"
 description = "perfect for relaxing"
 author = "Brad Parbs"
 type = "page"

@@ -1,5 +1,6 @@
 +++
-title = "🔞️ butts.tech"
+title = "butts.tech"
+emoji = "🔞️"
 description = "when you need an ascii butt"
 author = "Brad Parbs"
 type = "page"

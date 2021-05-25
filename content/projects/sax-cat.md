@@ -1,5 +1,6 @@
 +++
-title = "😺️ sax.cat"
+title = "sax.cat"
+emoji = "😺️"
 description = "We all need a little sax in our life."
 author = "Brad Parbs"
 type = "page"

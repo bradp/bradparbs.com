@@ -1,5 +1,6 @@
 +++
-title = "🍐️ pears.cloud"
+title = "pears.cloud"
+emoji = "🍐️"
 description = "A static site starter kit for easy development"
 author = "Brad Parbs"
 type = "page"

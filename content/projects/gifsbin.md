@@ -1,5 +1,6 @@
 +++
-title = "💝️ gifsb.in"
+title = "gifsb.in"
+emoji = "💝️"
 description = "for all your gif needs"
 author = "Brad Parbs"
 type = "page"
