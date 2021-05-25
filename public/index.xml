@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brad Parbs - I build things on the internet. on Brad Parbs</title>
+    <link>https://bradparbs.com/</link>
+    <description>Recent content in Brad Parbs - I build things on the internet. on Brad Parbs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Dec 2020 10:05:26 -0600</lastBuildDate><atom:link href="https://bradparbs.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Test</title>
+      <link>https://bradparbs.com/sample/markdown/</link>
+      <pubDate>Thu, 17 Dec 2020 10:05:26 -0600</pubDate>
+      
+      <guid>https://bradparbs.com/sample/markdown/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;figure&gt;
+		&lt;img loading=&#34;lazy&#34; sizes=&#34;100vw&#34;
+			srcset=&#34;
+				/sample/markdown/placeholder_hu5438825b9b6d1014226d20d231e650c2_2340565_480x0_resize_q85_lanczos.jpg 480w,
+				/sample/markdown/placeholder_hu5438825b9b6d1014226d20d231e650c2_2340565_768x0_resize_q85_lanczos.jpg 768w,
+				/sample/markdown/placeholder_hu5438825b9b6d1014226d20d231e650c2_2340565_1200x0_resize_q85_lanczos.jpg 1200w&#34;
+			src=&#34;https://bradparbs.com/sample/markdown/placeholder.jpg&#34;
+			width=&#34;5092&#34;
+			height=&#34;2992&#34;
+			alt=&#34;milwaukee city skyline&#34;
+			title=&#34;&#34;
+		&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;philosophy&#34;&gt;Philosophy&lt;/h3&gt;
+&lt;p&gt;Markdown is intended to be as easy-to-read and easy-to-write as is feasible.&lt;/p&gt;
+&lt;p&gt;Readability, however, is emphasized above all else. A Markdown-formatted
+document should be publishable as-is, as plain text, without looking
+like it&amp;rsquo;s been marked up with tags or formatting instructions. While
+Markdown&amp;rsquo;s syntax has been influenced by several existing text-to-HTML
+filters &amp;ndash; including &lt;a href=&#34;http://docutils.sourceforge.net/mirror/setext.html&#34; &gt;Setext&lt;/a&gt;
+, &lt;a href=&#34;http://www.aaronsw.com/2002/atx/&#34; &gt;atx&lt;/a&gt;
+, &lt;a href=&#34;http://textism.com/tools/textile/&#34; &gt;Textile&lt;/a&gt;
+, &lt;a href=&#34;http://docutils.sourceforge.net/rst.html&#34; &gt;reStructuredText&lt;/a&gt;
+,
+&lt;a href=&#34;http://www.triptico.com/software/grutatxt.html&#34; &gt;Grutatext&lt;/a&gt;
+, and &lt;a href=&#34;http://ettext.taint.org/doc/&#34; &gt;EtText&lt;/a&gt;
+ &amp;ndash; the single biggest source of
+inspiration for Markdown&amp;rsquo;s syntax is the format of plain text email.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// New creates a new Workers with the given number of workers.
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;New&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;numWorkers&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Workers&lt;/span&gt; {
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Workers&lt;/span&gt;{
+		&lt;span style=&#34;color:#a6e22e&#34;&gt;sem&lt;/span&gt;: make(&lt;span style=&#34;color:#66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt;{}, &lt;span style=&#34;color:#a6e22e&#34;&gt;numWorkers&lt;/span&gt;),
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;block-elements&#34;&gt;Block Elements&lt;/h2&gt;
+&lt;h3 id=&#34;paragraphs-and-line-breaks&#34;&gt;Paragraphs and Line Breaks&lt;/h3&gt;
+&lt;p&gt;A paragraph is simply one or more consecutive lines of text, separated
+by one or more blank lines. (A blank line is any line that looks like a
+blank line &amp;ndash; a line containing nothing but spaces or tabs is considered
+blank.) Normal paragraphs should not be indented with spaces or tabs.&lt;/p&gt;
+&lt;p&gt;The implication of the &amp;ldquo;one or more consecutive lines of text&amp;rdquo; rule is
+that Markdown supports &amp;ldquo;hard-wrapped&amp;rdquo; text paragraphs. This differs
+significantly from most other text-to-HTML formatters (including Movable
+Type&amp;rsquo;s &amp;ldquo;Convert Line Breaks&amp;rdquo; option) which translate every line break
+character in a paragraph into a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
+&lt;p&gt;When you &lt;em&gt;do&lt;/em&gt; want to insert a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt; break tag using Markdown, you
+end a line with two or more spaces, then type return.&lt;/p&gt;
+&lt;h3 id=&#34;headers&#34;&gt;Headers&lt;/h3&gt;
+&lt;p&gt;Markdown supports two styles of headers, [Setext] [1] and [atx] [2].&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Require loads a module the Node.js way.
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Note that this requires that the require function is present;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// if in the browser, and not in Node.js, try Browserify.
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Require&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ReactComponent&lt;/span&gt; {
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;m&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;support&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Require&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;)
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;nil&lt;/span&gt; {
+		panic(&lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt;)
+	}
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ReactComponent&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;node&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;m&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;needsCreate&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Optionally, you may &amp;ldquo;close&amp;rdquo; atx-style headers. This is purely
+cosmetic &amp;ndash; you can use this if you think it looks better. The
+closing hashes don&amp;rsquo;t even need to match the number of hashes
+used to open the header. (The number of opening hashes
+determines the header level.)&lt;/p&gt;
+&lt;h3 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h3&gt;
+&lt;p&gt;Markdown uses email-style &lt;code&gt;&amp;gt;&lt;/code&gt; characters for blockquoting. If you&amp;rsquo;re
+familiar with quoting passages of text in an email message, then you
+know how to create a blockquote in Markdown. It looks best if you hard
+wrap the text and put a &lt;code&gt;&amp;gt;&lt;/code&gt; before every line:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Markdown allows you to be lazy and only put the &lt;code&gt;&amp;gt;&lt;/code&gt; before the first
+line of a hard-wrapped paragraph:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by
+adding additional levels of &lt;code&gt;&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is the first level of quoting.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is nested blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Back to the first level.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Blockquotes can contain other Markdown elements, including headers, lists,
+and code blocks:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;this-is-a-header&#34;&gt;This is a header.&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;This is the first list item.&lt;/li&gt;
+&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here&amp;rsquo;s some example code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Any decent text editor should make email-style quoting easy. For
+example, with BBEdit, you can make a selection and choose Increase
+Quote Level from the Text menu.&lt;/p&gt;
+&lt;h3 id=&#34;lists&#34;&gt;Lists&lt;/h3&gt;
+&lt;p&gt;Markdown supports ordered (numbered) and unordered (bulleted) lists.&lt;/p&gt;
+&lt;p&gt;Unordered lists use asterisks, pluses, and hyphens &amp;ndash; interchangably
+&amp;ndash; as list markers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;is equivalent to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ordered lists use numbers followed by periods:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;Parish&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It&amp;rsquo;s important to note that the actual numbers you use to mark the
+list have no effect on the HTML output Markdown produces. The HTML
+Markdown produces from the above list is:&lt;/p&gt;
+&lt;p&gt;If you instead wrote the list in Markdown like this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;Parish&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;or even:&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;Parish&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;you&amp;rsquo;d get the exact same HTML output. The point is, if you want to,
+you can use ordinal numbers in your ordered Markdown lists, so that
+the numbers in your source match the numbers in your published HTML.
+But if you want to be lazy, you don&amp;rsquo;t have to.&lt;/p&gt;
+&lt;p&gt;To make lists look nice, you can wrap items with hanging indents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.&lt;/li&gt;
+&lt;li&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But if you want to be lazy, you don&amp;rsquo;t have to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.&lt;/li&gt;
+&lt;li&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;List items may consist of multiple paragraphs. Each subsequent
+paragraph in a list item must be indented by either 4 spaces
+or one tab:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;This is a list item with two paragraphs. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+mi posuere lectus.&lt;/p&gt;
+&lt;p&gt;Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+sit amet velit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It looks nice if you indent every line of the subsequent
+paragraphs, but here again, Markdown will allow you to be
+lazy:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This is a list item with two paragraphs.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is the second paragraph in the list item. You&#39;re
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;only required to indent the first line. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another item in the same list.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To put a blockquote within a list item, the blockquote&amp;rsquo;s &lt;code&gt;&amp;gt;&lt;/code&gt;
+delimiters need to be indented:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A list item with a blockquote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote
+inside a list item.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To put a code block within a list item, the code block needs
+to be indented &lt;em&gt;twice&lt;/em&gt; &amp;ndash; 8 spaces or two tabs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A list item with a code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;code goes here&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h3&gt;
+&lt;p&gt;Pre-formatted code blocks are used for writing about programming or
+markup source code. Rather than forming normal paragraphs, the lines
+of a code block are interpreted literally. Markdown wraps a code block
+in both &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+&lt;p&gt;To produce a code block in Markdown, simply indent every line of the
+block by at least 4 spaces or 1 tab.&lt;/p&gt;
+&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is a code block.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tell application &amp;quot;Foo&amp;quot;
+    beep
+end tell
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A code block continues until it reaches a line that is not indented
+(or the end of the article).&lt;/p&gt;
+&lt;p&gt;Within a code block, ampersands (&lt;code&gt;&amp;amp;&lt;/code&gt;) and angle brackets (&lt;code&gt;&amp;lt;&lt;/code&gt; and &lt;code&gt;&amp;gt;&lt;/code&gt;)
+are automatically converted into HTML entities. This makes it very
+easy to include example HTML source code using Markdown &amp;ndash; just paste
+it and indent it, and Markdown will handle the hassle of encoding the
+ampersands and angle brackets. For example, this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;
+    &amp;amp;copy; 2004 Foo Corporation
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Regular Markdown syntax is not processed within code blocks. E.g.,
+asterisks are just literal asterisks within a code block. This means
+it&amp;rsquo;s also easy to use Markdown to write about Markdown&amp;rsquo;s own syntax.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tell application &amp;quot;Foo&amp;quot;
+    beep
+end tell
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;span-elements&#34;&gt;Span Elements&lt;/h2&gt;
+&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
+&lt;p&gt;Markdown supports two style of links: &lt;em&gt;inline&lt;/em&gt; and &lt;em&gt;reference&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In both styles, the link text is delimited by [square brackets].&lt;/p&gt;
+&lt;p&gt;To create an inline link, use a set of regular parentheses immediately
+after the link text&amp;rsquo;s closing square bracket. Inside the parentheses,
+put the URL where you want the link to point, along with an &lt;em&gt;optional&lt;/em&gt;
+title for the link, surrounded in quotes. For example:&lt;/p&gt;
+&lt;p&gt;This is &lt;a href=&#34;http://example.com/&#34; &gt;an example&lt;/a&gt;
+ inline link.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://example.net/&#34; &gt;This link&lt;/a&gt;
+ has no title attribute.&lt;/p&gt;
+&lt;h3 id=&#34;emphasis&#34;&gt;Emphasis&lt;/h3&gt;
+&lt;p&gt;Markdown treats asterisks (&lt;code&gt;*&lt;/code&gt;) and underscores (&lt;code&gt;_&lt;/code&gt;) as indicators of
+emphasis. Text wrapped with one &lt;code&gt;*&lt;/code&gt; or &lt;code&gt;_&lt;/code&gt; will be wrapped with an
+HTML &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; tag; double &lt;code&gt;*&lt;/code&gt;&amp;rsquo;s or &lt;code&gt;_&lt;/code&gt;&amp;rsquo;s will be wrapped with an HTML
+&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt; tag. E.g., this input:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
+&lt;p&gt;To indicate a span of code, wrap it with backtick quotes (&lt;code&gt;`&lt;/code&gt;).
+Unlike a pre-formatted code block, a code span indicates code within a
+normal paragraph. For example:&lt;/p&gt;
+&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hey, hey, hey, it&#39;s a new site!</title>
+      <link>https://bradparbs.com/blog/2020/11/hey-hey-hey-its-a-new-site/</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 -0600</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2020/11/hey-hey-hey-its-a-new-site/</guid>
+      <description>After a few years of barely changing anything on my site, I&amp;rsquo;m super happy to finally build a whole new site! 🎉
+This site is powered by Hugo &amp;amp; Tailwind CSS . It&amp;rsquo;s been super fun to build, and I&amp;rsquo;m excited to finally get back to writing some blog posts.
+I&amp;rsquo;ve recently been updating a few of my other sites, and it feels good to use some sleek new tools to do it.</description>
+    </item>
+    
+    <item>
+      <title>A Beginner’s Guide to the Best Command Line Tools</title>
+      <link>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 -0500</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</guid>
+      <description>As someone who loves the command line, I’m always striving to make my workflow easier, more efficient, and just overall better. Hopefully, by walking through my set up and my recommendations for the best command line tools, you’ll find some nifty tips and tricks you can adapt to make your workflow better too.
+The command line is a scary place if you’ve never been there before. It is. You can do some really powerful and dangerous things to your computer.</description>
+    </item>
+    
+    <item>
+      <title>Getting started with Vagrant &amp; VVV for local development</title>
+      <link>https://bradparbs.com/blog/2015/01/getting-started-with-vagrant-vvv-for-local-development/</link>
+      <pubDate>Wed, 14 Jan 2015 00:00:00 -0600</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2015/01/getting-started-with-vagrant-vvv-for-local-development/</guid>
+      <description>When I started doing web development, I think I started the way a lot of us did. You have a site you want to work on, so you connect with FTP, download a file, modify it, upload it back up, and then refresh the page to see if your changes worked. This process doesn’t really work when you’re working with a team of people, or on a site that people are actively going to.</description>
+    </item>
+    
+    <item>
+      <title>Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times</title>
+      <link>https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/</link>
+      <pubDate>Thu, 17 Jul 2014 00:00:00 -0500</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/</guid>
+      <description>One of the most enjoyable parts about writing code is writing efficient and performant functionality. No matter how fast your code is, if your server itself isn’t running to it’s maximum performance, you’re not delivering your site as fast as you could be. By setting up Nginx and the new HHVM , you can get your server delivering fully loaded pages faster than most servers answer a request.
+HHVM is an open-source virtual machine designed for executing programs written in Hackand PHP.</description>
+    </item>
+    
+    <item>
+      <title>About Brad Parbs</title>
+      <link>https://bradparbs.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/about/</guid>
+      <description>Brad Parbs is a Milwaukee-based WordPress developer &amp; engineer, focusing on high perfomance, user friendly, enterprise scale, API driven websites &amp; applications.  Brad Parbs is currently a Developer at WebDevStudios, Previously Awesome Motive working on WPForms, Impress.org working on GiveWP, and Human Made. Brad Parbs likes to build many things online. Check out his projects to see them. Calling him a WordPress fanatic is putting it lightly.</description>
+    </item>
+    
+    <item>
+      <title>Automatic Feat. Images from Videos</title>
+      <link>https://bradparbs.com/projects/automatic-featured-images/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/automatic-featured-images/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>brad.cash</title>
+      <link>https://bradparbs.com/projects/brad.cash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/brad.cash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>butts.tech</title>
+      <link>https://bradparbs.com/projects/butts.tech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/butts.tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chassis</title>
+      <link>https://bradparbs.com/projects/chassis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/chassis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chassis Generator</title>
+      <link>https://bradparbs.com/projects/generator-chassis-wp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/generator-chassis-wp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CLI Weather Emoji</title>
+      <link>https://bradparbs.com/projects/weather-emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/weather-emoji/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CMB2</title>
+      <link>https://bradparbs.com/projects/cmb2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/cmb2/</guid>
+      <description>⛄️ Is it snowing in Milwaukee? - Is it snowing in Milwaukee right now? 😺️ sax.cat - We all need a little sax in our life. 💝️ Gifsb.in - My collection of gifs for everyday use. 🔞️ butts.tech - when you need an ascii butt.  🐕️ [Random Nature Cams](https://brrad.com/cam) - Random nature cams, perfect for a Raspberry Pi in Kiosk mode.    💰️ [brad.cash](https://brad.cash) - You can send me money.</description>
+    </item>
+    
+    <item>
+      <title>Colors</title>
+      <link>https://bradparbs.com/sample/colors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/sample/colors/</guid>
+      <description>    gray-100    gray-200    gray-300    gray-400    gray-500    gray-600    gray-700    gray-800    gray-900      red-100    red-200    red-300    red-400    red-500    red-600    red-700    red-800    red-900      yellow-100    yellow-200    yellow-300    yellow-400    yellow-500    yellow-600    yellow-700    yellow-800    yellow-900      green-100    green-200    green-300    green-400    green-500    green-600    green-700    green-800    green-900      teal-100    teal-200    teal-300    teal-400    teal-500    teal-600    teal-700    teal-800    teal-900      blue-100    blue-200    blue-300    blue-400    blue-500    blue-600    blue-700    blue-800    blue-900      indigo-100    indigo-200    indigo-300    indigo-400    indigo-500    indigo-600    indigo-700    indigo-800    indigo-900      purple-100    purple-200    purple-300    purple-400    purple-500    purple-600    purple-700    purple-800    purple-900      pink-100    pink-200    pink-300    pink-400    pink-500    pink-600    pink-700    pink-800    pink-900     </description>
+    </item>
+    
+    <item>
+      <title>Constant Contact Forms</title>
+      <link>https://bradparbs.com/projects/constant-contact-forms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/constant-contact-forms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact Brad Parbs</title>
+      <link>https://bradparbs.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/contact/</guid>
+      <description> There are plenty of ways to contact &amp; follow me. I currently use GitHub, Twitter, and LinkedIn. And you can always email me.  </description>
+    </item>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>https://bradparbs.com/projects/dotfiles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forced Emoji</title>
+      <link>https://bradparbs.com/projects/forced-emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/forced-emoji/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gifsb.in</title>
+      <link>https://bradparbs.com/projects/gifsbin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/gifsbin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Give Addon SMS</title>
+      <link>https://bradparbs.com/projects/give-addon-sms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/give-addon-sms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GiveWP</title>
+      <link>https://bradparbs.com/projects/givewp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/givewp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>horror.watch</title>
+      <link>https://bradparbs.com/projects/horror.watch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/horror.watch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo Feather Icons</title>
+      <link>https://bradparbs.com/projects/hugo-feather-icons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/hugo-feather-icons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo Jam Icons</title>
+      <link>https://bradparbs.com/projects/hugo-jam-icons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/hugo-jam-icons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo Radix Icons</title>
+      <link>https://bradparbs.com/projects/hugo-radix-icons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/hugo-radix-icons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo Simple Icons</title>
+      <link>https://bradparbs.com/projects/hugo-simple-icons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/hugo-simple-icons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Insert Headers &amp; Footers</title>
+      <link>https://bradparbs.com/projects/insert-headers-footers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/insert-headers-footers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>isitsnowinginmilwaukee.com</title>
+      <link>https://bradparbs.com/projects/isitsnowinginmilwaukee.com/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/isitsnowinginmilwaukee.com/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logout Roulette</title>
+      <link>https://bradparbs.com/projects/logout-roulette/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/logout-roulette/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pears.cloud</title>
+      <link>https://bradparbs.com/projects/pears.cloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/pears.cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>random nature cams</title>
+      <link>https://bradparbs.com/projects/random-nature-cams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/random-nature-cams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Registered Post Types</title>
+      <link>https://bradparbs.com/projects/registered-post-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/registered-post-types/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Required Plugins</title>
+      <link>https://bradparbs.com/projects/required-plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/required-plugins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sax.cat</title>
+      <link>https://bradparbs.com/projects/sax-cat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/sax-cat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>t</title>
+      <link>https://bradparbs.com/projects/t/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>v</title>
+      <link>https://bradparbs.com/projects/v/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/v/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vv</title>
+      <link>https://bradparbs.com/projects/vv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/vv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vvv Provision Flipper</title>
+      <link>https://bradparbs.com/projects/vvv-provision-flipper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/vvv-provision-flipper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wd_s</title>
+      <link>https://bradparbs.com/projects/wd_s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/wd_s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>weather dashboard</title>
+      <link>https://bradparbs.com/projects/weather-dashboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/weather-dashboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WordPress Plugin Generator</title>
+      <link>https://bradparbs.com/projects/generator-plugin-wp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/generator-plugin-wp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Worndpress</title>
+      <link>https://bradparbs.com/projects/worndpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/worndpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WP dotenv</title>
+      <link>https://bradparbs.com/projects/wpdotenv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/wpdotenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WP-CLI Examples</title>
+      <link>https://bradparbs.com/projects/wp-cli-examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/wp-cli-examples/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WPForms</title>
+      <link>https://bradparbs.com/projects/wp-forms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/wp-forms/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

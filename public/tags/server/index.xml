@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>server on Brad Parbs</title>
+    <link>https://bradparbs.com/tags/server/</link>
+    <description>Recent content in server on Brad Parbs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Jul 2014 00:00:00 -0500</lastBuildDate><atom:link href="https://bradparbs.com/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times</title>
+      <link>https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/</link>
+      <pubDate>Thu, 17 Jul 2014 00:00:00 -0500</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/</guid>
+      <description>One of the most enjoyable parts about writing code is writing efficient and performant functionality. No matter how fast your code is, if your server itself isn’t running to it’s maximum performance, you’re not delivering your site as fast as you could be. By setting up Nginx and the new HHVM , you can get your server delivering fully loaded pages faster than most servers answer a request.
+HHVM is an open-source virtual machine designed for executing programs written in Hackand PHP.</description>
+    </item>
+    
+  </channel>
+</rss>

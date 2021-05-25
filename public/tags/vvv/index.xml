@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vvv on Brad Parbs</title>
+    <link>https://bradparbs.com/tags/vvv/</link>
+    <description>Recent content in vvv on Brad Parbs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 14 Jan 2015 00:00:00 -0600</lastBuildDate><atom:link href="https://bradparbs.com/tags/vvv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting started with Vagrant &amp; VVV for local development</title>
+      <link>https://bradparbs.com/blog/2015/01/getting-started-with-vagrant-vvv-for-local-development/</link>
+      <pubDate>Wed, 14 Jan 2015 00:00:00 -0600</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2015/01/getting-started-with-vagrant-vvv-for-local-development/</guid>
+      <description>When I started doing web development, I think I started the way a lot of us did. You have a site you want to work on, so you connect with FTP, download a file, modify it, upload it back up, and then refresh the page to see if your changes worked. This process doesn’t really work when you’re working with a team of people, or on a site that people are actively going to.</description>
+    </item>
+    
+  </channel>
+</rss>
