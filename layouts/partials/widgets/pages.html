@@ -1,44 +1,9 @@
 <section id="nav">
-	<nav class="mt-8 mx-auto flex flex-wrap items-center place-content-center text-xl md:space-x-10 ">
+	<nav class="flex flex-wrap items-center mx-auto mt-8 text-xl place-content-center md:space-x-10 ">
 		{{ range .Site.Menus.main }}
-		<a href="{{ .URL }}" title="{{ .Title }}" class='mx-1 md:mx-2 border bg-pink-100 border-pink-500 text-pink-500 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:text-white hover:bg-pink-800 hover:border-pink-900 focus:outline-none focus:shadow-outline no-underline transform hover:scale-110'>
+		<a href="{{ .URL }}" title="{{ .Title }}" class='px-4 py-2 m-2 mx-1 text-pink-500 no-underline transition duration-500 transform bg-pink-100 border border-pink-500 rounded-md select-none md:mx-2 ease hover:text-white hover:bg-pink-800 hover:border-pink-900 focus:outline-none focus:shadow-outline hover:scale-110'>
 			{{ .Identifier }}
 		</a>
 		{{ end }}
 	</nav>
-</section>
-
-<section id="recent-posts" class="text-gray-700 body-font mt-20">
-
-	{{ $items_type := .Params.content.page_type | default "post" }}
-	{{ $items_count := .Params.content.count }}
-
-	{{/* Filters */}}
-	{{ $query := where site.RegularPages "Type" $items_type }}
-	{{ $archive_page := site.GetPage "Section" $items_type }}
-
-	{{ if .Params.content.filters.tag }}
-	{{ $archive_page = site.GetPage (printf "tags/%s" .Params.content.filters.tag) }}
-	{{ $query = $query | intersect $archive_page.Pages }}
-	{{ end }}
-	{{ if .Params.content.filters.category }}
-	{{ $archive_page = site.GetPage (printf "categories/%s" .Params.content.filters.category) }}
-	{{ $query = $query | intersect $archive_page.Pages }}
-	{{ end }}
-
-	<div class="text-center w-full">
-		<div class="my-0 text-3xl">
-			{{ .Title }}
-		</div>
-	</div>
-
-	<div class="container px-5 py-24 pt-6 mx-auto">
-		<div class="flex flex-wrap -m-4">
-			{{ range first $items_count $query }}
-				{{ partial "card.html" . }}
-			{{ else }}
-				{{ .Content }}
-			{{ end }}
-		</div>
-	</div>
 </section>
