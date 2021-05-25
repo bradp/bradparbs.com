@@ -5,25 +5,7 @@
     <link>https://bradparbs.com/tags/</link>
     <description>Recent content in Tags on Brad Parbs</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 17 Dec 2020 10:05:26 -0600</lastBuildDate><atom:link href="https://bradparbs.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>markdown</title>
-      <link>https://bradparbs.com/tags/markdown/</link>
-      <pubDate>Thu, 17 Dec 2020 10:05:26 -0600</pubDate>
-      
-      <guid>https://bradparbs.com/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>testing</title>
-      <link>https://bradparbs.com/tags/testing/</link>
-      <pubDate>Thu, 17 Dec 2020 10:05:26 -0600</pubDate>
-      
-      <guid>https://bradparbs.com/tags/testing/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 28 Nov 2020 00:00:00 -0600</lastBuildDate><atom:link href="https://bradparbs.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>misc</title>
       <link>https://bradparbs.com/tags/misc/</link>
@@ -75,24 +57,6 @@
       <pubDate>Thu, 17 Jul 2014 00:00:00 -0500</pubDate>
       
       <guid>https://bradparbs.com/tags/server/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag1</title>
-      <link>https://bradparbs.com/tags/tag1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bradparbs.com/tags/tag1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag2</title>
-      <link>https://bradparbs.com/tags/tag2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bradparbs.com/tags/tag2/</guid>
       <description></description>
     </item>
     
