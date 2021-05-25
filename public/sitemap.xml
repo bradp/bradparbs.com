@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bradparbs.com/</loc>
+    <loc>https://bradparbs.com/blog/2020/11/hey-hey-hey-its-a-new-site/</loc>
     <lastmod>2020-11-28T00:00:00-06:00</lastmod>
   </url><url>
-    <loc>https://bradparbs.com/blog/2020/11/hey-hey-hey-its-a-new-site/</loc>
+    <loc>https://bradparbs.com/</loc>
     <lastmod>2020-11-28T00:00:00-06:00</lastmod>
   </url><url>
     <loc>https://bradparbs.com/tags/misc/</loc>
@@ -107,8 +107,6 @@
   </url><url>
     <loc>https://bradparbs.com/projects/t/</loc>
   </url><url>
-    <loc>https://bradparbs.com/projects/v/</loc>
-  </url><url>
     <loc>https://bradparbs.com/projects/vv/</loc>
   </url><url>
     <loc>https://bradparbs.com/projects/vvv-provision-flipper/</loc>
@@ -120,8 +118,6 @@
     <loc>https://bradparbs.com/projects/generator-plugin-wp/</loc>
   </url><url>
     <loc>https://bradparbs.com/projects/worndpress/</loc>
-  </url><url>
-    <loc>https://bradparbs.com/projects/wp-cli-examples/</loc>
   </url><url>
     <loc>https://bradparbs.com/projects/wp-forms/</loc>
   </url>
