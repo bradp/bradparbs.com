@@ -1,19 +1,117 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><title>Brad Parbs - Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times</title><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><meta name=keywords content><meta name=author content><meta property="og:title" content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><meta property="og:description" content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><meta property="og:type" content="article"><meta property="og:url" content="https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/"><meta property="og:image" content="https://bradparbs.com/images/share-image.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-07-17T00:00:00-05:00"><meta property="article:modified_time" content="2014-07-17T00:00:00-05:00"><meta property="og:site_name" content="Brad Parbs"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://bradparbs.com/images/share-image.png"><meta name=twitter:title content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><meta name=twitter:description content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><meta name=twitter:site content="@bradparbs"><meta itemprop=name content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><meta itemprop=description content="Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times"><meta itemprop=datePublished content="2014-07-17T00:00:00-05:00"><meta itemprop=dateModified content="2014-07-17T00:00:00-05:00"><meta itemprop=wordCount content="2027"><meta itemprop=image content="https://bradparbs.com/images/share-image.png"><meta itemprop=keywords content="local,server,development,"><link rel=apple-touch-icon sizes=180x180 href=/assets/images/icons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/assets/images/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/assets/images/icons/favicon-16x16.png><link rel=mask-icon href=/assets/images/icons/safari-pinned-tab.svg color=#58c984><link rel="shortcut icon" href=/assets/images/icons/favicon.ico><meta name=msapplication-TileColor content="#58c984"><meta name=msapplication-config content="/assets/images/icons/browserconfig.xml"><meta name=theme-color content="#58c984"><link href=/css/main.min.93ddd171175175132e94289b6a1cc14a8bad8fb51926df812ee1c43568702d3a.css rel=stylesheet></head><body><div id=top></div><header class="mx-auto text-gray-700 bg-pink-100"><div class="container flex flex-col items-center p-5 mx-auto mb-6 sm:flex-row main-width"><a href=https://bradparbs.com/ title="Brad Parbs" class="flex items-center mb-4 text-4xl md:mb-0"><h1 class="m-0 text-2xl font-normal text-black">Brad Parbs</h1></a><ul class="flex flex-wrap items-center justify-center text-base md:ml-auto"><li class="mr-5 hover:text-gray-600 hover:underline"><a class=text-gray-800 href=https://bradparbs.com/about/ title=about>about</a></li><li class="mr-5 hover:text-gray-600 hover:underline"><a class=text-gray-800 href=https://bradparbs.com/projects/ title=projects>projects</a></li><li class="mr-5 hover:text-gray-600 hover:underline"><a class=text-gray-800 href=https://bradparbs.com/posts/ title=blog>blog</a></li><li class="mr-5 hover:text-gray-600 hover:underline"><a class=text-gray-800 href=https://bradparbs.com/contact/ title=contact>contact</a></li></ul></div></header><main><article class=ml-0><h1 class=my-6>Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times</h1></article><span class="mx-1 text-xs text-gray-600"><time datetime=" 2014-07-17T00:00:00-0500" class=post-date>2014-07-17</time></span>
-<a href=https://bradparbs.com/tags/local/ class="text-xs font-medium text-blue-600 uppercase">local</a>
-<a href=https://bradparbs.com/tags/server/ class="text-xs font-medium text-blue-600 uppercase">server</a>
-<a href=https://bradparbs.com/tags/development/ class="text-xs font-medium text-blue-600 uppercase">development</a><p>One of the most enjoyable parts about writing code is writing efficient and performant functionality. No matter how fast your code is, if your server itself isn’t running to it’s maximum performance, you’re not delivering your site as fast as you could be. By setting up <a href=http://nginx.org/>Nginx</a>
- and the new <a href=http://hhvm.com/>HHVM</a>
-, you can get your server delivering fully loaded pages faster than most servers answer a request.</p><p>HHVM is an open-source virtual machine designed for executing programs written in Hackand PHP. HHVM uses a just-in-time (JIT) compilation approach to achieve superior performance while maintaining the development flexibility that PHP provides.</p><p>It is worth noting that HHVM isn’t 100% compatible with all of PHP, so if you’re using obscure functions, you may run into an issue. In all of my testing of WordPress, I never once had this problem, but it is something to keep in mind.</p><p>In this post, we’ll set up both Nginx and HHVM from scratch, and then install and setup WordPress. If you follow this guide, you can have an insanely fast server setup in less than an hour.</p><p>This post is written for specifically Ubuntu 12.04 LTS and 14.04 LTS. The steps outlined will probably work on other versions, and with some modifications most likely anywhere. I prefer Ubuntu, though. I’ll be going through this on a Ubuntu 14.04 LTS installation.</p><p>I’m taking these steps on a brand new <a href=https://www.digitalocean.com/>Digital Ocean</a>
-VPS droplet, but you can use the server of your choice.</p><p>We want to start with a brand new installation, and install everything we will need. Our first step is updating all of the built in software, and then installing some small useful tools we will want.</p><pre><code>$ sudo apt-get update
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Brad Parbs  - Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times </title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times" />
+<meta name="keywords" content="" />
+<meta name="author" content="" /><meta property="og:title" content="Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times" />
+<meta property="og:description" content="Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/" /><meta property="og:image" content="https://bradparbs.com/images/share-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-07-17T00:00:00-05:00" />
+<meta property="article:modified_time" content="2014-07-17T00:00:00-05:00" /><meta property="og:site_name" content="Brad Parbs" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://bradparbs.com/images/share-image.png"/>
+
+<meta name="twitter:title" content="Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times"/>
+<meta name="twitter:description" content="Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times"/>
+<meta name="twitter:site" content="@bradparbs"/>
+<meta itemprop="name" content="Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times">
+<meta itemprop="description" content="Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times"><meta itemprop="datePublished" content="2014-07-17T00:00:00-05:00" />
+<meta itemprop="dateModified" content="2014-07-17T00:00:00-05:00" />
+<meta itemprop="wordCount" content="2027"><meta itemprop="image" content="https://bradparbs.com/images/share-image.png"/>
+<meta itemprop="keywords" content="local,server,development," />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png" />
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#58c984" />
+<link rel="shortcut icon" href="/assets/images/icons/favicon.ico" />
+<meta name="msapplication-TileColor" content="#58c984" />
+<meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml" />
+<meta name="theme-color" content="#58c984" />
+
+
+
+
+<link href="/css/main.css" rel="stylesheet" />
+</head>
+
+	<body>
+		<div id="top"></div><header class="mx-auto text-gray-700 bg-pink-100">
+	<div class="container flex flex-col items-center p-5 mx-auto mb-6 sm:flex-row main-width">
+	<a
+	href="https://bradparbs.com/"
+	title="Brad Parbs"
+	class="flex items-center mb-4 text-4xl md:mb-0"
+>
+	<h1 class="m-0 text-2xl font-normal text-black">Brad Parbs</h1>
+</a>
+
+			<ul class="flex flex-wrap items-center justify-center text-base md:ml-auto"><li class="mr-5 hover:text-gray-600 hover:underline "><a class="text-gray-800" href="https://bradparbs.com/about/" title="about">about</a></li>
+			<li class="mr-5 hover:text-gray-600 hover:underline "><a class="text-gray-800" href="https://bradparbs.com/projects/" title="projects">projects</a></li>
+			<li class="mr-5 hover:text-gray-600 hover:underline "><a class="text-gray-800" href="https://bradparbs.com/posts/" title="blog">blog</a></li>
+			<li class="mr-5 hover:text-gray-600 hover:underline "><a class="text-gray-800" href="https://bradparbs.com/contact/" title="contact">contact</a></li>
+			
+		</ul>
+	</div>
+</header>
+<main>
+<article class="ml-0">
+	<h1 class="my-6">Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times</h1>
+</article>
+
+
+		<span class="mx-1 text-xs text-gray-600">
+			<time datetime=" 2014-07-17T00:00:00-0500" class="post-date">
+				2014-07-17
+			</time>
+		</span>
+
+		
+			<a href="https://bradparbs.com/tags/local/" class="text-xs font-medium text-blue-600 uppercase">local</a>
+		
+			<a href="https://bradparbs.com/tags/server/" class="text-xs font-medium text-blue-600 uppercase">server</a>
+		
+			<a href="https://bradparbs.com/tags/development/" class="text-xs font-medium text-blue-600 uppercase">development</a>
+		
+
+
+<p>One of the most enjoyable parts about writing code is writing efficient and performant functionality. No matter how fast your code is, if your server itself isn’t running to it’s maximum performance, you’re not delivering your site as fast as you could be. By setting up <a href="http://nginx.org/" >Nginx</a>
+ and the new <a href="http://hhvm.com/" >HHVM</a>
+, you can get your server delivering fully loaded pages faster than most servers answer a request.</p>
+<p>HHVM is an open-source virtual machine designed for executing programs written in Hackand PHP. HHVM uses a just-in-time (JIT) compilation approach to achieve superior performance while maintaining the development flexibility that PHP provides.</p>
+<p>It is worth noting that HHVM isn’t 100% compatible with all of PHP, so if you’re using obscure functions, you may run into an issue. In all of my testing of WordPress, I never once had this problem, but it is something to keep in mind.</p>
+<p>In this post, we’ll set up both Nginx and HHVM from scratch, and then install and setup WordPress. If you follow this guide, you can have an insanely fast server setup in less than an hour.</p>
+<p>This post is written for specifically Ubuntu 12.04 LTS and 14.04 LTS. The steps outlined will probably work on other versions, and with some modifications most likely anywhere. I prefer Ubuntu, though. I’ll be going through this on a Ubuntu 14.04 LTS installation.</p>
+<p>I’m taking these steps on a brand new <a href="https://www.digitalocean.com/" >Digital Ocean</a>
+ VPS droplet, but you can use the server of your choice.</p>
+<p>We want to start with a brand new installation, and install everything we will need. Our first step is updating all of the built in software, and then installing some small useful tools we will want.</p>
+<pre><code>$ sudo apt-get update
 $ sudo apt-get install -y unzip vim git-core curl wget build-essential
-</code></pre><p>The <code>-y</code> flag we’re using for <code>apt-get install</code> will tell apt that we want to answer <code>Yes</code> to every question about whether or not we want to install a package. Because we’re also running as root (sudo), we want to only install from trusted sources, like the ones that are already added to Ubuntu.</p><p>We now want to install Nginx. It’s also possible to run HHVM with Apache, but our goal is speed and performance so we want to use Nginx. Nginx is a reverse proxy server, as well as a normal web server, and also gives us nice load balancing and caching.</p><p>The entire goal of Nginx and HHVM is to speed up everything our webserver does to create our final HTML pages that WordPress generates.</p><p>Installing Nginx is actually super simple on a new Ubuntu installation. We tell ‘apt’, our handy package manager how to find Nginx, and then we can just do a ‘apt-get install’ like we did previously.</p><p><code>$ sudo add-apt-repository -y ppa:nginx/mainline</code></p><p><img src=/images/1.png alt=1></p><p>After we do this, we want to do another at-get update to fetch the Nginx package we just told ‘apt’ about. Now we’re ready to install Nginx.</p><p><code>$ sudo apt-get install -y nginx</code></p><p>That’s it! Nginx is installed. We’ll configure it in just a bit.</p><p>Now we’re ready to install HHVM. For Ubuntu 12.04 and 14.04, we can follow the <a href=https://github.com/facebook/hhvm/wiki/Prebuilt-Packages-on-Ubuntu-12.04>official guide</a>
-.</p><pre><code>Ubuntu  12.04: $ sudo add-apt-repository -y ppa:mapnik/boost
+</code></pre><p>The <code>-y</code> flag we’re using for <code>apt-get install</code> will tell apt that we want to answer <code>Yes</code> to every question about whether or not we want to install a package. Because we’re also running as root (sudo), we want to only install from trusted sources, like the ones that are already added to Ubuntu.</p>
+<p>We now want to install Nginx. It’s also possible to run HHVM with Apache, but our goal is speed and performance so we want to use Nginx. Nginx is a reverse proxy server, as well as a normal web server, and also gives us nice load balancing and caching.</p>
+<p>The entire goal of Nginx and HHVM is to speed up everything our webserver does to create our final HTML pages that WordPress generates.</p>
+<p>Installing Nginx is actually super simple on a new Ubuntu installation. We tell ‘apt’, our handy package manager how to find Nginx, and then we can just do a ‘apt-get install’ like we did previously.</p>
+<p><code>$ sudo add-apt-repository -y ppa:nginx/mainline</code></p>
+<p><img src="/images/1.png" alt="1"  /></p>
+<p>After we do this, we want to do another at-get update to fetch the Nginx package we just told ‘apt’ about. Now we’re ready to install Nginx.</p>
+<p><code>$ sudo apt-get install -y nginx</code></p>
+<p>That’s it! Nginx is installed. We’ll configure it in just a bit.</p>
+<p>Now we’re ready to install HHVM. For Ubuntu 12.04 and 14.04, we can follow the <a href="https://github.com/facebook/hhvm/wiki/Prebuilt-Packages-on-Ubuntu-12.04" >official guide</a>
+.</p>
+<pre><code>Ubuntu  12.04: $ sudo add-apt-repository -y ppa:mapnik/boost
 $ wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add - $ echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list
 $ sudo apt-get update
 $ sudo apt-get install -y hhvm Ubuntu  14.04: $ wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add - $ echo deb http://dl.hhvm.com/ubuntu trusty main | sudo tee /etc/apt/sources.list.d/hhvm.list
 $ sudo apt-get update
 $ sudo apt-get install -y hhvm
-</code></pre><p>So far, everything goes pretty smoothly. The longest part is probably waiting for the server to pull in all of the packages for the ‘apt-get update’ every time.</p><p>After installing HHVM, we get a pretty handy message.</p><pre><code>********************************************************************
+</code></pre><p>So far, everything goes pretty smoothly. The longest part is probably waiting for the server to pull in all of the packages for the ‘apt-get update’ every time.</p>
+<p>After installing HHVM, we get a pretty handy message.</p>
+<pre><code>********************************************************************
 * HHVM is installed.  Here are some more things you might want to do:
 *  *  Configure your webserver to use HHVM:
 	* $ sudo /usr/share/hhvm/install_fastcgi.sh
@@ -27,13 +125,39 @@ $ sudo apt-get install -y hhvm
 *  *  Use HHVM for  /usr/bin/php even if you have php-cli installed:
 	* $ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60
 ********************************************************************
-</code></pre><p>This is nice because it tells us how to do our next few steps.</p><p>First we’ll run the first of the commands they tell us about to resart Nginx and install FastCGI using HHVM.</p><p><code>$ sudo /usr/share/hhvm/install_fastcgi.sh</code></p><p>After this, we want to tell Ubuntu to run HHVM on system start.</p><p><code>$ sudo update-rc.d hhvm defaults</code></p><p>And then we’ll restart HHVM, just for good measure.</p><p><code>$ sudo service hhvm restart</code></p><p>At this point, HHVM is currently running, and will run whenever our server is started up. We can verify that HHVM is installed by creating a PHP file and making sure that HHVM can run it.</p><pre><code>$ touch test.php
+</code></pre><p>This is nice because it tells us how to do our next few steps.</p>
+<p>First we’ll run the first of the commands they tell us about to resart Nginx and install FastCGI using HHVM.</p>
+<p><code>$ sudo /usr/share/hhvm/install_fastcgi.sh</code></p>
+<p>After this, we want to tell Ubuntu to run HHVM on system start.</p>
+<p><code>$ sudo update-rc.d hhvm defaults</code></p>
+<p>And then we’ll restart HHVM, just for good measure.</p>
+<p><code>$ sudo service hhvm restart </code></p>
+<p>At this point, HHVM is currently running, and will run whenever our server is started up. We can verify that HHVM is installed by creating a PHP file and making sure that HHVM can run it.</p>
+<pre><code>$ touch test.php
 $ echo &quot; test.php
 $ hhvm test.php
-</code></pre><p>We should get a return of “HipHop”. If that’s what you see, we know that HHVM is working perfectly.</p><p>At this point, we can start setting up the configuration for a website, but before we do that, there’s another handy command that our HHVM installation results screen gave us to have HHVM “pretend” to be PHP over the command line.</p><p><code>$ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60</code></p><p>What this lets us do is use PHP command line tools like WPCLI, PHPUnit, Composer, and all of those things, just like if we were running PHP instead of HHVM.</p><p>Let’s test this real quick by doing:</p><p><code>$ php -v</code></p><p>You should get a result like this:</p><p><img src=/images/3.png alt=3></p><p>One really nice thing about HHVM and Nginx is there is very little configuration we need to do to start working. We don’t really have to do anything at all and it is already running. The default file location of our files is “/usr/share/nginx/html”, and there is already a simple HTML file there. I like to make an alias so that I can quickly get to this location.</p><p><code>$ echo "www="cd /usr/share/nginx/html"" >> ~/.bashrc</code></p><p>This creates an alias so we can simply type “www” and change to our file directory.</p><p>At this point we want to install MySQL, so that we can actually use WordPress, and not just PHP files. Oddly, this portion has more configuration then anything we’ve done up to this point. After running the following command, we’ll get a password screen to set our root password.</p><p><code>$ sudo apt-get install mysql-server</code></p><p><a href=https://bradparbs.com/images/4.png><img src=/images/4.png alt=4></a></p><p>Now we’re ready to install WordPress and set up Nginx to work with it.</p><p>We’re going to head to our Nginx HTML folder and grab a copy of wordpress and unzip it.</p><pre><code>$ cd /usr/share/nginx/html
+</code></pre><p>We should get a return of “HipHop”. If that’s what you see, we know that HHVM is working perfectly.</p>
+<p>At this point, we can start setting up the configuration for a website, but before we do that, there’s another handy command that our HHVM installation results screen gave us to have HHVM “pretend” to be PHP over the command line.</p>
+<p><code>$ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60</code></p>
+<p>What this lets us do is use PHP command line tools like WPCLI, PHPUnit, Composer, and all of those things, just like if we were running PHP instead of HHVM.</p>
+<p>Let’s test this real quick by doing:</p>
+<p><code>$ php -v</code></p>
+<p>You should get a result like this:</p>
+<p><img src="/images/3.png" alt="3"  /></p>
+<p>One really nice thing about HHVM and Nginx is there is very little configuration we need to do to start working. We don’t really have to do anything at all and it is already running. The default file location of our files is “/usr/share/nginx/html”, and there is already a simple HTML file there. I like to make an alias so that I can quickly get to this location.</p>
+<p><code>$ echo &quot;www=&quot;cd /usr/share/nginx/html&quot;&quot;  &gt;&gt;  ~/.bashrc</code></p>
+<p>This creates an alias so we can simply type “www” and change to our file directory.</p>
+<p>At this point we want to install MySQL, so that we can actually use WordPress, and not just PHP files. Oddly, this portion has more configuration then anything we’ve done up to this point. After running the following command, we’ll get a password screen to set our root password.</p>
+<p><code>$ sudo apt-get install mysql-server</code></p>
+<p><a href="https://bradparbs.com/images/4.png" ><img src="/images/4.png" alt="4"  /></a>
+</p>
+<p>Now we’re ready to install WordPress and set up Nginx to work with it.</p>
+<p>We’re going to head to our Nginx HTML folder and grab a copy of wordpress and unzip it.</p>
+<pre><code>$ cd /usr/share/nginx/html
 $ wget http://wordpress.org/latest.zip
 $ unzip latest.zip
-</code></pre><p>And we’ll also do a little housekeeping while we’re here.</p><pre><code>$ mv wordpress/*  .
+</code></pre><p>And we’ll also do a little housekeeping while we’re here.</p>
+<pre><code>$ mv wordpress/*  .
 $ rmdir wordpress
 $ rm latest.zip
 $ rm index.html
@@ -224,6 +348,28 @@ At this point you can navigate in your browser to your site and you should be go
 ![load-times](/images/load-times.png)
 
 Here’s a screenshot a stresstest of a site running default 2014, with the steps outlined above. As you can see, these results are amazing for a $5/month server.
-</code></pre></main><footer class=bg-pink-100><div class="container flex flex-col items-center p-5 mx-auto mt-6 sm:flex-row main-width"><a href=https://bradparbs.com/ title="Brad Parbs" class="flex items-center mb-4 text-4xl md:mb-0"><h1 class="m-0 text-2xl font-normal text-black">Brad Parbs</h1></a><span class="inline-flex justify-center mt-4 sm:justify-start sm:ml-auto sm:mt-0"><a href=https://github.com/bradp title=GitHub class="p-3 mx-2 my-2 transition-transform duration-300 ease-in-out transform bg-pink-800 rounded-full hover:scale-125 hover:rotate-12 active:scale-90" target=_blank rel=noopener><img src=https://bradparbs.com/images/github.svg alt=GitHub class="w-4 h-4 md:w-6 md:h-6" width=24 height=24></a>
-<a href=https://twitter.com/bradparbs title=Twitter class="p-3 mx-2 my-2 transition-transform duration-300 ease-in-out transform bg-pink-800 rounded-full hover:scale-125 hover:rotate-12 active:scale-90" target=_blank rel=noopener><img src=https://bradparbs.com/images/twitter.svg alt=Twitter class="w-4 h-4 md:w-6 md:h-6" width=24 height=24></a>
-<a href=mailto:brad@bradparbs.com title=Email class="p-3 mx-2 my-2 transition-transform duration-300 ease-in-out transform bg-pink-800 rounded-full hover:scale-125 hover:rotate-12 active:scale-90" target=_blank rel=noopener><img src=https://bradparbs.com/images/email.svg alt=Email class="w-4 h-4 md:w-6 md:h-6" width=24 height=24></a></span></div></footer><script src=https://bradparbs.com/assets/js/app.min.02f37a8cf6a8c16992b69caa2221ce543d663b2a4bb356da1cb6b41284a6ca79b96441f09a85898515ed8d653db680d5060c9feb0137618be98a29c17329412a.js integrity="sha512-AvN6jPaowWmStpyqIiHOVD1mOypLs1baHLa0EoSmynm5ZEHwmoWJhRXtjWU9toDVBgyf6wE3YYvpiinBcylBKg=="></script>¨</body></html>
+</code></pre>
+</main><footer class="bg-pink-100">
+	<div class="container flex flex-col items-center p-5 mx-auto mt-6 sm:flex-row main-width"><a
+	href="https://bradparbs.com/"
+	title="Brad Parbs"
+	class="flex items-center mb-4 text-4xl md:mb-0"
+>
+	<h1 class="m-0 text-2xl font-normal text-black">Brad Parbs</h1>
+</a>
+<span class="inline-flex justify-center mt-4 sm:justify-start sm:ml-auto sm:mt-0">
+			<a href="https://github.com/bradp" title="GitHub" class="p-3 mx-2 my-2 transition-transform duration-300 ease-in-out transform bg-pink-800 rounded-full hover:scale-125 hover:rotate-12 active:scale-90" target="_blank" rel="noopener">
+				<img src="https://bradparbs.com/images/github.svg" alt="GitHub" class="w-4 h-4 md:w-6 md:h-6" width="24" height="24">
+			</a>
+			<a href="https://twitter.com/bradparbs" title="Twitter" class="p-3 mx-2 my-2 transition-transform duration-300 ease-in-out transform bg-pink-800 rounded-full hover:scale-125 hover:rotate-12 active:scale-90" target="_blank" rel="noopener">
+				<img src="https://bradparbs.com/images/twitter.svg" alt="Twitter" class="w-4 h-4 md:w-6 md:h-6" width="24" height="24">
+			</a>
+			<a href="mailto:brad@bradparbs.com" title="Email" class="p-3 mx-2 my-2 transition-transform duration-300 ease-in-out transform bg-pink-800 rounded-full hover:scale-125 hover:rotate-12 active:scale-90" target="_blank" rel="noopener">
+				<img src="https://bradparbs.com/images/email.svg" alt="Email" class="w-4 h-4 md:w-6 md:h-6" width="24" height="24">
+			</a>
+		</span>
+	</div>
+</footer>
+<script src="https://bradparbs.com/assets/js/app.min.js" defer></script>
+</body>
+</html>
