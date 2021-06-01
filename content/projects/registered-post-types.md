@@ -1,6 +1,6 @@
 +++
 title = "Registered Post Types"
-description = "Shows a list of all the post types in your WordPress"
+description = "Shows a list of all the post types on your site"
 author = "Brad Parbs"
 type = "page"
 kind = "plugin"
