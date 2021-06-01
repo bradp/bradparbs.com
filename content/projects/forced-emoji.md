@@ -1,6 +1,6 @@
 +++
 title = "Forced Emoji"
-description = "randomly forces emoji into your content where it can"
+description = "randomly force emoji into your content"
 author = "Brad Parbs"
 type = "page"
 kind = "plugin"

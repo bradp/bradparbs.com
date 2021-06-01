@@ -1,6 +1,6 @@
 +++
 title = "dotenv"
-description = "Set WordPress options from a .env file."
+description = "Set WordPress options from a .env file"
 author = "Brad Parbs"
 type = "page"
 kind = "plugin"

@@ -1,6 +1,6 @@
 +++
 title = "Insert Headers & Footers"
-description = "Easily insert header and footer code to your WP site."
+description = "Easily insert header and footer code to your site"
 author = "Brad Parbs"
 type = "page"
 kind = "plugin"
