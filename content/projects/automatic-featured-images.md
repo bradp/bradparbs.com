@@ -1,6 +1,6 @@
 +++
 title = "Automatic Feat. Images from Videos"
-description = "WordPress plugin to set featured images from videos"
+description = "Automatically set featured images from embedded videos"
 author = "Brad Parbs"
 type = "page"
 kind = "plugin"
