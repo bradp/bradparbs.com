@@ -23,7 +23,7 @@ disableFastRender = true
 disableKinds = ["taxonomy", "term"]
 enableEmoji = true
 enableInlineShortcodes = true
-summaryLength = 40
+summaryLength = 50
 
 [permalinks]
 posts = "/blog/:year/:month/:title/"
@@ -57,11 +57,6 @@ weight = 20
 name = "projects"
 url = "/projects/"
 weight = 30
-
-[[menu.main]]
-name = "blog"
-url = "/posts/"
-weight = 40
 
 [[menu.main]]
 name = "contact"
