@@ -14,6 +14,7 @@
 		"start": "yarn run build:hugo && hugo server --buildDrafts"
 	},
 	"dependencies": {
+		"@fullhuman/postcss-purgecss": "^4.0.3",
 		"@tailwindcss/forms": "^0.2.1",
 		"@tailwindcss/typography": "^0.3.1",
 		"autoprefixer": "^10.1.0",
