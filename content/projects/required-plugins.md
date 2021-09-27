@@ -1,8 +1,9 @@
 +++
 title = "Required Plugins"
+emoji = "🔒️"
 description = "Make certain plugins un-deactivate-able"
 author = "Brad Parbs"
-type = "page"
+type = "project"
 kind = "plugin"
-link = "https://github.com/WebDevStudios/WDS-Required-Plugins"
+link = "https://github.com/bradp/required-plugins"
 +++
