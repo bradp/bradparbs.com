@@ -1,7 +1,6 @@
 {
   "htmlElements": {
     "tags": [
-      "!doctype",
       "a",
       "article",
       "body",
@@ -70,6 +69,7 @@
       "hover:rotate-12",
       "hover:rotate-6",
       "hover:scale-125",
+      "hover:text-blue-800",
       "hover:text-gray-600",
       "hover:text-indigo-800",
       "hover:underline",
@@ -168,6 +168,7 @@
       "text-4xl",
       "text-base",
       "text-black",
+      "text-blue-500",
       "text-blue-600",
       "text-center",
       "text-gray-400",
