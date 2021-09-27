@@ -6,7 +6,7 @@
 			<ul class="flex flex-wrap items-center justify-center text-base md:ml-auto">
 				{{- range .Site.Menus.main -}}
 					<li class="mr-5 hover:text-gray-600 hover:underline {{ if $page.HasMenuCurrent " main" . }}bg-primary{{ end }}">
-				{{- .Pre -}}<a class="text-gray-800" href="{{ .URL | absURL | safeURL }}" title="{{ .Name | safeHTML }}">{{- .Name | emojify |
+				{{- .Pre -}}<a class="text-gray-800 text-xl" href="{{ .URL | absURL | safeURL }}" title="{{ .Name | safeHTML }}">{{- .Name | emojify |
 					safeHTML -}}</a>{{- .Post -}}
 			</li>
 			{{ end }}

@@ -4,12 +4,12 @@
 
 @layer base {
 	body {
-		@apply relative;
+		@apply relative min-h-screen;
 		font-family: Open Sans, -apple-system, Helvetica Neue, Helvetica, sans-serif;
 	}
 
 	main {
-		@apply min-h-screen px-4 pt-8 mx-auto mt-6 mb-16 main-width;
+		@apply px-4 pt-8 mx-auto mt-6 mb-16 main-width;
 	}
 
 	article {

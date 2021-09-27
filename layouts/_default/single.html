@@ -22,11 +22,27 @@
 				<div class="flex-1 px-4 py-2 text-sm">
 					<a href="{{ .Params.link }}" class="py-3 text-lg font-medium text-gray-900 hover:text-gray-600">{{ .Title }}</a>
 					<p class="py-3 text-gray-500">{{ .Params.description }}</p>
-					<a href="{{ .Params.link }}" class="py-3 text-sm text-indigo-500 hover:underline hover:text-indigo-800">Go to {{ .Title }} ➞</a>
+					<a href="{{ .Params.link }}" class="py-3 text-sm text-blue-500 hover:underline hover:text-blue-800">Go to {{ .Title }} ➞</a>
 				</div>
 			</div>
 		</li>
 	</ul>
+	{{ end }}
+{{ end }}
+{{ if in .Params.type "project" }}
+
+	<p class="my-6">{{ .Params.description }}</p>
+
+	{{ if in .Params.kind "website" }}
+		<a href="{{ .Params.link }}" class="py-3 text-lg text-blue-500 hover:underline hover:text-blue-800">Go to {{ .Title }} ➞</a>
+	{{ end }}
+
+	{{ if in .Params.kind "tool" }}
+		<a href="{{ .Params.link }}" class="py-3 text-lg text-blue-500 hover:underline hover:text-blue-800">Check out {{ .Title }} ➞</a>
+	{{ end }}
+
+	{{ if in .Params.kind "plugin" }}
+		<a href="{{ .Params.link }}" class="py-3 text-lg text-blue-500 hover:underline hover:text-blue-800">Download {{ .Title }} ➞</a>
 	{{ end }}
 {{ end }}
 {{ .Content }}
