@@ -1,2 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cli on Brad Parbs</title><link>https://bradparbs.com/tags/cli/</link><description>Recent content in cli on Brad Parbs</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 25 Jun 2015 00:00:00 -0500</lastBuildDate><atom:link href="https://bradparbs.com/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>A Beginner’s Guide to the Best Command Line Tools</title><link>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</link><pubDate>Thu, 25 Jun 2015 00:00:00 -0500</pubDate><guid>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</guid><description>As someone who loves the command line, I’m always striving to make my workflow easier, more efficient, and just overall better. Hopefully, by walking through my set up and my recommendations for the best command line tools, you’ll find some nifty tips and tricks you can adapt to make your workflow better too.
-The command line is a scary place if you’ve never been there before. It is. You can do some really powerful and dangerous things to your computer.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cli on Brad Parbs</title>
+    <link>https://bradparbs.com/tags/cli/</link>
+    <description>Recent content in cli on Brad Parbs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 25 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://bradparbs.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Beginner’s Guide to the Best Command Line Tools</title>
+      <link>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</guid>
+      <description>As someone who loves the command line, I’m always striving to make my workflow easier, more efficient, and just overall better. Hopefully, by walking through my set up and my recommendations for the best command line tools, you’ll find some nifty tips and tricks you can adapt to make your workflow better too.
+The command line is a scary place if you’ve never been there before. It is. You can do some really powerful and dangerous things to your computer.</description>
+    </item>
+    
+  </channel>
+</rss>

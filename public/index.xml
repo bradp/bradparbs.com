@@ -1,5 +1,458 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>I build things on the internet. on Brad Parbs</title><link>https://bradparbs.com/</link><description>Recent content in I build things on the internet. on Brad Parbs</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 28 Nov 2020 00:00:00 -0600</lastBuildDate><atom:link href="https://bradparbs.com/index.xml" rel="self" type="application/rss+xml"/><item><title>brad.cash</title><link>https://bradparbs.com/projects/brad.cash/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/brad.cash/</guid><description/></item><item><title>butts.tech</title><link>https://bradparbs.com/projects/butts.tech/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/butts.tech/</guid><description/></item><item><title>gifsb.in</title><link>https://bradparbs.com/projects/gifsbin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/gifsbin/</guid><description/></item><item><title>horror.watch</title><link>https://bradparbs.com/projects/horror.watch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/horror.watch/</guid><description/></item><item><title>pears.cloud</title><link>https://bradparbs.com/projects/pears.cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/pears.cloud/</guid><description/></item><item><title>isitsnowinginmilwaukee.com</title><link>https://bradparbs.com/projects/isitsnowinginmilwaukee.com/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/isitsnowinginmilwaukee.com/</guid><description/></item><item><title>sax.cat</title><link>https://bradparbs.com/projects/sax-cat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/sax-cat/</guid><description/></item><item><title>random nature cams</title><link>https://bradparbs.com/projects/random-nature-cams/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/random-nature-cams/</guid><description/></item><item><title>weather dashboard</title><link>https://bradparbs.com/projects/weather-dashboard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/weather-dashboard/</guid><description/></item><item><title>Hey, hey, hey, it's a new site!</title><link>https://bradparbs.com/blog/2020/11/hey-hey-hey-its-a-new-site/</link><pubDate>Sat, 28 Nov 2020 00:00:00 -0600</pubDate><guid>https://bradparbs.com/blog/2020/11/hey-hey-hey-its-a-new-site/</guid><description>After a few years of barely changing anything on my site, I&amp;rsquo;m super happy to finally build a whole new site! 🎉
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>I build things on the internet. on Brad Parbs</title>
+    <link>https://bradparbs.com/</link>
+    <description>Recent content in I build things on the internet. on Brad Parbs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 28 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bradparbs.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>brad.cash</title>
+      <link>https://bradparbs.com/projects/brad.cash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/brad.cash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>butts.tech</title>
+      <link>https://bradparbs.com/projects/butts.tech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/butts.tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gifsb.in</title>
+      <link>https://bradparbs.com/projects/gifsbin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/gifsbin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>horror.watch</title>
+      <link>https://bradparbs.com/projects/horror.watch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/horror.watch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pears.cloud</title>
+      <link>https://bradparbs.com/projects/pears.cloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/pears.cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>isitsnowinginmilwaukee.com</title>
+      <link>https://bradparbs.com/projects/isitsnowinginmilwaukee.com/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/isitsnowinginmilwaukee.com/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sax.cat</title>
+      <link>https://bradparbs.com/projects/sax-cat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/sax-cat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>random nature cams</title>
+      <link>https://bradparbs.com/projects/random-nature-cams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/random-nature-cams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>weather dashboard</title>
+      <link>https://bradparbs.com/projects/weather-dashboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/weather-dashboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hey, hey, hey, it&#39;s a new site!</title>
+      <link>https://bradparbs.com/blog/2020/11/hey-hey-hey-its-a-new-site/</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2020/11/hey-hey-hey-its-a-new-site/</guid>
+      <description>After a few years of barely changing anything on my site, I&amp;rsquo;m super happy to finally build a whole new site! 🎉
 This site is powered by Hugo &amp;amp; Tailwind CSS . It&amp;rsquo;s been super fun to build, and I&amp;rsquo;m excited to finally get back to writing some blog posts.
-I&amp;rsquo;ve recently been updating a few of my other sites, and it feels good to use some sleek new tools to do it.</description></item><item><title>A Beginner’s Guide to the Best Command Line Tools</title><link>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</link><pubDate>Thu, 25 Jun 2015 00:00:00 -0500</pubDate><guid>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</guid><description>As someone who loves the command line, I’m always striving to make my workflow easier, more efficient, and just overall better. Hopefully, by walking through my set up and my recommendations for the best command line tools, you’ll find some nifty tips and tricks you can adapt to make your workflow better too.
-The command line is a scary place if you’ve never been there before. It is. You can do some really powerful and dangerous things to your computer.</description></item><item><title>Getting started with Vagrant &amp; VVV for local development</title><link>https://bradparbs.com/blog/2015/01/getting-started-with-vagrant-vvv-for-local-development/</link><pubDate>Wed, 14 Jan 2015 00:00:00 -0600</pubDate><guid>https://bradparbs.com/blog/2015/01/getting-started-with-vagrant-vvv-for-local-development/</guid><description>When I started doing web development, I think I started the way a lot of us did. You have a site you want to work on, so you connect with FTP, download a file, modify it, upload it back up, and then refresh the page to see if your changes worked. This process doesn’t really work when you’re working with a team of people, or on a site that people are actively going to.</description></item><item><title>Setting up WordPress + Nginx + HHVM For The Fastest Possible Load Times</title><link>https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/</link><pubDate>Thu, 17 Jul 2014 00:00:00 -0500</pubDate><guid>https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/</guid><description>One of the most enjoyable parts about writing code is writing efficient and performant functionality. No matter how fast your code is, if your server itself isn’t running to it’s maximum performance, you’re not delivering your site as fast as you could be. By setting up Nginx and the new HHVM , you can get your server delivering fully loaded pages faster than most servers answer a request.
-HHVM is an open-source virtual machine designed for executing programs written in Hackand PHP.</description></item><item><title>About Brad Parbs</title><link>https://bradparbs.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/about/</guid><description>Brad Parbs is a Milwaukee-based WordPress developer &amp; engineer, focusing on high perfomance, user friendly, enterprise scale, API driven websites &amp; applications. Brad Parbs is currently a Developer at WebDevStudios, Previously Awesome Motive working on WPForms, Impress.org working on GiveWP, and Human Made. Brad Parbs likes to build many things online. Check out his projects to see them. Calling him a WordPress fanatic is putting it lightly.</description></item><item><title>Automatic Feat. Images from Videos</title><link>https://bradparbs.com/projects/automatic-featured-images/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/automatic-featured-images/</guid><description/></item><item><title>Chassis</title><link>https://bradparbs.com/projects/chassis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/chassis/</guid><description/></item><item><title>Chassis Generator</title><link>https://bradparbs.com/projects/generator-chassis-wp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/generator-chassis-wp/</guid><description/></item><item><title>CLI Weather Emoji</title><link>https://bradparbs.com/projects/weather-emoji/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/weather-emoji/</guid><description/></item><item><title>CMB2</title><link>https://bradparbs.com/projects/cmb2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/cmb2/</guid><description/></item><item><title>Contact Brad Parbs</title><link>https://bradparbs.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/contact/</guid><description> There are plenty of ways to contact &amp; follow me. I currently use GitHub, Twitter, and LinkedIn. And you can always email me.</description></item><item><title>Disable Telemetry</title><link>https://bradparbs.com/projects/disable-telemetry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/disable-telemetry/</guid><description/></item><item><title>dotenv</title><link>https://bradparbs.com/projects/dotenv/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/dotenv/</guid><description/></item><item><title>dotfiles</title><link>https://bradparbs.com/projects/dotfiles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/dotfiles/</guid><description/></item><item><title>Forced Emoji</title><link>https://bradparbs.com/projects/forced-emoji/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/forced-emoji/</guid><description/></item><item><title>Give Addon SMS</title><link>https://bradparbs.com/projects/give-addon-sms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/give-addon-sms/</guid><description/></item><item><title>Insert Headers &amp; Footers</title><link>https://bradparbs.com/projects/insert-headers-footers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/insert-headers-footers/</guid><description/></item><item><title>Logout Roulette</title><link>https://bradparbs.com/projects/logout-roulette/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/logout-roulette/</guid><description/></item><item><title>One Search Result</title><link>https://bradparbs.com/projects/one-search-result/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/one-search-result/</guid><description/></item><item><title>Registered Post Types</title><link>https://bradparbs.com/projects/registered-post-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/registered-post-types/</guid><description/></item><item><title>Required Plugins</title><link>https://bradparbs.com/projects/required-plugins/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/required-plugins/</guid><description/></item><item><title>Static 404</title><link>https://bradparbs.com/projects/static-404/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/static-404/</guid><description/></item><item><title>t</title><link>https://bradparbs.com/projects/t/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/t/</guid><description/></item><item><title>vv</title><link>https://bradparbs.com/projects/vv/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/vv/</guid><description/></item><item><title>vvv Provision Flipper</title><link>https://bradparbs.com/projects/vvv-provision-flipper/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/vvv-provision-flipper/</guid><description/></item><item><title>wd_s</title><link>https://bradparbs.com/projects/wd_s/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/wd_s/</guid><description/></item><item><title>WordPress Plugin Generator</title><link>https://bradparbs.com/projects/generator-plugin-wp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/generator-plugin-wp/</guid><description/></item><item><title>Worndpress</title><link>https://bradparbs.com/projects/worndpress/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bradparbs.com/projects/worndpress/</guid><description/></item></channel></rss>
+I&amp;rsquo;ve recently been updating a few of my other sites, and it feels good to use some sleek new tools to do it.</description>
+    </item>
+    
+    <item>
+      <title>A Beginner’s Guide to the Best Command Line Tools</title>
+      <link>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2015/06/a-beginners-guide-to-the-best-command-line-tools/</guid>
+      <description>As someone who loves the command line, I’m always striving to make my workflow easier, more efficient, and just overall better. Hopefully, by walking through my set up and my recommendations for the best command line tools, you’ll find some nifty tips and tricks you can adapt to make your workflow better too.
+The command line is a scary place if you’ve never been there before. It is. You can do some really powerful and dangerous things to your computer.</description>
+    </item>
+    
+    <item>
+      <title>Getting started with Vagrant &amp; VVV for local development</title>
+      <link>https://bradparbs.com/blog/2015/01/getting-started-with-vagrant-vvv-for-local-development/</link>
+      <pubDate>Wed, 14 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2015/01/getting-started-with-vagrant-vvv-for-local-development/</guid>
+      <description>When I started doing web development, I think I started the way a lot of us did. You have a site you want to work on, so you connect with FTP, download a file, modify it, upload it back up, and then refresh the page to see if your changes worked. This process doesn’t really work when you’re working with a team of people, or on a site that people are actively going to.</description>
+    </item>
+    
+    <item>
+      <title>Setting up WordPress &#43; Nginx &#43; HHVM For The Fastest Possible Load Times</title>
+      <link>https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/</link>
+      <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/blog/2014/07/setting-up-wordpress-nginx-hhvm-for-the-fastest-possible-load-times/</guid>
+      <description>One of the most enjoyable parts about writing code is writing efficient and performant functionality. No matter how fast your code is, if your server itself isn’t running to it’s maximum performance, you’re not delivering your site as fast as you could be. By setting up Nginx and the new HHVM , you can get your server delivering fully loaded pages faster than most servers answer a request.
+HHVM is an open-source virtual machine designed for executing programs written in Hackand PHP.</description>
+    </item>
+    
+    <item>
+      <title>About Brad Parbs</title>
+      <link>https://bradparbs.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/about/</guid>
+      <description>Brad Parbs is a Milwaukee-based WordPress developer &amp; engineer, focusing on high perfomance, user friendly, enterprise scale, API driven websites &amp; applications.  Brad Parbs is currently a Developer at Nexcess, Previously Awesome Motive working on WPForms, Impress.org working on GiveWP, WebDevStudios, and Human Made. Brad Parbs likes to build many things online. Check out his projects to see them. Calling him a WordPress fanatic is putting it lightly.</description>
+    </item>
+    
+    <item>
+      <title>Automatic Feat. Images from Videos</title>
+      <link>https://bradparbs.com/projects/automatic-featured-images/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/automatic-featured-images/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Avatars</title>
+      <link>https://bradparbs.com/projects/avatars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/avatars/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chassis</title>
+      <link>https://bradparbs.com/projects/chassis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/chassis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chassis Generator</title>
+      <link>https://bradparbs.com/projects/generator-chassis-wp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/generator-chassis-wp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clean Elementor</title>
+      <link>https://bradparbs.com/projects/clean-elementor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/clean-elementor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CLI Weather Emoji</title>
+      <link>https://bradparbs.com/projects/weather-emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/weather-emoji/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CMB2</title>
+      <link>https://bradparbs.com/projects/cmb2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/cmb2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Colors</title>
+      <link>https://bradparbs.com/projects/colors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/colors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact Brad Parbs</title>
+      <link>https://bradparbs.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/contact/</guid>
+      <description> There are plenty of ways to contact &amp; follow me.
+I currently use GitHub, Twitter, and LinkedIn.
+You can always email me.
+ </description>
+    </item>
+    
+    <item>
+      <title>Disable Telemetry</title>
+      <link>https://bradparbs.com/projects/disable-telemetry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/disable-telemetry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dolly</title>
+      <link>https://bradparbs.com/projects/dolly/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/dolly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotenv</title>
+      <link>https://bradparbs.com/projects/dotenv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/dotenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotfiles</title>
+      <link>https://bradparbs.com/projects/dotfiles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Drafts</title>
+      <link>https://bradparbs.com/projects/drafts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/drafts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forced Emoji</title>
+      <link>https://bradparbs.com/projects/forced-emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/forced-emoji/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Give Addon SMS</title>
+      <link>https://bradparbs.com/projects/give-addon-sms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/give-addon-sms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Howdy</title>
+      <link>https://bradparbs.com/projects/howdy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/howdy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Insert Headers &amp; Footers</title>
+      <link>https://bradparbs.com/projects/insert-headers-footers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/insert-headers-footers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logout Roulette</title>
+      <link>https://bradparbs.com/projects/logout-roulette/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/logout-roulette/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modified</title>
+      <link>https://bradparbs.com/projects/modified/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/modified/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>One Search Result</title>
+      <link>https://bradparbs.com/projects/one-search-result/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/one-search-result/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pages</title>
+      <link>https://bradparbs.com/projects/pages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Parbs Standards</title>
+      <link>https://bradparbs.com/projects/standards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/standards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Published</title>
+      <link>https://bradparbs.com/projects/published/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/published/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Registered Post Types</title>
+      <link>https://bradparbs.com/projects/registered-post-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/registered-post-types/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Required Plugins</title>
+      <link>https://bradparbs.com/projects/required-plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/required-plugins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Schedules</title>
+      <link>https://bradparbs.com/projects/schedules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/schedules/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Static 404</title>
+      <link>https://bradparbs.com/projects/static-404/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/static-404/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>t</title>
+      <link>https://bradparbs.com/projects/t/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vv</title>
+      <link>https://bradparbs.com/projects/vv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/vv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vvv Provision Flipper</title>
+      <link>https://bradparbs.com/projects/vvv-provision-flipper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/vvv-provision-flipper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wd_s</title>
+      <link>https://bradparbs.com/projects/wd_s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/wd_s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Where</title>
+      <link>https://bradparbs.com/projects/where/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/where/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WordPress Plugin Generator</title>
+      <link>https://bradparbs.com/projects/generator-plugin-wp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/generator-plugin-wp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Worndpress</title>
+      <link>https://bradparbs.com/projects/worndpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradparbs.com/projects/worndpress/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
