@@ -7,11 +7,11 @@
 	"keywords": [],
 	"license": "MIT",
 	"scripts": {
-		"build": "yarn run build:hugo",
-		"build:hugo": "yarn run clean && hugo --gc --environment development",
-		"build:hugo:prod": "yarn run clean && hugo --gc --minify --environment production",
+		"build": "npm run build:hugo",
+		"build:hugo": "npm run clean && hugo --gc --environment development",
+		"build:hugo:prod": "npm run clean && hugo --gc --minify --environment production",
 		"clean": "rimraf public",
-		"start": "yarn run build:hugo && hugo server --buildDrafts"
+		"start": "npm run build:hugo && hugo server --buildDrafts"
 	},
 	"dependencies": {
 		"@fullhuman/postcss-purgecss": "^4.0.3",
