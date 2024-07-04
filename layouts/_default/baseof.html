@@ -10,12 +10,16 @@
 	</head>
 
 	<body>
-		<div id="top"></div>
-		{{- partial "header/header" . -}}
+		<div class-="flex flex-col h-screen">
+			<div id="top"></div>
+			{{- partial "header/header" . -}}
 
-		<main>{{- block "main" . }}{{- end }}</main>
+			<main clas="min-h-64 mb-auto">
+				{{- block "main" . }}{{- end }}
+			</main>
 
-		{{- partial "footer/footer" . -}}
-		{{- partial "footer/scripts" . -}}
+			<footer class="bg-pink-100 h-5"></footer>
+			{{- partial "footer/scripts" . -}}
+		</div>
 	</body>
 </html>
