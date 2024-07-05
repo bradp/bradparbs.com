@@ -1,3 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bradparbs.com</loc>
+    <lastmod>2023-07-04T10:00:00.021Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://bradparbs.com/about</loc>
+    <lastmod>2023-07-04T10:00:00.021Z</lastmod>
+    <changefreq>monthly</changefreq>ode
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://bradparbs.com/projects</loc>
+    <lastmod>2023-07-04T10:00:00.021Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://bradparbs.com/speaking</loc>
+    <lastmod>2023-07-04T10:00:00.021Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://bradparbs.com/uses</loc>
+    <lastmod>2023-07-04T10:00:00.021Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://bradparbs.com/blog</loc>
+    <lastmod>2023-07-04T10:00:00.021Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+</urlset>
