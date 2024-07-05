@@ -1,0 +1,158 @@
+[
+  {
+    "id": "projects",
+    "title": "Projects",
+    "items": [
+      {
+        "title": "dotfiles",
+        "emoji": "⚫️",
+        "description": "My dotfiles",
+        "href": "https://github.com/bradp/dotfiles"
+      },
+      {
+        "title": "MouseHunt Improved",
+        "emoji": "🐭",
+        "description": "A browser extension to improve the MouseHunt game experience",
+        "href": "https://github.com/MHCommunity/mousehunt-improved"
+      },
+      {
+        "title": "mouse.rip",
+        "emoji": "🪤️",
+        "description": "MouseHunt guides, tools, and resources",
+        "href": "https://mouse.rip"
+      }
+    ]
+  },
+  {
+    "id": "wordpress-plugins",
+    "title": "WordPress Plugins",
+    "items": [
+      {
+        "title": "Automatic Feat. Images from Videos",
+        "emoji": "📸️",
+        "description": "Automatically set featured images from embedded videos",
+        "href": "https://wordpress.org/plugins/automatic-featured-images-from-videos"
+      },
+      {
+        "title": "Avatars",
+        "emoji": "👤️",
+        "description": "Remove avatars from your WordPress site",
+        "href": "https://github.com/bradp/avatars"
+      },
+      {
+        "title": "Clean Elementor",
+        "emoji": "🧹",
+        "description": "Set Elementor settings and clean up the dashboard",
+        "href": "https://github.com/bradp/clean-elementor"
+      },
+      {
+        "title": "Colors",
+        "emoji": "🎨️",
+        "description": "Disable admin color schemes",
+        "href": "https://github.com/bradp/colors"
+      },
+      {
+        "title": "Disable Telemetry",
+        "emoji": "🛑️",
+        "description": "Stop all requests to the WP.org API",
+        "href": "https://github.com/bradp/disable-telemetry"
+      },
+      {
+        "title": "Dolly",
+        "emoji": "🎶️",
+        "description": "Make sure Hello Dolly stays deactivated",
+        "href": "https://github.com/bradp/dolly"
+      },
+      {
+        "title": "dotenv",
+        "emoji": "⚙️",
+        "description": "Set WordPress options from a .env file",
+        "href": "https://github.com/bradp/dotenv"
+      },
+      {
+        "title": "Drafts",
+        "emoji": "✏️",
+        "description": "Quickly and easily view all your recent draft posts",
+        "href": "https://github.com/bradp/drafts"
+      },
+      {
+        "title": "Forced Emoji",
+        "emoji": "😁️",
+        "description": "randomly force emoji into your content",
+        "href": "https://github.com/bradp/forced-emoji"
+      },
+      {
+        "title": "Howdy",
+        "emoji": "👋️",
+        "description": "Remove 'Howdy' from the admin bar",
+        "href": "https://github.com/bradp/howdy"
+      },
+      {
+        "title": "Insert Headers & Footers",
+        "emoji": "⌨️",
+        "description": "Easily insert header and footer code to your site",
+        "href": "https://wordpress.org/plugins/insert-headers-and-footers"
+      },
+      {
+        "title": "Logout Roulette",
+        "emoji": "🎰️",
+        "description": "Are you ready to try your luck?",
+        "href": "https://wordpress.org/plugins/logout-roulette"
+      },
+      {
+        "title": "Modified",
+        "emoji": "📎️",
+        "description": "Quickly and easily view all your recently edited posts",
+        "href": "https://github.com/bradp/modified"
+      },
+      {
+        "title": "One Search Result",
+        "emoji": "🔍️",
+        "description": "Automatically send a user to the page or post if it's the only search result available",
+        "href": "https://github.com/bradp/one-search-result"
+      },
+      {
+        "title": "Pages",
+        "emoji": "📝",
+        "description": "Easily view your pages in the dashboard",
+        "href": "https://github.com/bradp/pages"
+      },
+      {
+        "title": "Published",
+        "emoji": "📄",
+        "description": "Quickly and easily view all your recently published posts",
+        "href": "https://github.com/bradp/published"
+      },
+      {
+        "title": "Registered Post Types",
+        "emoji": "📖️",
+        "description": "Shows a list of all the post types on your site",
+        "href": "https://github.com/bradp/registered-post-types"
+      },
+      {
+        "title": "Required Plugins",
+        "emoji": "🔒️",
+        "description": "Make certain plugins un-deactivate-able",
+        "href": "https://github.com/bradp/required-plugins"
+      },
+      {
+        "title": "Schedules",
+        "emoji": "📅️",
+        "description": "Quickly and easily view all your scheduled posts",
+        "href": "https://github.com/bradp/schedules"
+      },
+      {
+        "title": "Static 404",
+        "emoji": "⚡️",
+        "description": "Quickly send a 404 for missing static files",
+        "href": "https://github.com/bradp/static-404"
+      },
+      {
+        "title": "Where",
+        "emoji": "❓",
+        "description": "Display your site's environment type in the admin bar",
+        "href": "https://github.com/bradp/where"
+      }
+    ]
+  }
+]

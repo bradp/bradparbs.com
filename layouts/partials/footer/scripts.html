@@ -1,6 +1,0 @@
-{{- $js := resources.Get "js/main.js" -}}
-{{- $instant_page := resources.Get "js/vendor/instantpage.js" -}}
-{{- $js := slice $instant_page $js | resources.Concat "assets/js/app.js" -}}
-{{- $js := $js | minify -}}
-
-<script src="{{ $js.Permalink }}" defer></script>

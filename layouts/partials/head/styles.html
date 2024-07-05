@@ -1,5 +1,0 @@
-{{ $options := dict "config" "postcss.config.js" "inlineImports" true }}
-{{ $styles := resources.Get "css/main.css" }}
-{{ $styles = $styles | resources.PostCSS $options }}
-{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
-<link href="{{ $styles.RelPermalink }}" rel="stylesheet" />

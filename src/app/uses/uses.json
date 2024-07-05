@@ -1,0 +1,84 @@
+[
+  {
+    "id": "hardware",
+    "title": "Hardware",
+    "items": [
+      {
+        "title": "14” MacBook Pro",
+        "description": "I'm an Apple fanboy and I love this laptop. It's the perfect size and it's super powerful. Battery life is great and it stays cool even when I'm running a million things at once.",
+        "href": "https://www.apple.com/macbook-pro/"
+      },
+      {
+        "title": "Vortex Pok3r 60% Keyboard",
+        "description": "I love this keyboard so much I have two of them. At first I was worried about the lack of buttons and the small size, but with layers and mappings I can do everything at lightning speed.",
+        "href": "https://vortexgear.store/"
+      },
+      {
+        "title": "Razer DeathAdder v2 Gaming Mouse",
+        "description": "I've mapped the buttons to do things like switch spaces, open Mission Control, and switch between apps. If you haven't tried a gaming mouse for development, you're missing out."
+      }
+    ]
+  },
+  {
+    "id": "development-tools",
+    "title": "Development tools",
+    "items": [
+      {
+        "title": "Visual Studio Code",
+        "description": "I've used Sublime Text, PHPStorm, Vim, and everything in between. Visual Studio Code is my favorite. It's fast, has a ton of great plugins, and is super customizable.",
+        "href": "https://code.visualstudio.com/"
+      },
+      {
+        "title": "iTerm2",
+        "description": "A hotkey to quickly toggle your terminal is a game changer.",
+        "href": "https://iterm2.com/"
+      },
+      {
+        "title": "Kaleidoscope",
+        "description": "Fantastic diff tool that easily integrates with Git.",
+        "href": "https://www.kaleidoscopeapp.com/"
+      },
+      {
+        "title": "Bruno",
+        "description": "A relatively new tool that I've been using for a bit. It's a replacement for Postman and I'm loving it.",
+        "href": "https://www.usebruno.com/"
+      }
+    ]
+  },
+  {
+    "id": "productivity",
+    "title": "Productivity",
+    "items": [
+      {
+        "title": "1Password",
+        "description": "I can't imagine my life without 1Password. It's a must-have.",
+        "href": "https://1password.com/"
+      },
+      {
+        "title": "Arc from The Browser Company",
+        "description": "Honestly, I don't know what I'd do without Arc. It's a fantastic browser that's got a ton of great features.",
+        "href": "https://arc.net/gift/a3a64569"
+      },
+      {
+        "title": "Alfred",
+        "description": "I've been using Alfred for years. I have so many custom workflows and actions that make my life so much easier.",
+        "href": "https://www.alfredapp.com/"
+      },
+      {
+        "title": "BetterTouchTool",
+        "description": "Another app that without it, I'd be lost.",
+        "href": "https://folivora.ai/"
+      },
+      {
+        "title": "Fantastical",
+        "description": "Great calendar app that I use on all my devices. Adding events via natural language is such a time saver.",
+        "href": "https://flexibits.com/fantastical"
+      },
+      {
+        "title": "Notion",
+        "description": "I use Notion for everything. Basically my second brain.",
+        "href": "https://www.notion.so/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "title": "WordCamps",
+    "items": [
+      {
+        "title": "Learn to love the terminal",
+        "event": "WordCamp Lancaster 2016",
+        "description": "The command line is a scary place. Let’s make it less scary, while improving your workflow, becoming more efficient, and learning some nifty tricks. Automating and optimizing recurring tasks, doing less boring things, and being more efficient allows a developer to focus on the fun parts that matter. Mastering the command line isn’t as difficult as it seems.",
+        "href": "https://speakerdeck.com/bradp/learn-to-love-the-terminal",
+        "cta": "View slides"
+      },
+      {
+        "title": "Powerful Local Development Environments with Vagrant and Friends",
+        "event": "WordCamp Minneapolis 2015",
+        "description": "This talk walks through setting up a professional, powerful, and efficient local development environment. It discusses how to get set up, why, and the different things you can do with a great set up.",
+        "href": "https://wordpress.tv/2015/05/24/brad-parbs-powerful-local-development-environments-with-vagrant-and-friends/",
+        "cta": "Watch video on WordPress.tv"
+      },
+      {
+        "title": "Writing Extensible Plugins",
+        "event": "WordCamp Phoenix 2014",
+        "description": "Functionality in a WordPress site usually requires a variety of plugins, all that need to work together. Sometimes, plugins need to be extended and modified. Brad went through how to build a plugin that supports extensibility and modification, without hacks. This was an interactive session, where everyone in attendance shared their tips and tricks for extending plugins.",
+        "href": "https://wordpress.tv/2014/06/05/brad-parbs-writing-extensible-plugins/",
+        "cta": "Watch video on WordPress.tv"
+      },
+      {
+        "title": "Getting SASSy: Fun with CSS Preprocessors",
+        "event": "WordCamp Grand Rapids 2013",
+        "description": "In this talk learn to write your CSS faster and more efficiently. CSS pre-processors like SASS and LESS let you write DRY CSS that can be modularly used to create themes and sites quite a bit faster.",
+        "href": "https://wordpress.tv/2013/10/14/brad-parbs-getting-sassy-fun-with-css-preprocessors-2/",
+        "cta": "Watch video on WordPress.tv"
+      },
+      {
+        "title": "Getting SASSy – Fun with CSS Preprocessors",
+        "event": "WordCamp Providence 2013",
+        "description": "Write your CSS faster and more efficiently. CSS pre-processors like SASS and LESS let you write DRY CSS that can be modularly used to create themes and sites quite a bit faster. Starting from a beginner’s perspective, this talk allows anyone (designers & developers) to get started with SASS or LESS for their WordPress theming.",
+        "href": "https://wordpress.tv/2013/08/29/brad-parbs-getting-sassy-fun-with-css-preprocessors/",
+        "cta": "Watch video on WordPress.tv"
+      },
+      {
+        "title": "Responsive Design Primer",
+        "event": "WordCamp Providence 2012",
+        "description": "Want to learn what Responsive Design is? Learn the history of web design, what RWD is, why you should care, how you can get started using it, and some great tips for anyone who uses WordPress.",
+        "href": "https://wordpress.tv/2013/06/12/brad-parbs-responsive-design-primer-2/",
+        "cta": "Watch video on WordPress.tv"
+      },
+      {
+        "title": "320px and Up, Getting Started with Responsive Design",
+        "event": "WordCamp Grand Rapids 2012",
+        "description": "320px and Up – Responsive Web Design, what is it, the benefits, a background on it, how to get started, and things to watch out for while developing sites that work on any mobile phone, tablet, desktop, and more.",
+        "href": "https://wordpress.tv/2013/05/07/brad-parbs-320px-and-up-getting-started-with-responsive-design-2/",
+        "cta": "Watch video on WordPress.tv"
+      },
+      {
+        "title": "WordPress File Structure, FTP & MySQL",
+        "event": "WordCamp Phoenix 2013",
+        "description": "Brad Parbs talks about the WordPress File Structure, who does what, trac, Theme Structure & Template Hierarchy, FTP and MySQL.",
+        "href": "https://wordpress.tv/2013/02/07/brad-parbs-wordpress-file-structure-ftp-mysql/",
+        "cta": "Watch video on WordPress.tv"
+      },
+      {
+        "title": "Intro to Responsive Design",
+        "event": "WordCamp Phoenix 2013",
+        "description": "Attendees will learn the basic history of web design, what Responsive Design is, why you should care, how you can get started using it, and some great tips for anyone who uses WordPress. People will be inspired to make their sites responsive, as well realizing it is quite simple and easy to do so.",
+        "href": "https://wordpress.tv/2013/01/31/brad-parbs-intro-to-responsive-design/",
+        "cta": "Watch video on WordPress.tv"
+      },
+      {
+        "title": "Responsive Design Primer",
+        "event": "WordCamp Chicago 2012",
+        "description": "Want to learn what Responsive Design is? Learn the history of web design, what RWD is, why you should care, how you can get started using it, and some great tips for anyone who uses WordPress.",
+        "href": "https://wordpress.tv/2012/10/06/brad-parbs-responsive-design-primer/",
+        "cta": "Watch video on WordPress.tv"
+      }
+    ]
+  },
+  {
+    "title": "Meetups",
+    "items": [
+      {
+        "title": "Writing Clean, Clear, & Semantic Markup with HTML5",
+        "event": "Web414, October 2013",
+        "description": "Brad Parbs, everyone's favorite GIF-aficionado, walks us through what HTML5 means, how you can get out the messy div-soup that plagues many current web projects.",
+        "href": "https://speakerdeck.com/bradp/web414-writing-clean-clear-and-semantic-markup-with-html5/",
+        "cta": "View slides"
+      },
+      {
+        "title": "Theme Frameworks, Where Do I Start?",
+        "event": "Appleton WordPress Meetup, September 2013",
+        "description": "Brad Parbs, WordPress fanatic, has used almost every theme framework and starter theme out there. And even built a few of his own. He takes us through this crazy jungle of options, so you can figure out where you need to start. Stop building custom themes for clients from scratch, there's an easier way!",
+        "href": "https://speakerdeck.com/bradp/starter-themes-for-appleton-wordpress-meetup",
+        "cta": "View slides"
+      }
+    ]
+  }
+]
